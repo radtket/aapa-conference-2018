@@ -17,3 +17,14 @@ dt {
 dd {
 	margin: 0;
 }
+
+.inline-list {
+	li {
+		display: inline-block;
+		margin-right: $base-spacing;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+}

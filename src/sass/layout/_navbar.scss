@@ -1,0 +1,260 @@
+$navbar-bottom-height: 55px;
+$nav-item-mobile-height: 35px;
+$nav-item-desktop-hover-triangle-size: 10px;
+$navbar-colapse: 850px;
+$nav-bar-z: 99;
+
+.mobile-on .sub-nav {
+	overflow-x: hidden !important;
+}
+
+.navbar {
+	box-shadow: $boxshadow-navbar;
+	font-size: rem(12);
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: $nav-bar-z;
+
+	// Top Navbar
+	&__top {
+		background-color: $color-purple;
+		@include padding($x-small-spacing null);
+
+		ul {
+			text-align: center;
+			@include mq($min-width: $navbar-colapse) {
+				text-align: left;
+			}
+
+			li {
+				color: $white;
+				display: inline-block;
+				letter-spacing: $base-letter-spacing;
+				line-height: 1;
+				margin-right: $base-spacing;
+				text-transform: uppercase;
+
+				> * {
+					display: inherit;
+					vertical-align: middle;
+				}
+
+				svg {
+					fill: $color-teal;
+					margin-right: 4px;
+					max-height: rem(14);
+					max-width: rem(14);
+				}
+			}
+		}
+	}
+	// END // Top Navbar
+
+	&__bottom {
+		background-color: $white;
+		position: relative;
+
+		&--logo {
+			display: block;
+			float: left;
+			height: $navbar-bottom-height;
+			max-width: 85px;
+		}
+
+		&--nav {
+			display: none;
+			@include position(absolute, 100% 0 null 0);
+			@include mq($min-width: $navbar-colapse) {
+				display: block;
+				float: right;
+				position: relative;
+			}
+
+			&.js-show-menu {
+				display: block;
+			}
+
+			.nav-menu {
+				li {
+					display: block;
+					line-height: $nav-item-mobile-height;
+				}
+
+				> li {
+					position: relative;
+
+					&:last-of-type > a {
+						border-bottom: $base-border;
+					}
+
+					@include mq($min-width: $navbar-colapse) {
+						display: inline-block;
+						line-height: $navbar_bottom-height;
+						margin-right: $base-spacing;
+
+						&:last-of-type {
+							margin-right: 0;
+
+							> a {
+								border-bottom: 0;
+							}
+						}
+					}
+
+					a {
+						cursor: pointer;
+						display: inherit;
+						font-weight: $font-weight--medium;
+						transition: all 0.12s linear;
+						@include padding(null $small-spacing);
+					}
+
+					> a {
+						background-color: $color-snow;
+						border-top: $base-border;
+						color: $base-font-color;
+						text-transform: uppercase;
+						@include mq($min-width: $navbar-colapse) {
+							background-color: transparent;
+							border-top: 0;
+							position: relative;
+							@include padding(null 0);
+
+							&::before {
+								background-image: url('../images/icons/selected-indicator.png?text=fallback');
+								background-image: url('../images/icons/selected-indicator.svg');
+								background-size: contain;
+								content: '';
+								display: block;
+								height: $nav-item-desktop-hover-triangle-size;
+								margin-left: -$nav-item-desktop-hover-triangle-size;
+								transform: scaleY(0);
+								transform-origin: 50% 100%;
+								transition: transform 0.12s linear;
+								width: ($nav-item-desktop-hover-triangle-size * 2);
+								@include position(absolute, null null 0 50%);
+							}
+
+							// Hover State
+							&.sub-nav-open {
+								color: $color-purple_light;
+
+								&::before {
+									transform: scaleY(1);
+									visibility: visible;
+								}
+
+								span {
+									background-position: right -15px;
+								}
+							}
+
+							span {
+								background-image: url('../images/icons/menu-arrow.png?text=fallback');
+								background-image: url('../images/icons/menu-arrow.svg');
+								background-position: right 3px;
+								background-repeat: no-repeat;
+								background-size: 10px 24px;
+								padding-right: 1rem;
+								transition: all 0.12s linear;
+							}
+						}
+					}
+				}
+
+				.sub-nav {
+					background-color: $color-purple_light;
+					display: none;
+					width: 100%;
+					@include mq($min-width: $navbar-colapse) {
+						box-shadow: $boxshadow-navbar;
+						min-width: 235px;
+						z-index: $nav-bar-z + 1;
+						@include position(absolute, 100% null null 0);
+					}
+
+					> li {
+						border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+						> a {
+							background-color: transparent;
+							color: $white;
+							letter-spacing: $base-letter-spacing;
+							text-indent: $small-spacing;
+							@include mq($min-width: $navbar-colapse) {
+								text-indent: 0;
+							}
+
+							&:hover {
+								background-color: rgba(0, 0, 0, 0.05);
+								color: $white;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+$hamburger-bar-width: 30px;
+$hamburger-bar-height: $hamburger-bar-width * 0.1;
+$hamburger-bar-spacing: $hamburger-bar-height * 2;
+
+.hamburger {
+	float: right;
+	height: $navbar_bottom-height;
+	@include mq($min-width: $navbar-colapse) {
+		display: none;
+	}
+
+	&__menu {
+		height: $hamburger_bar-height + $hamburger_bar-spacing * 2;
+		position: relative;
+		width: $hamburger_bar-width;
+
+		&--bar {
+			background: rgba($color-purple, 1);
+			position: relative;
+			transform: translateY($hamburger_bar-spacing);
+			transition: all 0s 0.3s;
+			@include size($hamburger_bar-width $hamburger_bar-height);
+
+			&::after,
+			&::before {
+				background-color: rgba($color-purple, 1);
+				content: '';
+				@include size($hamburger_bar-width $hamburger_bar-height);
+				@include position(absolute, null null null 0);
+			}
+
+			&::before {
+				bottom: $hamburger_bar-spacing;
+				transition: bottom 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+			}
+
+			&::after {
+				top: $hamburger_bar-spacing;
+				transition: top 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+			}
+
+			&.animate {
+				background: rgba($color-purple, 0);
+
+				&::after {
+					top: 0;
+					transform: rotate(45deg);
+					transition: top 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+				}
+
+				&::before {
+					bottom: 0;
+					transform: rotate(-45deg);
+					transition: bottom 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+				}
+			}
+		}
+	}
+}

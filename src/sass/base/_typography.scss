@@ -1,22 +1,21 @@
 html {
-	background-color: $viewport-background-color;
-	box-sizing: border-box;
-	color: $base-font-color;
-	font-family: 'BentonSans';
-	font-size: 100%;
-	line-height: $base-line-height;
-	display: flex;
+  background-color: $viewport-background-color;
+  box-sizing: border-box;
+  color: $base-font-color;
+  font-family: "BentonSans";
+  font-size: 100%;
+  line-height: $base-line-height;
 }
 
 html,
 body {
-	height: 100%;
+  height: 100%;
 }
 
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 h1,
@@ -54,6 +53,6 @@ a {
 hr {
 	border: 0;
 	border-bottom: $base-border;
-	margin: $base-spacing 0;
+	margin: $base-spacing auto;
 }
 

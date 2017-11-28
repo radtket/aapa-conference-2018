@@ -33,6 +33,7 @@ $light-gray: #ddd;
 $white: #fff;
 $black: #000;
 $color-snow: #f8f8f8;
+$color-snow-d: #c5c5c5;
 
 // Theme Colors
 $color-purple: #6b478e;
@@ -70,3 +71,6 @@ $focus-outline-offset: 2px;
 // Animations
 $base-duration: 150ms;
 $base-timing: ease;
+
+// Media Queies
+$container-max-width: 1200px;

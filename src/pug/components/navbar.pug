@@ -1,3 +1,4 @@
+include svg/svg-navbar
 header.navbar
 	section.navbar__top
 		.container
@@ -7,6 +8,8 @@ header.navbar
 						use(xmlns:xlink='http://www.w3.org/2000/xlink', xlink:href='#icon-location')
 					span May 19-23, 2018
 				li
+					svg
+						use(xmlns:xlink='http://www.w3.org/2000/xlink', xlink:href='#icon-location')
 					span New Orleans
 	section.navbar__bottom
 		.container
@@ -17,7 +20,7 @@ header.navbar
 				.hamburger__menu
 					.hamburger__menu--bar
 			nav.navbar__bottom--nav
-				ul
+				ul.nav-menu
 
 					li
 						a.has__sub-nav(href='#')
@@ -81,3 +84,6 @@ header.navbar
 								a(href='') 2015
 							li
 								a(href='') 2014
+
+.container
+	.hey hey

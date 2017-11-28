@@ -1,0 +1,6 @@
+.container {
+	@include grid-container;
+	@include padding(null $small-spacing);
+	@include margin(null auto);
+	max-width: $container-max-width;
+}

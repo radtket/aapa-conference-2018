@@ -1,9 +1,18 @@
 {
+  "plugins": [
+		"stylelint-order"
+	],
   "extends": "stylelint-config-sass-guidelines",
   "rules": {
+    "order/order": [
+			"custom-properties",
+			"declarations"
+		],
+		"order/properties-alphabetical-order": true,
     "indentation": ["tab", {
       "except": ["value"]
     }],
-    "max-nesting-depth": 4,
+    "selector-max-compound-selectors": 10,
+    "max-nesting-depth": 10,
   }
 }
