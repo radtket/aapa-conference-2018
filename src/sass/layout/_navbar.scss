@@ -1,7 +1,6 @@
 $navbar-bottom-height: 55px;
 $nav-item-mobile-height: 35px;
-$nav-item-desktop-hover-triangle-size: 10px;
-$navbar-colapse: 850px;
+$nav-item-desktop-hover-triangle-size: $small-spacing;
 $nav-bar-z: 99;
 
 .mobile-on .sub-nav {
@@ -29,14 +28,12 @@ $nav-bar-z: 99;
 			}
 
 			li {
-				color: $white;
-				display: inline-block;
-				letter-spacing: $base-letter-spacing;
+				color: $color-snow;
 				line-height: 1;
-				margin-right: $base-spacing;
-				text-transform: uppercase;
+				@extend %textNav;
 
-				> * {
+				span,
+				svg {
 					display: inherit;
 					vertical-align: middle;
 				}
@@ -106,7 +103,6 @@ $nav-bar-z: 99;
 					a {
 						cursor: pointer;
 						display: inherit;
-						font-weight: $font-weight--medium;
 						transition: all 0.12s linear;
 						@include padding(null $small-spacing);
 					}
@@ -115,7 +111,7 @@ $nav-bar-z: 99;
 						background-color: $color-snow;
 						border-top: $base-border;
 						color: $base-font-color;
-						text-transform: uppercase;
+						@extend %textNav;
 						@include mq($min-width: $navbar-colapse) {
 							background-color: transparent;
 							border-top: 0;
@@ -198,7 +194,6 @@ $nav-bar-z: 99;
 		}
 	}
 }
-
 $hamburger-bar-width: 30px;
 $hamburger-bar-height: $hamburger-bar-width * 0.1;
 $hamburger-bar-spacing: $hamburger-bar-height * 2;

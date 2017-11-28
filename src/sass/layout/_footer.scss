@@ -27,9 +27,7 @@ $material-design-line-size: $small-spacing;
 
 		&--item {
 			color: $base-font-color;
-			font-size: rem(12);
-			font-weight: $font-weight--medium;
-			text-transform: uppercase;
+			@extend %textNav;
 
 			&:hover {
 				color: $color-purple-light;
