@@ -1,0 +1,9 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "rules": {
+    "indentation": ["tab", {
+      "except": ["value"]
+    }],
+    "max-nesting-depth": 4,
+  }
+}

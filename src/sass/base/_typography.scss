@@ -1,0 +1,59 @@
+html {
+	background-color: $viewport-background-color;
+	box-sizing: border-box;
+	color: $base-font-color;
+	font-family: 'BentonSans';
+	font-size: 100%;
+	line-height: $base-line-height;
+	display: flex;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'BentonSans';
+	font-size: modular-scale(1);
+	letter-spacing: $base-letter-spacing;
+	line-height: $heading-line-height;
+	margin: 0 0 $small-spacing;
+}
+
+p {
+	margin: 0 0 $small-spacing;
+}
+
+a {
+	color: $action-color;
+	text-decoration: none;
+	transition: color $base-duration $base-timing;
+
+	&:hover {
+		color: shade($action-color, 25%);
+	}
+
+	// &:focus {
+	// 	outline: $focus-outline;
+	// 	outline-offset: $focus-outline-offset;
+	// }
+}
+
+hr {
+	border: 0;
+	border-bottom: $base-border;
+	margin: $base-spacing 0;
+}
+

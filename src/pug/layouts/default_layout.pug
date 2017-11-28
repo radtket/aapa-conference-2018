@@ -1,0 +1,20 @@
+html(lang='en')
+	head
+		block title
+		meta(charset='utf-8')
+		meta(http-equiv='x-ua-compatible', content='ie=edge')
+		title
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width,initial-scale=1')
+
+		//- Normalize
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css")
+
+		//- Base Styles
+		link(rel="stylesheet", href="css/application.css", attr)
+
+		//- Modernizr
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js")
+	body
+		include ../components/svg
+		include ../components/navbar
