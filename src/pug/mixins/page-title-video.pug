@@ -1,0 +1,10 @@
+mixin page-title-video(videoSrc, pageName)
+	section.page-section.secondary-page-title
+		.secondary-page-title__inner.text-center
+			h1 Contact Information
+			ul.breadcrumb
+				li
+					a(href='index.html') Home
+				li= pageName
+		video#video-background(autoplay='', loop='', muted='', plays-inline='')
+			source(src= videoSrc, type='video/mp4')

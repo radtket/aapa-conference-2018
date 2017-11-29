@@ -5,8 +5,8 @@
 	justify-content: center;
 
 	&::before {
-		background: $color-purple;
-		background: linear-gradient(to right, $color-purple 0%, $color-teal 100%, $color-purple-light 100%);
+		background-color: $color-purple;
+		background-image: linear-gradient(to right, $color-purple 0%, $color-teal 100%, $color-purple-light 100%);
 		content: ' ';
 		opacity: 0.6;
 		@include position(absolute, 0);
@@ -16,8 +16,7 @@
 	&__inner {
 		max-width: 80%;
 		position: relative;
-		text-align: center;
-		text-shadow: 0 7px 5px rgba(0, 0, 0, 0.45);
+		text-shadow: $fontshaow-page-title;
 
 		h1 {
 			color: $white;
@@ -25,5 +24,3 @@
 		}
 	}
 }
-
-

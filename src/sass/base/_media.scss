@@ -14,3 +14,13 @@ svg {
 	transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
 }
 
+// Video
+
+// Intro Sections Video
+#video-background {
+	min-height: 100%;
+	min-width: 100%;
+	z-index: $base-z-index - 1;
+	@include size(auto);
+	@include position(absolute, 0);
+}
