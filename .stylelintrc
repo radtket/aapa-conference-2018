@@ -14,5 +14,8 @@
     }],
     "selector-max-compound-selectors": 10,
     "max-nesting-depth": 10,
+    "selector-no-qualifying-type": [true, {
+      ignore: ["class"]
+    }]
   }
 }

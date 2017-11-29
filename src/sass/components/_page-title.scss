@@ -1,0 +1,29 @@
+.secondary-page-title {
+	align-items: center;
+	background-attachment: initial;
+	display: flex;
+	justify-content: center;
+
+	&::before {
+		background: $color-purple;
+		background: linear-gradient(to right, $color-purple 0%, $color-teal 100%, $color-purple-light 100%);
+		content: ' ';
+		opacity: 0.6;
+		@include position(absolute, 0);
+		@include size(100%);
+	}
+
+	&__inner {
+		max-width: 80%;
+		position: relative;
+		text-align: center;
+		text-shadow: 0 7px 5px rgba(0, 0, 0, 0.45);
+
+		h1 {
+			color: $white;
+			font-size: rem(48);
+		}
+	}
+}
+
+

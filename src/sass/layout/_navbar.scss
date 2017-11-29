@@ -30,7 +30,7 @@ $nav-bar-z: 99;
 			li {
 				color: $color-snow;
 				line-height: 1;
-				@extend %textNav;
+				@extend %text-nav;
 
 				span,
 				svg {
@@ -39,7 +39,7 @@ $nav-bar-z: 99;
 				}
 
 				span {
-					letter-spacing: .5px;
+					letter-spacing: 0.5px;
 				}
 
 				svg {
@@ -115,7 +115,7 @@ $nav-bar-z: 99;
 						background-color: $color-snow;
 						border-top: $base-border;
 						color: $base-font-color;
-						@extend %textNav;
+						@extend %text-nav;
 						@include mq($min-width: $navbar-colapse) {
 							background-color: transparent;
 							border-top: 0;
