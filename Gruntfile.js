@@ -86,7 +86,7 @@ module.exports = grunt => {
 			main: {
 				expand: true,
 				cwd: 'src',
-				src: ['libraries/**'],
+				src: ['libraries/**', 'fonts/**', 'video/**'],
 				dest: 'dist/',
 			},
 		},
