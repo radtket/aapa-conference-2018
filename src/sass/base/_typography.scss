@@ -63,6 +63,12 @@ hr {
 	font-size: calcRem(48);
 }
 
+%text-card-headline {
+	font-size: calcRem(18);
+	letter-spacing: $base-letter-spacing;
+	text-transform: uppercase;
+}
+
 %text-nav {
 	font-size: calcRem(12);
 	font-weight: $font-weight--medium;

@@ -2,3 +2,150 @@ extends layouts/default_layout
 include mixins/page-title-img
 block content
 	+page-title-img(`background-image: url('images/hero-images/hero__aapa-staff.jpg');`, `Contact Us`, `Contact Information`)
+	section.page-section.bg-pattern--teal
+		.container
+			.flex-container
+				figure.contact-category.text-center
+					svg
+						use(xlink:href='#contact__meetings', xmlns:xlink='http://www.w3.org/2000/xlink')
+					h3.contact-category__dept General Meetings
+					.contact-category__content
+						ul.contact-category__contacts
+							li.contact
+								svg
+									use(xlink:href='#contact__email', xmlns:xlink='http://www.w3.org/2000/xlink')
+								.contact__content
+									span.contact__content--desc Email
+									a.contact__content--value(href='mailto:meetings@aapa.org') meetings@aapa.org
+							li.contact
+								svg
+									use(xlink:href='#contact__phone', xmlns:xlink='http://www.w3.org/2000/xlink')
+								.contact__content
+									span.contact__content--desc Phone
+									a.contact__content--value(href='tel:+5713194384') (571) 319-4384
+				figure.contact-category.text-center
+					svg
+						use(xlink:href='#contact__buisness-opp', xmlns:xlink='http://www.w3.org/2000/xlink')
+					h3.contact-category__dept Business Opportunities
+					.contact-category__content
+						ul.contact-category__contacts
+							li.contact
+								svg
+									use(xlink:href='#contact__email', xmlns:xlink='http://www.w3.org/2000/xlink')
+								.contact__content
+									span.contact__content--desc Email
+									a.contact__content--value(href='mailto:businessdevelopment@aapa.org') businessdevelopment@aapa.org
+							li.contact
+								svg
+									use(xlink:href='#contact__phone', xmlns:xlink='http://www.w3.org/2000/xlink')
+								.contact__content
+									span.contact__content--desc Phone
+									a.contact__content--value(href='tel:+8004245249') (800) 424-5249
+							li.contact
+								svg
+									use(xlink:href='#contact__fax', xmlns:xlink='http://www.w3.org/2000/xlink')
+								.contact__content
+									span.contact__content--desc Fax
+									a.contact__content--value(href='tel:+5713194509') (571) 319-4509
+				figure.contact-category.text-center
+					svg
+						use(xlink:href='#contact__education', xmlns:xlink='http://www.w3.org/2000/xlink')
+					h3.contact-category__dept Education/CME
+					.contact-category__content
+						ul.contact-category__contacts
+							li.contact
+								svg
+									use(xlink:href='#contact__email', xmlns:xlink='http://www.w3.org/2000/xlink')
+								.contact__content
+									span.contact__content--desc Email
+									a.contact__content--value(href='mailto:cme@aapa.org') cme@aapa.org
+							li.contact
+								svg
+									use(xlink:href='#contact__phone', xmlns:xlink='http://www.w3.org/2000/xlink')
+								.contact__content
+									span.contact__content--desc Phone
+									a.contact__content--value(href='tel:+5713194421') (571) 319-4421
+				figure.contact-category.text-center
+					svg
+						use(xlink:href='#contact__registration', xmlns:xlink='http://www.w3.org/2000/xlink')
+					h3.contact-category__dept Registration
+					.contact-category__content
+						ul.contact-category__contacts
+							li.contact
+								svg
+									use(xlink:href='#contact__email', xmlns:xlink='http://www.w3.org/2000/xlink')
+								.contact__content
+									span.contact__content--desc Attendee
+									a.contact__content--value(href='mailto:aapa@experient-inc.com') aapa@experient-inc.com
+							li.contact
+								svg
+									use(xlink:href='#contact__email', xmlns:xlink='http://www.w3.org/2000/xlink')
+								.contact__content
+									span.contact__content--desc Exhibitor
+									a.contact__content--value(href='mailto:aapaexh@experient-inc.com') aapaexh@experient-inc.com
+							li.contact
+								svg
+									use(xlink:href='#contact__phone', xmlns:xlink='http://www.w3.org/2000/xlink')
+								.contact__content
+									span.contact__content--desc Domestic
+									a.contact__content--value(href='tel:+8004245249') (800) 424-5249
+							li.contact
+								svg
+									use(xlink:href='#contact__phone--int', xmlns:xlink='http://www.w3.org/2000/xlink')
+								.contact__content
+									span.contact__content--desc International
+									a.contact__content--value(href='tel:+8479965829') (847) 996-5829
+				figure.contact-category.text-center
+					svg
+						use(xlink:href='#contact__housing', xmlns:xlink='http://www.w3.org/2000/xlink')
+					h3.contact-category__dept Housing
+					.contact-category__content
+						ul.contact-category__contacts
+							li.contact
+								svg
+									use(xlink:href='#contact__email', xmlns:xlink='http://www.w3.org/2000/xlink')
+								.contact__content
+									span.contact__content--desc Attendee
+									a.contact__content--value(href='mailto:aapa@experient-inc.com') aapa@experient-inc.com
+							li.contact
+								svg
+									use(xlink:href='#contact__email', xmlns:xlink='http://www.w3.org/2000/xlink')
+								.contact__content
+									span.contact__content--desc Exhibitor
+									a.contact__content--value(href='mailto:aapaexh@experient-inc.com') aapaexh@experient-inc.com
+							li.contact
+								svg
+									use(xlink:href='#contact__phone', xmlns:xlink='http://www.w3.org/2000/xlink')
+								.contact__content
+									span.contact__content--desc Domestic
+									a.contact__content--value(href='tel:+8004245249') (800) 424-5249
+							li.contact
+								svg
+									use(xlink:href='#contact__phone--int', xmlns:xlink='http://www.w3.org/2000/xlink')
+								.contact__content
+									span.contact__content--desc International
+									a.contact__content--value(href='tel:+8479965829') (847) 996-5829
+				figure.contact-category.text-center
+					svg
+						use(xlink:href='#contact__customer-care', xmlns:xlink='http://www.w3.org/2000/xlink')
+					h3.contact-category__dept Customer Care Team
+					.contact-category__content
+						ul.contact-category__contacts
+							li.contact
+								svg
+									use(xlink:href='#contact__email', xmlns:xlink='http://www.w3.org/2000/xlink')
+								.contact__content
+									span.contact__content--desc Email
+									a.contact__content--value(href='mailto:membership@aapa.org') membership@aapa.org
+							li.contact
+								svg
+									use(xlink:href='#contact__phone', xmlns:xlink='http://www.w3.org/2000/xlink')
+								.contact__content
+									span.contact__content--desc Phone
+									a.contact__content--value(href='tel:+7038362272') (703) 836-2272
+							li.contact
+								svg
+									use(xlink:href='#contact__fax', xmlns:xlink='http://www.w3.org/2000/xlink')
+								.contact__content
+									span.contact__content--desc Fax
+									a.contact__content--value(href='tel:+7036841924') (703) 684-1924

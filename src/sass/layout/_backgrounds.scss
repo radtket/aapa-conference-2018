@@ -1,0 +1,14 @@
+.bg-pattern--teal {
+	background: url('../images/backgrounds/bg_teal-triangles.png');
+	background-image: url('../images/backgrounds/bg_teal-triangles.svg'), none;
+}
+
+.bg-pattern--purple {
+	background: url('../images/backgrounds/bg_purple-triangles.png');
+	background-image: url('../images/backgrounds/bg_purple-triangles.svg'), none;
+
+	// Typography
+	.headline {
+		color: $white;
+	}
+}

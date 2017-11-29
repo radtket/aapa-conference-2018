@@ -41,7 +41,7 @@ $material-design-line-size: $small-spacing;
 			margin-right: $small-spacing;
 			@include size($base-spacing);
 
-			@include mq($min-width: 450px) {
+			@include mq($min-width: $footer-icon-break) {
 				margin-right: $base-spacing;
 				@include size($base-spacing * 1.25);
 			}
@@ -61,7 +61,7 @@ $material-design-line-size: $small-spacing;
 	}
 
 	&__disclaimer {
-		max-width: 450px;
+		max-width: $footer-icon-break;
 		@include grid-container;
 		@include margin(null auto);
 
@@ -69,7 +69,7 @@ $material-design-line-size: $small-spacing;
 			display: inline-block;
 			height: $large-spacing;
 			margin-bottom: $small-spacing;
-			@include mq($min-width: 450px) {
+			@include mq($min-width: $footer-icon-break) {
 				@include grid-column(3);
 			}
 
@@ -88,7 +88,7 @@ $material-design-line-size: $small-spacing;
 		&--text {
 			color: $color-gray;
 			font-size: calcRem(12);
-			@include mq($min-width: 450px) {
+			@include mq($min-width: $footer-icon-break) {
 				margin-left: $base-spacing;
 				text-align: left;
 				@include grid-column(9);
