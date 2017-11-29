@@ -38,6 +38,10 @@ $nav-bar-z: 99;
 					vertical-align: middle;
 				}
 
+				span {
+					letter-spacing: .5px;
+				}
+
 				svg {
 					fill: $color-teal;
 					margin-right: 4px;

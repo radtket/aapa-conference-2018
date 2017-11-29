@@ -1,6 +1,8 @@
 const pixRem = require('pixrem');
 const postcssFlexboxfixer = require('postcss-flexboxfixer');
 const autoPrefixer = require('autoprefixer');
+const mozjpeg = require('imagemin-mozjpeg');
+const svgo = require('imagemin-svgo');
 
 module.exports = grunt => {
 	grunt.initConfig({
@@ -92,11 +94,19 @@ module.exports = grunt => {
 		// image compress task (compress all image src/images to dist/images)
 		imagemin: {
 			dynamic: {
+				options: {
+					svgoPlugins: [
+						{ removeViewBox: true }, // don't remove the viewbox atribute from the SVG
+						{ removeUselessStrokeAndFill: true }, // don't remove Useless Strokes and Fills
+						{ removeEmptyAttrs: true }, // don't remove Empty Attributes from the SVG
+					],
+					use: [mozjpeg(), svgo()],
+				},
 				files: [
 					{
 						expand: true,
 						cwd: 'src/',
-						src: ['images/**/*.{png,jpg,gif}'],
+						src: ['images/**/*.{png,jpg,gif,svg}'],
 						dest: 'dist',
 					},
 				],

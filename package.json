@@ -44,6 +44,8 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-postcss": "^0.9.0",
     "grunt-sass": "^2.0.0",
+    "imagemin-mozjpeg": "^6.0.0",
+    "imagemin-svgo": "^6.0.0",
     "pixrem": "^4.0.1",
     "postcss-flexboxfixer": "0.0.5",
     "postcss-scss": "^1.0.2",
