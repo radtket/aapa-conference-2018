@@ -87,7 +87,7 @@ $material-design-line-size: $small-spacing;
 
 		&--text {
 			color: $color-gray;
-			font-size: rem(12);
+			font-size: calcRem(12);
 			@include mq($min-width: 450px) {
 				margin-left: $base-spacing;
 				text-align: left;

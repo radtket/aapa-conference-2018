@@ -20,7 +20,7 @@
 
 		h1 {
 			color: $white;
-			font-size: rem(48);
+			@extend %text-page-title;
 		}
 	}
 }

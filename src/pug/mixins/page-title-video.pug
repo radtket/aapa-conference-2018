@@ -1,7 +1,7 @@
-mixin page-title-video(videoSrc, pageName)
+mixin page-title-video(videoSrc, pageName, pageNameFull)
 	section.page-section.secondary-page-title
 		.secondary-page-title__inner.text-center
-			h1 Contact Information
+			h1= pageNameFull
 			ul.breadcrumb
 				li
 					a(href='index.html') Home
