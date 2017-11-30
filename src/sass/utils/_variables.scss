@@ -13,6 +13,7 @@ $font-weight--black: 900;
 // Line height
 $base-line-height: 1.5;
 $heading-line-height: 1.2;
+$lead-line-height: 1.65;
 
 // Other Sizes
 $base-border-radius: 3px;
@@ -43,6 +44,9 @@ $color-blue: #636cb2;
 
 // Secondary Theme Colors
 $color-pink: #ed3e7a;
+$color-pink-l: tint($color-pink, 20%);
+$color-pink-d: shade($color-pink, 20%);
+
 $color-lime: #c9da2a;
 $color-black: #202020;
 $color-gray: $medium-gray;
@@ -53,7 +57,8 @@ $action-color: $color-purple;
 
 // Border
 $base-border-color: $light-gray;
-$base-border: 1px solid $base-border-color;
+$base-border-size: 1px;
+$base-border: $base-border-size solid $base-border-color;
 
 // Background Colors
 $viewport-background-color: $white;

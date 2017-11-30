@@ -1,0 +1,67 @@
+$accordion-color: $color-purple-light;
+$accordion-active: darken($color-purple-light, 7%);
+$accordion-accent: darken($color-purple-light, 10%);
+
+.accordion {
+	box-shadow: $boxshadow-large;
+
+	&::after {
+		background-color: $accordion-accent;
+		content: '';
+		display: block;
+		height: 1rem;
+		width: 100%;
+	}
+
+	> dt {
+		@extend %accordion-title;
+
+		> a {
+			background-color: $color-purple-light;
+			border-bottom: 1px solid $accordion-accent;
+			color: $white;
+			display: block;
+			padding: 1rem;
+			padding-right: $base-spacing + $small-spacing;
+			position: relative;
+			transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+
+			&:hover {
+				background-color: $accordion-active;
+			}
+
+			&.active {
+				background-color: $accordion-active;
+				color: $color-teal;
+				cursor: default;
+
+				&::after {
+					background-image: url('../images/icons/accordion-plus-teal.png?text=fallback');
+					background-image: url('../images/icons/accordion-plus-teal.svg');
+					transform: rotate(-225deg);
+					@include size(1rem);
+					@include margin((-0.5rem) (-0.5rem) null null);
+				}
+			}
+
+			&::after {
+				background-image: url('../images/icons/accordion-plus.png?text=fallback');
+				background-image: url('../images/icons/accordion-plus.svg');
+				background-size: contain;
+				content: '';
+				display: block;
+				transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+				@include position(absolute, 50% $base-spacing null null);
+				@include size($small-spacing);
+				@include margin((-$x-small-spacing) (-$x-small-spacing) null null);
+			}
+		}
+	}
+
+	> dd {
+		background-color: $color-snow;
+		line-height: $lead-line-height;
+		padding: $base-spacing;
+	}
+}
+

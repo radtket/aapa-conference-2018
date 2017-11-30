@@ -69,6 +69,12 @@ hr {
 	text-transform: uppercase;
 }
 
+%accordion-title {
+	font-size: rem(14);
+	letter-spacing: $base-letter-spacing;
+	text-transform: uppercase;
+}
+
 %text-nav {
 	font-size: calcRem(12);
 	font-weight: $font-weight--medium;

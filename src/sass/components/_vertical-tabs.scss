@@ -1,0 +1,120 @@
+$tab-border: $base-border-size solid $color-pink-d;
+
+.vertical-tabs {
+	border-radius: $base-border-radius;
+	border-top: $tab-border;
+	margin-bottom: $base-spacing;
+	@include clearfix;
+	@include mq($max-width: $cards-brk-sm) {
+		border: $tab-border;
+	}
+
+	&__nav {
+		display: none;
+		@include mq($min-width: $cards-brk-sm) {
+			border-left: $tab-border;
+			display: inline-block;
+			float: left;
+			width: 20%;
+			width: 235px; // tabs-content calc(100% - 235px);
+		}
+
+		&--item {
+			@include mq($min-width: $cards-brk-sm) {
+				background-color: $color-snow;
+				border-bottom: $tab-border;
+				color: $color-black;
+				cursor: pointer;
+				display: block;
+				font-weight: $font-weight--medium;
+				margin-right: -$base-border-size;
+				position: relative;
+				@include padding($small-spacing $x-small-spacing $small-spacing ($small-spacing + $x-small-spacing));
+
+				&:hover {
+					background-color: $color-pink-l;
+					color: $color-black;
+
+					&::after {
+						background-color: tint($color-pink-d, 20%);
+					}
+				}
+
+				&::after {
+					background-color: transparent;
+					content: '';
+					display: block;
+					height: 100%;
+					width: $x-small-spacing;
+					@include position(absolute, 0 null 0 0);
+				}
+
+				&.is-active {
+					background-color: $color-pink;
+					color: $black;
+
+					&::after {
+						background-color: $color-pink-d;
+					}
+				}
+			}
+		}
+	}
+
+	.vertical-tab--content {
+		@include mq($min-width: $cards-brk-sm) {
+			background-color: $color-pink;
+			display: inline-block;
+			position: relative;
+			width: 80%;
+			width: calc(100% - 235px); // tabs navsize 235px
+
+			&::after {
+				background-color: $color-pink-d;
+				content: '';
+				display: block;
+				height: 1rem;
+				width: 100%;
+			}
+		}
+
+		&--item {
+			background-color: $color-pink;
+			padding: $base-spacing;
+
+			@include mq($min-width: $cards-brk-sm) {
+				display: none;
+				min-height: 400px;
+			}
+		}
+	}
+
+	.vertical-tab-accordion-heading {
+		background-color: $color-pink-l;
+		border-top: $tab-border;
+		color: $color-black;
+		cursor: pointer;
+		display: block;
+		font-weight: $font-weight--medium;
+		padding: $small-spacing $base-spacing;
+		@include mq($min-width: $cards-brk-sm) {
+			display: none;
+		}
+
+		&:focus,
+		&:hover,
+		&.is-active {
+			background-color: $color-pink;
+			color: $black;
+
+			&:focus,
+			&:hover {
+				color: inherit;
+			}
+		}
+
+		&:first-child {
+			border-top: 0;
+		}
+	}
+}

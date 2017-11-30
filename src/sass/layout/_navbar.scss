@@ -139,7 +139,7 @@ $nav-bar-z: 99;
 
 							// Hover State
 							&.sub-nav-open {
-								color: $color-purple_light;
+								color: $color-purple-light;
 
 								&::before {
 									transform: scaleY(1);
@@ -165,7 +165,7 @@ $nav-bar-z: 99;
 				}
 
 				.sub-nav {
-					background-color: $color-purple_light;
+					background-color: $color-purple-light;
 					display: none;
 					width: 100%;
 					@include mq($min-width: $navbar-colapse) {

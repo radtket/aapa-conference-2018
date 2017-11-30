@@ -2,3 +2,237 @@ extends layouts/default_layout
 include mixins/page-title-img
 block content
 	+page-title-img(`background-image: url('images/hero-images/hero__faq-alt.jpg');`, `FAQs`, `Frequently Asked Questions`)
+
+	section.page-section.bg-pattern--teal
+		.container
+			.vertical-tabs
+				nav.vertical-tabs__nav
+					a.js-vertical-tab.vertical-tabs__nav--item.is-active(href='javascript:void(0)', rel='tab1') General Information
+					a.js-vertical-tab.vertical-tabs__nav--item(href='javascript:void(0)', rel='tab2') Education & CME
+					a.js-vertical-tab.vertical-tabs__nav--item(href='javascript:void(0)', rel='tab3') Requesting Event Space
+					a.js-vertical-tab.vertical-tabs__nav--item(href='javascript:void(0)', rel='tab4') Exhibits
+					a.js-vertical-tab.vertical-tabs__nav--item(href='javascript:void(0)', rel='tab5') Sponsorships
+					a.js-vertical-tab.vertical-tabs__nav--item(href='javascript:void(0)', rel='tab6') Housing & Registration
+				.vertical-tab--content
+					a.js-vertical-tab-accordion-heading.vertical-tab-accordion-heading.is-active(href='', rel='tab1') General Information
+					#tab1.js-vertical-tab-content.vertical-tab--content--item
+						// Accordion #1
+						dl.accordion
+							dt
+								a(href='') Where and when is the AAPA 2018 Conference?
+							dd
+								p
+									| The conference will be held Saturday, May 19, 2018 – Wednesday, May 23, 2018 in New Orleans, Louisiana. All conference events will take place inside the Ernest N. Morial Convention Center, 900 Convention Center Blvd, New Orleans, LA 70130, and the Hilton New Orleans Riverside, 2 Poydras St., New Orleans, LA 70130.
+							dt
+								a(href='') Where are the future AAPA conferences?
+							dd
+								ul
+									li AAPA 2019 | May 18 – 22, Denver, CO
+									li AAPA 2020 | May 16 – 20, Nashville, TN
+									li AAPA 2021 | May 22 – 26, Philadelphia, PA
+									li AAPA 2022 | May 21-25,  Indianapolis, IN
+							dt
+								a(href='') How much does it cost to register?
+							dd
+								p
+									| See our registration pricing -- and
+									a(href='https://www.aapa.org/conference/register/') register today
+									| !
+							dt
+								a(href='') Where should I stay during AAPA 2018?
+							dd
+								p
+									| Save $200 on your registration by staying in the official AAPA hotel block. You can book your room with no prepayment or deposit during the registration process.
+									a(href='https://www.aapa.org/conference/register/') Register now!
+							dt
+								a(href='') Why should I book my hotel room through AAPA?
+							dd
+								ul.event__details--list
+									li There is no prepayment or deposit at the time of booking.
+									li You can receive official AAPA 2018 conference deliveries to your guest room.
+									li
+										| When attendees book their rooms through AAPA, it helps us negotiate lower room rates and lower conference expenses. This allows us to keep registration rates lower.
+									li You will be surrounded by your fellow PAs and PA students.
+									li You can save $200 on your registration fee.
+							dt
+								a(href='') Can I bring a guest to the conference?
+							dd
+								p
+									| Yes, guest passes are available for purchase on site at the conference. Guests must be 18 years of age or older and are only allowed in the Exhibit Hall and the General Session.
+						// END // Accordion #1
+					a.js-vertical-tab-accordion-heading.vertical-tab-accordion-heading(href='', rel='tab2') Education & CME
+					#tab2.js-vertical-tab-content.vertical-tab--content--item
+						// Accordion #2
+						dl.accordion
+							// Accordion Item
+							dt
+								a(href='') How many CME credits can I potentially earn at this meeting?
+							dd
+								p
+									| As with all CME, conference CME credit is awarded on an hour for hour basis. Sessions are generally scheduled for 60 minutes which equals one credit.
+								p
+									| Self-assessment CME will receive an additional 50 percent weighting when logging with NCCPA. PAs should be aware that the extra weighting for self-assessment activities is only relevant to NCCPA certification. States that require CME for license renewal purposes do not apply any additional weighting for self-assessment CME and PAs must claim those credits exactly as awarded on their CME certificates.
+								p
+									| The maximum total number of credits available is between 39 and 42 credits, depending on what you attend.
+							// END // Accordion Item
+							// Accordion Item
+							dt
+								a(href='') Why should I attend Self-Assessment sessions?
+							dd
+								p
+									| In recognition of the value of self-assessment and its role in continuous professional development, NCCPA is now offering an additional incentive to encourage PA participation in self-assessment activities. For all activities approved for AAPA Category 1 Self-Assessment CME credit, NCCPA will now apply an additional 50% weighting when those self-assessment credits are logged for NCCPA certification maintenance purposes. In other words, if a PA logs 20 AAPA Category 1 Self-assessment CME credits with NCCPA, they will count as 30 of their total 100 credit requirements for that 2-year CME cycle.
+								p
+									| PAs should be aware that the extra weighting for self-assessment activities is only relevant to NCCPA certification and NCCPA will automatically apply the extra weighting in their logging system. PAs should log self-assessment credits exactly as they are reflected on their CME certificates.
+									strong
+										| States that require CME for license renewal purposes do not apply any additional weighting for self-assessment
+									|  and PAs must claim those credits exactly as awarded on their CME certificates.
+							// END // Accordion Item
+							// Accordion Item
+							dt
+								a(href='') What are Meet the Expert (MTE) Sessions?
+							dd
+								p
+									| MTE Sessions feature a blend of lecture-based and case-based content, presented by facilitators who guide discussion on a specific topic. They are designed for PAs practicing in the relevant specialty for more than 5 years. These sessions will be available for purchase when registration opens on November 1, 2017.
+							// END // Accordion Item
+							// Accordion Item
+							dt
+								a(href='') What are Speak Like a Pro (SLaP) Sessions?
+							dd
+								p
+									| Speak Like a Pro (SLaP) is a small group interactive professional development opportunity for PAs interested in becoming better speakers. Participants make brief presentations that will be videotaped and critiqued by experts. These sessions will be available for purchase when registration opens November 1, 2017.
+							// END // Accordion Item
+							// Accordion Item
+							dt
+								a(href='') Are there any hands-on workshops available? How do I sign up for them?
+							dd
+								p
+									| Workshops at AAPA 2018 aim to provide in-depth practical instruction to enhance your clinical skills, covering topics from reading EKGs and knot-tying to using bedside ultrasound. You can purchase your tickets during the conference registration process, which opens November 1, 2017.
+							// END // Accordion Item
+							// Accordion Item
+							dt
+								a(href='') What if I can’t attend but still want to earn CME credit?
+							dd
+								p
+									| AAPA Conference on Demand gives you online access to sessions recorded at AAPA 2018 and is available for purchase through Learning Central. The full list of sessions to be captured in New Orleans will not be available until April 2018 as it is dependent on individual speakers giving permission for capture. The content is the presentation slides synchronized with the audio of the speaker’s voice. You must complete an evaluation and clinical questions at the conclusion of the presentation to be able to claim credit.
+								p
+									| CME from
+									a(href='https://www.aapa.org/learning-central/cme-on-demand/conference-on-demand/') AAPA 2017 in Las Vegas
+									|  is available now.
+							// END // Accordion Item
+							// END // Accordion #2
+					a.js-vertical-tab-accordion-heading.vertical-tab-accordion-heading(href='', rel='tab3') Requesting Event Space
+					#tab3.js-vertical-tab-content.vertical-tab--content--item
+						// Accordion #3
+						dl.accordion
+							// Accordion Item
+							dt
+								a(href='')
+									| How do I request space for a constituent organization, alumni or specialty group event?
+							dd
+								p
+									| Fill out the
+									a(href='https://www.formsite.com/aapa/form881/index.html') Event Request Form
+									|  with all your events details. AAPA will assign space and send confirmations in January of 2018. Event request must be received by May 1, 2018, to be included in the online conference scheduler and AAPA App
+							// END // Accordion Item
+							// END // Accordion #3
+					a.js-vertical-tab-accordion-heading.vertical-tab-accordion-heading(href='', rel='tab4') Exhibits
+					#tab4.js-vertical-tab-content.vertical-tab--content--item
+						// Accordion #4
+						dl.accordion
+							// Accordion Item
+							dt
+								a(href='') Why should I exhibit at AAPA 2018?
+							dd
+								p
+									| Conference attendees are extremely interested in new products and information that could better patient care, as well as improve their efficiencies as a healthcare provider.
+							// END // Accordion Item
+							// Accordion Item
+							dt
+								a(href='') How do I become an exhibitor for AAPA 2018?
+							dd
+								p
+									a(href='http://s23.a2zinc.net/clients/aapas/AC18/Public/MainHall.aspx?ID=42&sortMenu=101000') Register now to exhibit
+									| ! If you have questions,contact Tony Manigross at
+									a(href='mailto:businessdevelopment@aapa.org') businessdevelopment@aapa.org
+									|  or 571-319-4508.
+							// END // Accordion Item
+							// END // Accordion #4
+					a.js-vertical-tab-accordion-heading.vertical-tab-accordion-heading(href='', rel='tab5') Sponsorships
+					#tab5.js-vertical-tab-content.vertical-tab--content--item
+						// Accordion #5
+						dl.accordion
+							// Accordion Item
+							dt
+								a(href='') Why should I become a sponsor for AAPA 2018?
+							dd
+								p
+									| Sponsoring at this conference will improve visibility of your support of the PA profession as well as increase traffic to your exhibit or product theater.
+							// END // Accordion Item
+							// Accordion Item
+							dt
+								a(href='') How do I become a sponsor for AAPA 2018?
+							dd
+								p
+									a(href='http://s23.a2zinc.net/clients/aapas/AC18/Public/Content.aspx?ID=77&sortMenu=104001', rel='noopener', target='_blank') Register now as a sponsor
+									|  and if you have any questions contact Tony Manigross at
+									a(href='mailto:businessdevelopment@aapa.org') businessdevelopment@aapa.org
+									|  or 571-319-4508.
+							// END // Accordion Item
+							// END // Accordion #5
+					a.js-vertical-tab-accordion-heading.vertical-tab-accordion-heading(href='', rel='tab6') Housing & Registration
+					#tab6.js-vertical-tab-content.vertical-tab--content--item
+						// Accordion #6
+						dl.accordion
+							// Accordion Item
+							dt
+								a(href='') What is AAPA's new housing and registration discount policy?
+							dd
+								p
+									a(href='https://www.aapa.org/conference/official-housing-info-and-policies/') Read the new policy here. 
+							// END // Accordion Item
+							// Accordion Item
+							dt
+								a(href='')
+									| Why is AAPA offering a registration discount for attendees who stay in the AAPA hotel block?
+							dd
+								p
+									| In order for any organization to produce a large national conference, conference cities require the organization to reserve blocks of hotel rooms in the city to accommodate their attendees. Filling these room blocks is required to offset major costs at both the convention center and the headquarters hotel. If AAPA had to absorb these costs, registration fees would escalate considerably. In addition, if AAPA does not fill the hotel blocks, there is no negotiating power for the future. With the advent of Airbnb and discounted hotel websites, filling the blocks is an increasingly difficult task. It is becoming industry standard to require attendees to book inside the block. We have chosen to offer an incentive to stay inside the block in the form of a $200 registration discount.
+								p
+									| When you book inside the block, you have the added benefit of not being charged for the deposit until May 2018. Staying within the block affords exceptional networking opportunities and a far more cohesive conference. Our guaranteed low group rates remain the same through the time of the conference.
+							// END // Accordion Item
+							// Accordion Item
+							dt
+								a(href='') What if I live in New Orleans?
+							dd
+								p
+									| If you live within a 50-mile radius of New Orleans, you are automatically eligible for the $200 discount on your registration.
+							// END // Accordion Item
+							// Accordion Item
+							dt
+								a(href='') What if I’m sharing a room with another attendee?
+							dd
+								p
+									| The hotel block registration discount is available for all registrants, even if they are sharing a room with another attendee. The discount can be applied for up to
+									strong four people
+									|  sharing one room.
+								p
+									span(style='font-size: 1em;')
+										| To receive the discount for all individuals who are sharing a room, follow the instructions below:
+								p
+									| 1.The person who will be reserving the room in their name should
+									strong register and book the hotel room first
+									|  by
+									a(href='https://connect.aapa.org/conference/registration') logging in to the registration and housing dashboard
+									| . When this individual reaches the “Book Hotel” page, they should follow instructions to reserve the room.
+								p
+									| 2. After the room is reserved, they can fill in information for each guest. The first guest information should be the person who is holding the room in their name. Next, select the purple "Add Person" button and add up to 3 additional guests before reviewing and checking out.
+								p
+									| 3. After step two, each additional guest can
+									a(href='https://connect.aapa.org/conference/registration') register
+									| . When reaching the “Book Hotel” page, select “No Reservations at this time.” Then select “Sharing a room reserved by someone else.” You will receive a pop-up stating “Please provide the name of the person you are sharing a room with.” Enter the name of the person who reserved the room and continue. This will apply the discount at check out.
+								p
+									| Should any issues arise during this process, please contact the meetings department at
+									a(href='mailto:meetings@aapa.org', style='font-size: 1em;') meetings@aapa.org
+									span(style='font-size: 1em;') .
+							// END // Accordion Item
+							// END // Accordion #6
