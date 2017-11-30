@@ -56,6 +56,11 @@ hr {
 	margin: $base-spacing auto;
 }
 
+.lead {
+	font-size: calcRem(18);
+	font-weight: $font-weight--regular;
+	line-height: $lead-line-height;
+}
 
 // Typography Styles
 
@@ -70,7 +75,7 @@ hr {
 }
 
 %accordion-title {
-	font-size: rem(14);
+	font-size: calcRem(14);
 	letter-spacing: $base-letter-spacing;
 	text-transform: uppercase;
 }
@@ -79,4 +84,18 @@ hr {
 	font-size: calcRem(12);
 	font-weight: $font-weight--medium;
 	text-transform: uppercase;
+}
+
+
+// Groups
+// Group - Keynote
+%text-keynote-title {
+	font-size: calcRem(30);
+	font-weight: $font-weight--medium;
+	margin-bottom: 0;
+	text-transform: uppercase;
+}
+
+%text-keynote-subtitle {
+	font-size: calcRem(14);
 }

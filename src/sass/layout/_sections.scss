@@ -30,3 +30,13 @@
 		padding: 140px 0;
 	}
 }
+
+.small-section {
+	@include padding($base-spacing);
+	@include mq($min-width: 480px) {
+		@include padding($large-spacing $base-spacing);
+	}
+	@include mq($min-width: 768px) {
+		@include padding(($base-spacing * 3) $base-spacing);
+	}
+}

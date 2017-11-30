@@ -2,3 +2,35 @@ extends layouts/default_layout
 include mixins/page-title-img
 block content
 	+page-title-img(`background-image: url('images/hero-images/hero__keynote.jpg'); background-position: 50% 20%;`, `Keynote`, `Keynote Speaker`)
+
+	section.small-section
+		.container
+			figure.keynote__img
+				img(alt='', src='http://www.executivespeakers.com/Upload/Speaker/jeff-evans.jpg')
+
+				nav.social-list
+					a(href='//jeffbevans.com', target='_blank', title='Website')
+						svg
+							use(xlink:href='#icon-social-website', xmlns:xlink='http://www.w3.org/1999/xlink')
+					a(href='//instagram.com/jeff_b_evans/', target='_blank', title='Instagram')
+						svg
+							use(xlink:href='#instagram', xmlns:xlink='http://www.w3.org/1999/xlink')
+					a(href='//twitter.com/Jeff_B_Evans', target='_blank', title='Twitter')
+						svg
+							use(xlink:href='#twitter', xmlns:xlink='https://twitter.com/Jeff_B_Evans')
+					a(href='//facebook.com/mountainvisionjeff/', target='_blank', title='Facebook')
+						svg
+							use(xlink:href='#facebook', xmlns:xlink='http://www.w3.org/1999/xlink')
+
+			article.keynote__about
+				.text-center
+					h2 Jeff Evans
+					em Physician Assistant, Keynote Speaker
+				p.lead Grab your pack and join PA Jeff Evans on a journey to high peaks and exciting locales around the world. Evans is a mountaineer, world-renowned adventurer, and sought-after speaker whose stories and experiences will inspire you to connect – with your own potential, each other, the world, and all its possibilities.
+				p.lead Listen to Evans’ experiences of delivering emergency medical care on the frontlines of Mosul, Iraq. Guiding a blind climber to the summit of Mount Everest. Leading injured veterans on expeditions to Nepal, the South Pole and more as part of No Barriers Warriors, a program he co-founded. And then use his lessons in servant leadership, teamwork, communication and trust to be a guide to others in your own life, whether personally or professionally.
+				p.lead With #[strong MountainVision: Lessons Beyond the Summit] , earn AAPA Category 1 CME credit while you explore fostering success in others, nurturing your team, staying connected and more.
+
+	section.small-section.bg-pattern--purple
+		.container
+			.respnsive-video-wrapper
+				iframe(allowfullscreen='', frameborder='0', src='http://videos.sproutvideo.com/embed/4c9ad8b51d12efc4c4/7e3b60af23e29b73')

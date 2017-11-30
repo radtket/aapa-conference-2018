@@ -23,3 +23,24 @@ svg {
 	@include size(auto);
 	@include position(absolute, 0);
 }
+
+
+// Responsive Video
+.respnsive-video-wrapper {
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 56.25%; // For ratio 16:9. 75% if ratio is 4:3
+	position: relative;
+
+	embed,
+	object,
+	iframe {
+		@include position(absolute, 0 null null 0);
+		@include size(100%);
+	}
+}
+
+video {
+	height: auto;
+	max-width: 100%;
+}
