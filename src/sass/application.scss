@@ -6,6 +6,7 @@
 @import 'utils/helper-classes';
 @import 'utils/variables';
 
+@import 'base/buttons';
 @import 'base/lists';
 @import 'base/media';
 @import 'base/typography';
@@ -17,7 +18,8 @@
 
 @import 'components/accordion';
 @import 'components/breadcrumbs';
-@import 'components/contact-cards';
+@import 'components/cards-contact';
+@import 'components/cards-price';
 @import 'components/countdown';
 @import 'components/page-title';
 @import 'components/social-list';

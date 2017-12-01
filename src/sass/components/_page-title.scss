@@ -33,6 +33,7 @@ $section-title-underline-width: 33%;
 $section-title-underline-height: 4px;
 
 .section-title {
+	margin-bottom: $base-spacing;
 	&__title {
 		color: $color-black;
 		display: inline-block;

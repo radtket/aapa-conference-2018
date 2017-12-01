@@ -1,0 +1,10 @@
+@each $color-name, $color-value in $named-color-list {
+	.btn-#{$color-name} {
+		background-color: $color-value;
+
+		&:focus,
+		&:hover {
+			background-color: shade($color-value, 12%);
+		}
+	}
+}

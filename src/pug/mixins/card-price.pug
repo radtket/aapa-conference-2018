@@ -1,0 +1,9 @@
+mixin card-price(title, sale, price, colorClass)
+	figure.card.text-center
+		.card__title(class=`bg-${colorClass}`)= title
+		.card__body
+			ul
+				li= sale
+				li.old-price= price
+			p Full Price Registration
+			a.btn(href='#', class=`btn-${colorClass}`) Register Now

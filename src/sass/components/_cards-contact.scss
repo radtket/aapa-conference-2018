@@ -11,12 +11,8 @@
 .contact-category {
 	background-color: $color-snow;
 	border: $base-border;
-	border-radius: $large-border-radius;
-	box-shadow: $boxshadow-large;
-	margin: $base-spacing auto;
-	max-width: $card-max-width; // 360px
-	// overflow: hidden;
-	padding: $base-spacing $small-spacing;
+	padding: $card-inner-padding;
+	@extend %card;
 	@include mq($min-width: $cards-brk-sm) {
 		display: flex;
 		flex-basis: calc(50% - 20px);

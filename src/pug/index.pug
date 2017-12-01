@@ -4,6 +4,7 @@ include mixins/section-title-center-stacked-top-w-sub
 include mixins/section-title-left
 include mixins/section-title-center
 include mixins/section-title-double-left
+include mixins/card-price
 block content
 
   section.page-section
@@ -19,6 +20,9 @@ block content
     .container
       +section-title-center-stacked-top-w-sub(`Registration Discounts`, `.`, `Cyber Monday Prices are here!`, `From now through November 27th, Get our special discounted rate by staying in the AAPA hotel block.`)
 
+      +card-price(`Member`, `$550`, `$750`, `purple`)
+      +card-price(`Member`, `$550`, `$750`, `blue`)
+      +card-price(`Member`, `$550`, `$750`, `pink`)
 
 
 

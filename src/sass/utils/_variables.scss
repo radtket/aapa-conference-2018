@@ -57,6 +57,10 @@ $color-gray: $medium-gray;
 $base-font-color: $dark-gray;
 $action-color: $color-purple;
 
+// Color Lists
+$named-color-list: (purple, $color-purple), (teal, $color-teal), (purple-light, $color-purple-light), (blue, $color-blue), (pink, $color-pink), (lime, $color-lime);
+
+
 // Border
 $base-border-color: $light-gray;
 $base-border-size: 1px;
@@ -96,3 +100,13 @@ $page-section-md: 768px;
 $page-section-lg: 1024px;
 // Element Sizes
 $card-max-width: 360px;
+
+// Extends
+$card-inner-padding: $base-spacing $small-spacing;
+%card {
+	border-radius: $large-border-radius;
+	box-shadow: $boxshadow-large;
+	margin: $base-spacing auto;
+	max-width: $card-max-width;
+	overflow: hidden;
+}

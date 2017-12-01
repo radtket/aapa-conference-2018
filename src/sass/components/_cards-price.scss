@@ -1,0 +1,39 @@
+.card {
+	background-color: $white;
+	@extend %card;
+
+	@include mq($min-width: $page-section-md) {
+		@include grid-column(4);
+	}
+
+	&__title {
+		background-color: $color-purple;
+		color: $white;
+		font-size: rem(20);
+		padding: $small-spacing;
+	}
+
+	&__body {
+		padding: $card-inner-padding;
+
+		li {
+			display: inline-block;
+			font-size: rem(30);
+			position: relative;
+			@include margin(null $x-small-spacing);
+
+			&.old-price {
+				&::before {
+					background-color: $color-pink;
+					content: '';
+					@include position(absolute, 47% null null 0);
+					@include size(100% 6%);
+				}
+			}
+		}
+
+		p {
+			margin-bottom: $base-spacing;
+		}
+	}
+}
