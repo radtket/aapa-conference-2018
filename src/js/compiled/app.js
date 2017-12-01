@@ -206,3 +206,43 @@ $('.js-vertical-tab-accordion-heading').click(function (e) {
 // }
 
 // initializeClock('.js-countdown', new Date(2017, 12, 27));
+
+/* ---------------------------------------------
+ Tabs
+ --------------------------------------------- */
+
+function initTabs() {
+	var tabs = document.querySelector('#tabs');
+	var tabsNavItem = tabs.querySelectorAll('.agenda-tabs__nav--link');
+	var tabsContainterItem = tabs.querySelectorAll('.agenda-tabs__content-item');
+	var activeIndex = 0;
+
+	function goToTab(index) {
+		if (index !== activeIndex && index >= 0 && index <= tabsNavItem.length) {
+			// Add/Remove class for nav-item
+			tabsNavItem[activeIndex].classList.remove('is-active');
+			tabsNavItem[index].classList.add('is-active');
+			// Add/Remove class for containers
+			tabsContainterItem[activeIndex].classList.remove('is-active');
+			tabsContainterItem[index].classList.add('is-active');
+			// set activeIndex
+			activeIndex = index;
+		}
+	}
+
+	// Handle Click
+	function handClick(link, index) {
+		link.addEventListener('click', function (e) {
+			e.preventDefault();
+			goToTab(index);
+		});
+	}
+
+	// set click on all tabs-nav-items
+	for (var i = 0; i < tabsNavItem.length; i += 1) {
+		var link = tabsNavItem[i];
+		handClick(link, i);
+	}
+}
+
+document.addEventListener('DOMContentLoaded', initTabs);

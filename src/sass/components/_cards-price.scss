@@ -9,8 +9,8 @@
 	&__title {
 		background-color: $color-purple;
 		color: $white;
-		font-size: rem(20);
 		padding: $small-spacing;
+		@extend %card-title;
 	}
 
 	&__body {

@@ -14,6 +14,7 @@ $accordion-accent: darken($color-purple-light, 10%);
 	}
 
 	> dt {
+		letter-spacing: $base-letter-spacing;
 		@extend %accordion-title;
 
 		> a {

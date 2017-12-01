@@ -226,3 +226,43 @@ $('.js-vertical-tab-accordion-heading').click(function(e) {
 // }
 
 // initializeClock('.js-countdown', new Date(2017, 12, 27));
+
+/* ---------------------------------------------
+ Tabs
+ --------------------------------------------- */
+
+function initTabs() {
+	const tabs = document.querySelector('#tabs');
+	const tabsNavItem = tabs.querySelectorAll('.agenda-tabs__nav--link');
+	const tabsContainterItem = tabs.querySelectorAll('.agenda-tabs__content-item');
+	let activeIndex = 0;
+
+	function goToTab(index) {
+		if (index !== activeIndex && index >= 0 && index <= tabsNavItem.length) {
+			// Add/Remove class for nav-item
+			tabsNavItem[activeIndex].classList.remove('is-active');
+			tabsNavItem[index].classList.add('is-active');
+			// Add/Remove class for containers
+			tabsContainterItem[activeIndex].classList.remove('is-active');
+			tabsContainterItem[index].classList.add('is-active');
+			// set activeIndex
+			activeIndex = index;
+		}
+	}
+
+	// Handle Click
+	function handClick(link, index) {
+		link.addEventListener('click', e => {
+			e.preventDefault();
+			goToTab(index);
+		});
+	}
+
+	// set click on all tabs-nav-items
+	for (let i = 0; i < tabsNavItem.length; i += 1) {
+		const link = tabsNavItem[i];
+		handClick(link, i);
+	}
+}
+
+document.addEventListener('DOMContentLoaded', initTabs);

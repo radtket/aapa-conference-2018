@@ -103,6 +103,7 @@ $card-max-width: 360px;
 
 // Extends
 $card-inner-padding: $base-spacing $small-spacing;
+
 %card {
 	border-radius: $large-border-radius;
 	box-shadow: $boxshadow-large;

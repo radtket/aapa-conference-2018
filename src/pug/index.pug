@@ -25,10 +25,275 @@ block content
       +card-price(`Member`, `$550`, `$750`, `pink`)
 
 
-
-  section.page-section
+  section.page-section.bg-blue
     .container
       +section-title-left(`Agenda`, `.`)
+
+      #tabs.agenda-tabs
+        nav.agenda-tabs__nav.text-center
+          .nav_wrap
+            a.agenda-tabs__nav--link.is-active(href='#')
+              | Friday
+              span May 18
+            a.agenda-tabs__nav--link(href='#')
+              | Saturday
+              span May 19
+            a.agenda-tabs__nav--link(href='#')
+              | Sunday
+              span May 20
+            a.agenda-tabs__nav--link(href='#')
+              | Monday
+              span May 21
+            a.agenda-tabs__nav--link(href='#')
+              | Tuesday
+              span May 22
+            a.agenda-tabs__nav--link(href='#')
+              | Wednesday
+              span May 23
+        .agenda-tabs__content-item.is-active
+          .agenda-tabs__content-item--inner
+            section.agenda__tod
+              h2.agenda__tod--headline AM Events
+              .agenda__item
+                .agenda__item--time 8:00 a.m. - 6:00 p.m.
+                .agenda__item--name AAPA Board of Directors Meeting
+            section.agenda__tod
+              h2.agenda__tod--headline PM Events
+              .agenda__item
+                .agenda__item--time 1:00 p.m. - 7:00 p.m.
+                .agenda__item--name Registration Open
+              .agenda__item
+                .agenda__item--time 3:30 p.m. - 7:00 p.m.
+                .agenda__item--name House of Delegates Credentialing
+              .agenda__item
+                .agenda__item--time 6:30 p.m. - 8:00 p.m.
+                .agenda__item--name House of Delegates Reference Committee Orientation
+              .agenda__item
+                .agenda__item--time 6:00 p.m. - 8:00 p.m.
+                .agenda__item--name Student Academy Board Meeting
+        .agenda-tabs__content-item
+          .agenda-tabs__content-item--inner
+            section.agenda__tod
+              h2.agenda__tod--headline AM Events
+              .agenda__item
+                .agenda__item--time 6:30 a.m. - 6:00 p.m.
+                .agenda__item--name Registration Open
+              .agenda__item
+                .agenda__item--time 8:00 a.m. - 8:45 a.m.
+                .agenda__item--name House of Delegates Delegate Orientation
+              .agenda__item
+                .agenda__item--time 8:00 a.m. - 5:00 p.m.
+                .agenda__item--name House of Delegates Credentialing
+              .agenda__item
+                .agenda__item--time 8:00 a.m. - 12:00 p.m.
+                .agenda__item--name CME Sessions & Workshops
+              .agenda__item
+                .agenda__item--time 9:00 a.m. - 3:00 p.m.
+                .agenda__item--name Blood Drive
+              .agenda__item
+                .agenda__item--time 9:00 a.m. - 5:30 p.m.
+                .agenda__item--name Assembly of Representatives (AOR) Meeting
+              .agenda__item
+                .agenda__item--time 9:00 a.m. - 5:00 p.m.
+                .agenda__item--name House of Delegates Meeting
+            section.agenda__tod
+              h2.agenda__tod--headline PM Events
+              .agenda__item
+                .agenda__item--time 12:00 p.m. - 12:45 p.m.
+                .agenda__item--name Product Theaters
+              .agenda__item
+                .agenda__item--time 12:00 p.m. - 2:00 p.m.
+                .agenda__item--name ePoster Presentations
+              .agenda__item
+                .agenda__item--time 1:00 p.m. - 5:00 p.m.
+                .agenda__item--name CME Sessions & Workshops
+              .agenda__item
+                .agenda__item--time 5:30 p.m. - 7:00 p.m.
+                .agenda__item--name Shaking Hands & Taking Names
+              .agenda__item
+                .agenda__item--time 6:00 p.m. - 7:30 p.m.
+                .agenda__item--name House of Delegates Reception (Invitation Only)
+              .agenda__item
+                .agenda__item--time 7:00 p.m. - 8:00 p.m.
+                .agenda__item--name AAPA Distinguished Fellows Reception (Invitation Only)
+              .agenda__item
+                .agenda__item--time 5:30 p.m. - 8:00 p.m.
+                .agenda__item--name Satellite Symposia (eligible for CME)
+        .agenda-tabs__content-item
+          .agenda-tabs__content-item--inner
+            section.agenda__tod
+              h2.agenda__tod--headline AM Events
+              .agenda__item
+                .agenda__item--time 7:00 a.m. - 7:45 a.m.
+                .agenda__item--name Product Theaters
+              .agenda__item
+                .agenda__item--time 7:00 a.m. - 6:00 p.m.
+                .agenda__item--name Registration Open
+              .agenda__item
+                .agenda__item--time 8:00 a.m. - 9:00 a.m.
+                .agenda__item--name House of Delegates Credentialing
+              .agenda__item
+                .agenda__item--time 8:00 a.m. - 3:30 p.m.
+                .agenda__item--name House of Delegates Meeting
+              .agenda__item
+                .agenda__item--time 8:00 a.m. - 12:00 p.m.
+                .agenda__item--name CME Sessions & Workshops
+              .agenda__item
+                .agenda__item--time 9:00 a.m. - 11:00 a.m.
+                .agenda__item--name AAPA Career Fair
+              .agenda__item
+                .agenda__item--time 9:00 a.m. - 3:00 p.m.
+                .agenda__item--name Blood Drive
+            section.agenda__tod
+              h2.agenda__tod--headline PM Events
+              .agenda__item
+                .agenda__item--time 12:00 p.m. - 12:45 p.m.
+                .agenda__item--name Product Theaters
+              .agenda__item
+                .agenda__item--time 12:00 p.m. - 2:00 p.m.
+                .agenda__item--name AAPA Career Fair
+              .agenda__item
+                .agenda__item--time 12:00 p.m. - 2:00 p.m.
+                .agenda__item--name ePoster Presentations
+              .agenda__item
+                .agenda__item--time 1:00 p.m. - 5:30 p.m.
+                .agenda__item--name CME Sessions & Workshops
+              .agenda__item
+                .agenda__item--time 4:00 p.m. - 5:30 p.m.
+                .agenda__item--name General Session
+              .agenda__item
+                .agenda__item--time 6:00 p.m. - 7:00 p.m.
+                .agenda__item--name Constituent Organization Leadership Forum
+              .agenda__item
+                .agenda__item--time 7:00 p.m. - 8:00 p.m.
+                .agenda__item--name Constituent Organization Leadership Reception
+              .agenda__item
+                .agenda__item--time 5:30 p.m. - 8:00 p.m.
+                .agenda__item--name Satellite Symposia (eligible for CME)
+              .agenda__item
+                .agenda__item--time 7:00 p.m - 10:00 p.m.
+                .agenda__item--name PA Foundation Event
+        .agenda-tabs__content-item
+          .agenda-tabs__content-item--inner
+            section.agenda__tod
+              h2.agenda__tod--headline AM Events
+              .agenda__item
+                .agenda__item--time 7:00 a.m. - 7:45 a.m.
+                .agenda__item--name Product Theaters
+              .agenda__item
+                .agenda__item--time 7:00 a.m. - 6:00 p.m.
+                .agenda__item--name Registration Open
+              .agenda__item
+                .agenda__item--time 8:00 a.m. - 11:00 a.m.
+                .agenda__item--name CME Sessions & Workshops
+              .agenda__item
+                .agenda__item--time 8:00 a.m. - 12:00 p.m.
+                .agenda__item--name House of Delegates Meeting
+              .agenda__item
+                .agenda__item--time 8:00 a.m. - 12:00 p.m.
+                .agenda__item--name Research in Action
+              .agenda__item
+                .agenda__item--time 9:00 a.m. - 5:00 p.m.
+                .agenda__item--name Exhibit Hall Open
+            section.agenda__tod
+              h2.agenda__tod--headline PM Events
+              .agenda__item
+                .agenda__item--time 12:00 p.m. - 12:45 p.m.
+                .agenda__item--name Product Theaters
+              .agenda__item
+                .agenda__item--time 12:00 p.m. - 2:00 p.m.
+                .agenda__item--name ePoster Presentations
+              .agenda__item
+                .agenda__item--time 12:30 p.m. - 2:00 p.m.
+                .agenda__item--name Researchers Luncheon
+              .agenda__item
+                .agenda__item--time 12:30 p.m. - 3:30 p.m.
+                .agenda__item--name PA Foundation Board Meeting
+              .agenda__item
+                .agenda__item--time 1:00 p.m. - 5:00 p.m.
+                .agenda__item--name CME Sessions & Workshops
+              .agenda__item
+                .agenda__item--time 2:00 p.m. - 6:00 p.m.
+                .agenda__item--name CME Sessions & Workshops
+              .agenda__item
+                .agenda__item--time 5:00 p.m. - 6:30 p.m.
+                .agenda__item--name Veteran's Caucus Memorial Ceremony
+              .agenda__item
+                .agenda__item--time 6:30 p.m. - 7:30 p.m.
+                .agenda__item--name Veteran's Caucus Memorial Reception
+              .agenda__item
+                .agenda__item--time 5:30 p.m. - 8:00 p.m.
+                .agenda__item--name Satellite Symposia (eligible for CME)
+              .agenda__item
+                .agenda__item--time 6:00 p.m. - 7:00 p.m.
+                .agenda__item--name Program Directors Reception (Invitation Only)
+              .agenda__item
+                .agenda__item--time 7:00 p.m.
+                .agenda__item--name AAPA's National Medical Challenge Bowl
+        .agenda-tabs__content-item
+          .agenda-tabs__content-item--inner
+            section.agenda__tod
+              h2.agenda__tod--headline AM Events
+              .agenda__item
+                .agenda__item--time 6:30 a.m. - Race Start
+                .agenda__item--name PA Foundation Pacers for Health 5K Fun Run/Walk
+              .agenda__item
+                .agenda__item--time 6:30 a.m. - 7:45 a.m.
+                .agenda__item--name Satellite Symposia (eligible for CME)
+              .agenda__item
+                .agenda__item--time 7:00 a.m. - 6:00 p.m.
+                .agenda__item--name Registration Open
+              .agenda__item
+                .agenda__item--time 8:00 a.m. - 12:00 p.m.
+                .agenda__item--name Arizona State University Capstone
+              .agenda__item
+                .agenda__item--time 8:00 a.m. - 11:00 a.m.
+                .agenda__item--name CME Sessions & Workshops
+              .agenda__item
+                .agenda__item--time 9:00 a.m. - 2:30 p.m.
+                .agenda__item--name Exhibit Hall Open
+              .agenda__item
+                .agenda__item--time 11:00 a.m. - 1:00 p.m.
+                .agenda__item--name Exhibit Hall Brunch Bites
+            section.agenda__tod
+              h2.agenda__tod--headline PM Events
+              .agenda__item
+                .agenda__item--time 12:00 p.m. - 12:45 p.m.
+                .agenda__item--name Product Theaters
+              .agenda__item
+                .agenda__item--time 12:00 p.m. - 2:00 p.m.
+                .agenda__item--name ePoster Presentations
+              .agenda__item
+                .agenda__item--time 1:00 p.m. - 5:00 p.m.
+                .agenda__item--name CME Sessions & Workshops
+              .agenda__item
+                .agenda__item--time 2:00 p.m. - 6:00 p.m.
+                .agenda__item--name CME Sessions & Workshops
+              .agenda__item
+                .agenda__item--time 5:30 p.m. - 8:00 p.m.
+                .agenda__item--name Satellite Symposia (eligible for CME)
+        .agenda-tabs__content-item
+          .agenda-tabs__content-item--inner
+            section.agenda__tod
+              h2.agenda__tod--headline AM Events
+              .agenda__item
+                .agenda__item--time 6:30 a.m. - 7:45 a.m.
+                .agenda__item--name Satellite Symposia (eligible for CME)
+              .agenda__item
+                .agenda__item--time 7:00 a.m. - 3:00 p.m.
+                .agenda__item--name Registration Open
+              .agenda__item
+                .agenda__item--time 8:00 a.m. - 12:00 p.m.
+                .agenda__item--name CME Sessions & Workshops
+            section.agenda__tod
+              h2.agenda__tod--headline PM Events
+              .agenda__item
+                .agenda__item--time 12:00 p.m. - 2:00 p.m.
+                .agenda__item--name ePoster Presentations
+              .agenda__item
+                .agenda__item--time 1:00 p.m. - 5:00 p.m.
+                .agenda__item--name CME Sessions & Workshops
+
 
 
   section.page-section.bg-pattern--purple

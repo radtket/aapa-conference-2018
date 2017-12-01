@@ -99,15 +99,24 @@ hr {
 	text-transform: uppercase;
 }
 
+%card-title {
+	font-size: calcRem(20);
+}
+
 %text-card-headline {
 	font-size: calcRem(18);
 	letter-spacing: $base-letter-spacing;
 	text-transform: uppercase;
 }
 
+%text-agenda-subtitle-date {
+	font-size: rem(16);
+	line-height: $heading-line-height;
+	text-transform: uppercase;
+}
+
 %accordion-title {
 	font-size: calcRem(14);
-	letter-spacing: $base-letter-spacing;
 	text-transform: uppercase;
 }
 
