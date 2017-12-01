@@ -24,3 +24,79 @@
 		}
 	}
 }
+
+
+
+
+// Main Section Headline
+$section-title-underline-width: 33%;
+$section-title-underline-height: 4px;
+
+.section-title {
+	&__title {
+		color: $color-black;
+		display: inline-block;
+		font-size: $large-spacing;
+		margin-bottom: $large-spacing;
+		position: relative;
+
+		&::after {
+			background-color: $color-teal;
+			content: '';
+			display: inline-block;
+			@include size($section-title-underline-width $section-title-underline-height);
+			@include position(absolute, null null (-$base-spacing) 0);
+		}
+	}
+
+	&__mark {
+		color: $color-pink;
+		left: $section-title-underline-height;
+		position: relative;
+	}
+
+	&__subtitle {
+		display: block;
+	}
+
+	&__tagline {
+		@extend %text-countdown-cta-headline;
+	}
+}
+
+
+// Main Section Headline - Centered
+.section-title.text-center {
+	.section-title__title::after {
+		left: 50%;
+		margin-left: (- $section-title-underline-width / 2);
+	}
+
+	.section-title__subtitle {
+		max-width: $lead-mobile-max-width;
+		@include margin(null auto);
+	}
+}
+
+
+
+
+
+// Main Section Headline - Stacked
+.section-title--stacked {
+	display: inline-block;
+	margin-bottom: $large-spacing;
+	position: relative;
+
+	&::after {
+		background-color: $color-purple-light;
+		content: '';
+		display: inline-block;
+		@include size($section-title-underline-width $section-title-underline-height);
+		@include position(absolute, null null (-$base-spacing) 0);
+	}
+
+	&__title {
+		@extend %texted-stacked-section-title;
+	}
+}

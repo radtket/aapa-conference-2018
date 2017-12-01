@@ -14,7 +14,7 @@
       "classes": true
     }
   },
-  "plugins": ["prettier"],
+  "plugins": ["prettier", "pug"],
   "rules": {
     "no-unused-vars": [
       1,

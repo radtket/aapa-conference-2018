@@ -1,9 +1,14 @@
 //Pixels to Rems
+
 @function calcRem($size) {
-  $remSize: $size / 16;
-  @return #{$remSize}rem;
+	$rem-size: $size / 16;
+	@return #{$rem-size}rem;
 }
 
 .text-center {
 	text-align: center;
+}
+
+.mb-0 {
+	margin-bottom: 0;
 }

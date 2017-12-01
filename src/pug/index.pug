@@ -1,23 +1,32 @@
 extends layouts/default_layout
-
+include mixins/countdown
+include mixins/section-title-center-stacked-top-w-sub
+include mixins/section-title-left
+include mixins/section-title-center
+include mixins/section-title-double-left
 block content
-  .container-fluid
-    .row
-      .col-sm-4
-        .panel
-          .panel-body
-            h3 Heading
-            p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-            a.btn.btn-default(href='#', role='button') View details
-      .col-sm-4
-        .panel
-          .panel-body
-            h3 Heading
-            p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-            a.btn.btn-default(href='#', role='button') View details
-      .col-sm-4
-        .panel
-          .panel-body
-            h3 Heading
-            p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-            a.btn.btn-default(href='#', role='button') View details
+
+  section.page-section
+    .container
+      +section-title-double-left(`Real Connections`, `.`, `Real Community`, `.`)
+
+      p.lead Connect with leading CME, new career opportunities, your PA peers, New Orleans – and do it all in one place at one time, at the only national PA conference.
+      p.lead Because real learning takes place face-to-face. Real relationships thrive on shared experiences. And a real community is built on real connections. The connections you make here will make all the difference.
+
+  +countdown
+
+  section#register.page-section.bg-pattern--teal
+    .container
+      +section-title-center-stacked-top-w-sub(`Registration Discounts`, `.`, `Cyber Monday Prices are here!`, `From now through November 27th, Get our special discounted rate by staying in the AAPA hotel block.`)
+
+
+
+
+  section.page-section
+    .container
+      +section-title-left(`Agenda`, `.`)
+
+
+  section.page-section.bg-pattern--purple
+    .container
+      +section-title-center(`Special Events`, `.`)

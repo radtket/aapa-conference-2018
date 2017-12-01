@@ -68,6 +68,37 @@ hr {
 	font-size: calcRem(48);
 }
 
+
+%texted-stacked-section-title {
+	font-size: rem(30);
+	@include mq($min-width: $page-section-sm) {
+		font-size: rem(40);
+	}
+	@include mq($min-width: 1275px) {
+		font-size: rem(48);
+	}
+}
+
+
+%countdown-number {
+	font-size: rem(30);
+	line-height: $heading-line-height;
+	@include mq($min-width: $page-section-lg) {
+		font-size: rem(40);
+	}
+}
+
+%text-headline-lowercase {
+	font-size: rem(24);
+	font-weight: $font-weight--light;
+	line-height: $heading-line-height;
+}
+
+%text-countdown-cta-headline {
+	font-size: rem(20);
+	text-transform: uppercase;
+}
+
 %text-card-headline {
 	font-size: calcRem(18);
 	letter-spacing: $base-letter-spacing;
