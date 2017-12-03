@@ -1,0 +1,90 @@
+$card-event-date-width: 20%;
+
+.events {
+
+	// Slider Styles
+	.owl-stage {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.owl-item {
+		background: $color-snow;
+		cursor: pointer;
+		height: auto;
+		max-width: 100%;
+		@include margin($large-spacing null);
+		@extend %card;
+	}
+
+	&__photo {
+		display: block;
+		position: relative;
+
+		img {
+			height: auto;
+			overflow: hidden;
+		}
+
+		.date {
+			background: $color-purple-light;
+			color: $white;
+			line-height: $heading-line-height;
+			width: $card-event-date-width;
+			@extend %card-title;
+			@include padding($x-small-spacing null);
+			@include position(absolute, null null 0 0);
+
+			.month {
+				display: block;
+				@extend %text-nav;
+			}
+
+			&:nth-of-type(2) {
+				left: $card-event-date-width;
+			}
+
+			&:nth-of-type(3) {
+				left: $card-event-date-width * 2;
+			}
+
+			&:nth-of-type(4) {
+				left: $card-event-date-width * 3;
+			}
+
+			&:nth-of-type(5) {
+				left: $card-event-date-width * 4;
+			}
+
+			&__sat {
+				background: $color-purple-light;
+			}
+
+			&__sun {
+				background: shade($color-purple-light, 3%);
+			}
+
+			&__mon {
+				background: shade($color-purple-light, 6%);
+			}
+
+			&__tue {
+				background: shade($color-purple-light, 9%);
+			}
+
+			&__wed {
+				background: shade($color-purple-light, 12%);
+			}
+		}
+	}
+
+	&__text {
+		padding: $base-spacing;
+
+		h5 {
+			color: $color-purple-light;
+			font-weight: $font-weight--medium;
+			@extend %card-title;
+		}
+	}
+}

@@ -73,6 +73,6 @@ $material-design-line-size: $small-spacing;
 
 	hr {
 		border-color: $color-teal;
-		width: 12em;
+		width: $large-spacing * 4;
 	}
 }

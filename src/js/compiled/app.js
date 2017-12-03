@@ -111,56 +111,64 @@ mnThisLi.hover(function () {
 // subnavItems.forEach(subnavItem => subnavItem.addEventListener('mouseleave', navItemHide));
 
 // Toggle
-$('.accordion > dd').hide();
-$('.accordion > dt > a').click(function () {
-	if ($(this).hasClass('active')) {
-		$(this).parent().next().slideUp('easeOutExpo');
-		$(this).removeClass('active');
-	} else {
-		$(this).parent().next('dd');
-		$(this).addClass('active');
-		$(this).parent().next().slideDown('easeOutExpo');
-	}
+// $('.accordion > dd').hide();
+// $('.accordion > dt > a').click(function() {
+// 	if ($(this).hasClass('active')) {
+// 		$(this)
+// 			.parent()
+// 			.next()
+// 			.slideUp('easeOutExpo');
+// 		$(this).removeClass('active');
+// 	} else {
+// 		$(this)
+// 			.parent()
+// 			.next('dd');
+// 		$(this).addClass('active');
+// 		$(this)
+// 			.parent()
+// 			.next()
+// 			.slideDown('easeOutExpo');
+// 	}
 
-	return false;
-});
+// 	return false;
+// });
 
-// Tabs
+// // Tabs
 
-$('.js-vertical-tab-content').hide();
-$('.js-vertical-tab-content:first').show();
+// $('.js-vertical-tab-content').hide();
+// $('.js-vertical-tab-content:first').show();
 
-/* if in tab mode */
+// /* if in tab mode */
 
-$('.js-vertical-tab').click(function (e) {
-	e.preventDefault();
+// $('.js-vertical-tab').click(function(e) {
+// 	e.preventDefault();
 
-	$('.js-vertical-tab-content').hide();
-	var activeTab = $(this).attr('rel');
-	$('#' + activeTab).show();
+// 	$('.js-vertical-tab-content').hide();
+// 	const activeTab = $(this).attr('rel');
+// 	$(`#${activeTab}`).show();
 
-	$('.js-vertical-tab').removeClass('is-active');
-	$(this).addClass('is-active');
+// 	$('.js-vertical-tab').removeClass('is-active');
+// 	$(this).addClass('is-active');
 
-	$('.js-vertical-tab-accordion-heading').removeClass('is-active');
-	$('.js-vertical-tab-accordion-heading[rel^=\'' + activeTab + '\']').addClass('is-active');
-});
+// 	$('.js-vertical-tab-accordion-heading').removeClass('is-active');
+// 	$(`.js-vertical-tab-accordion-heading[rel^='${activeTab}']`).addClass('is-active');
+// });
 
-/* if in accordion mode */
+// /* if in accordion mode */
 
-$('.js-vertical-tab-accordion-heading').click(function (e) {
-	e.preventDefault();
+// $('.js-vertical-tab-accordion-heading').click(function(e) {
+// 	e.preventDefault();
 
-	$('.js-vertical-tab-content').slideUp('easeOutExpo');
-	var accordionActiveTab = $(this).attr('rel');
-	$('#' + accordionActiveTab).slideDown('easeOutExpo');
+// 	$('.js-vertical-tab-content').slideUp('easeOutExpo');
+// 	const accordionActiveTab = $(this).attr('rel');
+// 	$(`#${accordionActiveTab}`).slideDown('easeOutExpo');
 
-	$('.js-vertical-tab-accordion-heading').removeClass('is-active');
-	$(this).addClass('is-active');
+// 	$('.js-vertical-tab-accordion-heading').removeClass('is-active');
+// 	$(this).addClass('is-active');
 
-	$('.js-vertical-tab').removeClass('is-active');
-	$('.js-vertical-tab[rel^=\'' + accordionActiveTab + '\']').addClass('is-active');
-});
+// 	$('.js-vertical-tab').removeClass('is-active');
+// 	$(`.js-vertical-tab[rel^='${accordionActiveTab}']`).addClass('is-active');
+// });
 
 /* ---------------------------------------------
  Countdown Clock
@@ -211,38 +219,88 @@ $('.js-vertical-tab-accordion-heading').click(function (e) {
  Tabs
  --------------------------------------------- */
 
-function initTabs() {
-	var tabs = document.querySelector('#tabs');
-	var tabsNavItem = tabs.querySelectorAll('.agenda-tabs__nav--link');
-	var tabsContainterItem = tabs.querySelectorAll('.agenda-tabs__content-item');
-	var activeIndex = 0;
+// function initTabs() {
+// 	const tabs = document.querySelector('#tabs');
+// 	const tabsNavItem = tabs.querySelectorAll('.agenda-tabs__nav--link');
+// 	const tabsContainterItem = tabs.querySelectorAll('.agenda-tabs__content-item');
+// 	let activeIndex = 0;
 
-	function goToTab(index) {
-		if (index !== activeIndex && index >= 0 && index <= tabsNavItem.length) {
-			// Add/Remove class for nav-item
-			tabsNavItem[activeIndex].classList.remove('is-active');
-			tabsNavItem[index].classList.add('is-active');
-			// Add/Remove class for containers
-			tabsContainterItem[activeIndex].classList.remove('is-active');
-			tabsContainterItem[index].classList.add('is-active');
-			// set activeIndex
-			activeIndex = index;
+// 	function goToTab(index) {
+// 		if (index !== activeIndex && index >= 0 && index <= tabsNavItem.length) {
+// 			// Add/Remove class for nav-item
+// 			tabsNavItem[activeIndex].classList.remove('is-active');
+// 			tabsNavItem[index].classList.add('is-active');
+// 			// Add/Remove class for containers
+// 			tabsContainterItem[activeIndex].classList.remove('is-active');
+// 			tabsContainterItem[index].classList.add('is-active');
+// 			// set activeIndex
+// 			activeIndex = index;
+// 		}
+// 	}
+
+// 	// Handle Click
+// 	function handClick(link, index) {
+// 		link.addEventListener('click', e => {
+// 			e.preventDefault();
+// 			goToTab(index);
+// 		});
+// 	}
+
+// 	// set click on all tabs-nav-items
+// 	for (let i = 0; i < tabsNavItem.length; i += 1) {
+// 		const link = tabsNavItem[i];
+// 		handClick(link, i);
+// 	}
+// }
+
+// document.addEventListener('DOMContentLoaded', initTabs);
+
+$('.events').owlCarousel({
+	loop: false,
+	margin: 10,
+	nav: true,
+	navText: ['<svg><use xmlns:xlink="http://www.w3.org/2000/xlink" xlink:href="#slick-prev"></use></svg>', '<svg><use xmlns:xlink="http://www.w3.org/2000/xlink" xlink:href="#slick-next"></use></svg>'],
+	navContainerClass: 'owl-carousel__nav',
+	navClass: ['owl-carousel__nav--prev', 'owl-carousel__nav--next'],
+	navElement: 'button',
+	dotsClass: 'owl-carousel__dots',
+	dotClass: 'owl-carousel__dots--item',
+	stagePadding: 10,
+	responsive: {
+		0: {
+			items: 1,
+			center: true
+		},
+		600: {
+			items: 2
+		},
+		872: {
+			items: 3
+		},
+		1200: {
+			items: 4
+		},
+		1600: {
+			items: 5
 		}
 	}
+});
 
-	// Handle Click
-	function handClick(link, index) {
-		link.addEventListener('click', function (e) {
-			e.preventDefault();
-			goToTab(index);
-		});
-	}
+// $('.kard').on('click', () => {
+// 	$('this').toggleClass('flipped');
+// });
 
-	// set click on all tabs-nav-items
-	for (var i = 0; i < tabsNavItem.length; i += 1) {
-		var link = tabsNavItem[i];
-		handClick(link, i);
+var hotelBtn = document.querySelectorAll('.hotel-btn');
+
+function showHotelDetails() {
+	this.parentNode.querySelector('.hotel-details').classList.toggle('show-hotel-details');
+	if (this.textContent === 'View Rates') {
+		this.textContent = 'Hide Rates';
+	} else {
+		this.textContent = 'View Rates';
 	}
 }
 
-document.addEventListener('DOMContentLoaded', initTabs);
+hotelBtn.forEach(function (btn) {
+	return btn.addEventListener('click', showHotelDetails);
+});

@@ -1,17 +1,12 @@
-.bg-pattern--teal {
-	background: url('../images/backgrounds/bg_teal-triangles.png');
-	background-image: url('../images/backgrounds/bg_teal-triangles.svg'), none;
-}
+$bg-color-name-list: purple, teal, lime, pink, blue;
 
-.bg-pattern--purple {
-	background: url('../images/backgrounds/bg_purple-triangles.png');
-	background-image: url('../images/backgrounds/bg_purple-triangles.svg'), none;
-
-	// Typography
-	.headline {
-		color: $white;
+@each $bg-color in $bg-color-name-list {
+	.bg-pattern--#{$bg-color} {
+		background: url('../images/backgrounds/bg_#{$bg-color}-triangles.png');
+		background-image: url('../images/backgrounds/bg_#{$bg-color}-triangles.svg'), none;
 	}
 }
+
 
 @each $color-name, $color-value in $named-color-list {
 	.bg-#{$color-name} {

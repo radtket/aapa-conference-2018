@@ -21,6 +21,7 @@ $_button-background-color-hover: shade($white, 20%);
 	display: inline-block;
 	font-family: $base-font-family;
 	font-size: rem(12);
+	-webkit-font-smoothing: antialiased;
 	font-weight: $font-weight--medium;
 	letter-spacing: $base-letter-spacing;
 	line-height: 1;
@@ -35,7 +36,6 @@ $_button-background-color-hover: shade($white, 20%);
 	user-select: none;
 	vertical-align: middle;
 	white-space: nowrap;
-	-webkit-font-smoothing: antialiased;
 
 	&:hover {
 		background-color: $_button-background-color-hover;
@@ -56,7 +56,6 @@ $_button-background-color-hover: shade($white, 20%);
 		}
 	}
 }
-
 
 @each $color-name, $color-value in $named-color-list {
 	.btn-#{$color-name} {

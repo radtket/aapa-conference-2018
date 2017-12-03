@@ -1,8 +1,15 @@
 .container {
+	max-width: $container-max-width;
 	@include grid-container;
 	@include padding(null $small-spacing);
 	@include margin(null auto);
-	max-width: $container-max-width;
+}
+
+.container-full {
+	max-width: 100%;
+	@include grid-container;
+	@include margin(null auto);
+	@include padding(null 2%);
 }
 
 .page-section,
