@@ -1,0 +1,6 @@
+.promo-section {
+	&__headline {
+		margin-bottom: $base-spacing;
+		@extend %text-countdown-cta-headline;
+	}
+}

@@ -2,6 +2,7 @@
 
 @function calcRem($size) {
 	$rem-size: $size / 16;
+
 	@return #{$rem-size}rem;
 }
 
@@ -11,4 +12,12 @@
 
 .mb-0 {
 	margin-bottom: 0;
+}
+
+.clearfix {
+	@include clearfix;
+}
+
+.bg-scroll{
+	background-attachment: scroll !important;
 }

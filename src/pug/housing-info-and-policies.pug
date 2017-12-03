@@ -1,75 +1,77 @@
 extends layouts/default_layout
 include mixins/page-title-video
 include mixins/hotel
+include mixins/section-title-double-left
+include mixins/section-title-left-stacked-top
+include mixins/section-title-left
 block content
 	+page-title-video(`../video/video__hotels.mp4`, `Hotels & Travel`, `Hotel Policy & Rates`)
 
-	section.small-section
+	//- section.small-section
+	//- 	.container
+	//- 		.col-two-third
+	//- 			.mw_700
+	//- 				svg
+	//- 					use(xmlns:xlink='http://www.w3.org/2000/xlink', xlink:href='#clipart-new')
+	//- 				+section-title-double-left(`Housing`, `&`, `Registration Policy`, '.')
+	//- 				p.lead New this year, AAPA will be offering a $200 registration discount for attendees who book their hotel room within any of the official AAPA hotel blocks through our official housing agent, Experient. This year, you have 10 properties to choose from in the New Orleans area! You will be prompted to book your hotel during your registration process in order to receive the discount. No deposit is required to make a reservation until Friday, May 4, 2018.
+	//- 		figure.col-third
+	//- 			svg
+	//- 				use(xmlns:xlink='http://www.w3.org/2000/xlink', xlink:href='#clipart-new')
+
+
+	//- section.small-section
+	//- 	.container
+	//- 		figure.col-third
+	//- 			svg
+	//- 				use(xmlns:xlink='http://www.w3.org/2000/xlink', xlink:href='#clipart-question')
+	//- 		.col-two-third
+	//- 			.mw_700
+	//- 				svg
+	//- 					use(xmlns:xlink='http://www.w3.org/2000/xlink', xlink:href='#clipart-question')
+	//- 				+section-title-left-stacked-top(`New Policy`, `?`, `Why are we enacting this`)
+	//- 				p.lead In order to negotiate discounted hotel room rates for conference attendees, AAPA is required to fill a certain number of hotel rooms — an increasingly difficult task given the rise of discounted-hotel websites and Airbnb. When rooms aren’t filled, AAPA faces a loss. This new offered discount is an alternative to increasing registration rates to compensate for that loss.
+	//- 				p.lead Special considerations will be made for those who live in the New Orleans area and don’t require a hotel room. Contact us at the email above for more information.
+	//- 				small
+	//- 					em
+	//- 						strong Note:
+	//- 						|  Reservations made in official conference hotels through other websites (Expedia, Priceline, etc.) will not be eligible for the registration discount.
+
+
+	section.split-section
+		.clearfix.relative
+
+			.split-section-media.right
+				.split-section-media-table(style="background-image: url('../images/backgrounds/bg_pink-triangles.png')")
+					.split-section-media-cell.page-section.bg-scroll(style="background: url('../images/clipart/new.svg')")
+
+			.split-section-content.page-section.left
+				.split-section-content-wrapper
+					.split-section-content-text
+						+section-title-double-left(`Housing`, `&`, `Registration Policy`, '.')
+						p New this year, AAPA will be offering a $200 registration discount for attendees who book their hotel room within any of the official AAPA hotel blocks through our official housing agent, Experient. This year, you have 10 properties to choose from in the New Orleans area! You will be prompted to book your hotel during your registration process in order to receive the discount. No deposit is required to make a reservation until Friday, May 4, 2018.
+
+	section.split-section
+		.clearfix.relative
+
+			.split-section-media.left
+				.split-section-media-table(style="background-image: url('../images/backgrounds/bg_lime-triangles.png')")
+					.split-section-media-cell.page-section.bg-scroll(style="background: url('../images/clipart/question.svg')")
+
+			.split-section-content.page-section.right
+				.split-section-content-wrapper
+					.split-section-content-text
+						+section-title-left-stacked-top(`New Policy`, `?`, `Why are we enacting this`)
+						p In order to negotiate discounted hotel room rates for conference attendees, AAPA is required to fill a certain number of hotel rooms — an increasingly difficult task given the rise of discounted-hotel websites and Airbnb. When rooms aren’t filled, AAPA faces a loss. This new offered discount is an alternative to increasing registration rates to compensate for that loss.
+						p Special considerations will be made for those who live in the New Orleans area and don’t require a hotel room. Contact us at the email above for more information.
+						small
+							em
+								strong Note:
+								|  Reservations made in official conference hotels through other websites (Expedia, Priceline, etc.) will not be eligible for the registration discount.
+
+
+	section.page-section.bg-pattern--teal
 		.container
-			.col-two-third
-				.mw_700
-					svg
-						use(xmlns:xlink='http://www.w3.org/2000/xlink', xlink:href='#clipart__new')
-					.section-title__stacked
-						h2.section-title__stacked__title
-							| Housing
-							span.section-title__stacked__mark &
-						h2.section-title__stacked__title
-							| Registration Policy
-							span.section-title__stacked__mark .
-					p.lead
-						| New this year, AAPA will be offering a $200 registration discount for attendees who book their hotel room within any
-						| of the official AAPA hotel blocks through our official housing agent, Experient. This year, you have 10 properties
-						| to choose from in the New Orleans area! You will be prompted to book your hotel during your registration process in
-						| order to receive the discount. No deposit is required to make a reservation until Friday, May 4, 2018.
-			figure.col-third
-				svg
-					use(xmlns:xlink='http://www.w3.org/2000/xlink', xlink:href='#clipart__new')
-
-
-	section.small-section
-		.container
-			figure.col-third
-				svg
-					use(xmlns:xlink='http://www.w3.org/2000/xlink', xlink:href='#clipart__questions')
-			.col-two-third
-				.mw_700
-					svg
-						use(xmlns:xlink='http://www.w3.org/2000/xlink', xlink:href='#clipart__questions')
-					.section-title(style='text-align: left;')
-						h6.section-title__tagline Why are we enacting this
-						h2.section-title__title
-							| New Policy
-							span.section-title__mark ?
-					p.lead
-						| In order to negotiate discounted hotel room rates for conference attendees, AAPA is required to fill a certain number
-						| of hotel rooms — an increasingly difficult task given the rise of discounted-hotel websites and Airbnb. When rooms
-						| aren’t filled, AAPA faces a loss. This new offered discount is an alternative to increasing registration rates to compensate
-						| for that loss.
-					p.lead
-						| Special considerations will be made for those who live in the New Orleans area and don’t require a hotel room. Contact
-						| us at the email above for more information.
-					small
-						strong Note:
-						|  Reservations made in official conference hotels through other websites (Expedia, Priceline, etc.) will
-						| 						not be eligible for the registration discount.
-
-
-	section.promo-section.bg__pattern--teal
-		.container
-			h3.promo-section__headline Questions about this new policy?
-			a.btn(href='mailto:meetings@aapa.org') Contact Us
-
-	section.page-section
+			+section-title-left(`Hotel Rates`, `.`)
 		.container.container-flex
-			//- +hotel(`Hilton  Riverside`, `232`, `images/hotels/HiltonNewOrleansRiverside.jpg`)
-			//- +hotel(`Astor Crowne Plaza French Quarter`, `149`, `images/hotels/AstorCrownePlazaNewOrleansFrenchQuarter.jpg`)
-			//- +hotel(`Marriott New Orleans`, `217`, `images/hotels/NewOrleansMarriott.jpg`)
-			//- +hotel(`JW Marriott`, `240`, `images/hotels/JWMarriottNewOrleans.jpg`)
-			//- +hotel(`The Ritz-Carlton`, `259`, `images/hotels/TheRitzCarltonNewOrleans.jpg`)
-			//- +hotel(`Courtyard French Quarter`, `217`, `images/hotels/CourtyardNewOrleansFrenchQuarterIberville.jpg`)
-			//- +hotel(`Downtown Marriott at the Convention Center`, `229`, `images/hotels/NewOrleansDowntownMarriottattheConventionCenter.jpg`)
-			//- +hotel(`Courtyard Downtown/Convention Center`, `200`, `images/hotels/CourtyardNewOrleansDowntownConventionCenter.jpg`)
-			//- +hotel(`Hyatt Place Convention Center`, `199`, `images/hotels/HyattPlaceNewOrleansConventionCenter.jpg`)
-			//- +hotel(`Hampton Inn & Suites Convention Center`, `189`, `images/hotels/HamptonInnSuitesNew Orleans–ConventionCenter.jpg`)
-			+loop
+			+hotel-cards
