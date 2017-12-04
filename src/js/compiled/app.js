@@ -303,14 +303,14 @@ hotelBtn.forEach(function (btn) {
 	return btn.addEventListener('click', showHotelDetails);
 });
 
-function split_height_init() {
+function splitHeightInit() {
 	(function ($) {
 		$('.split-section-media-table, .split-section-content').css('height', 'auto');
 
 		if ($(window).width() > 992) {
 			$('.split-section').each(function () {
-				var split_section_height = $(this).find('.split-section-content').innerHeight();
-				$(this).find('.split-section-media-table').height(split_section_height);
+				var splitSectionHeight = $(this).find('.split-section-content').innerHeight();
+				$(this).find('.split-section-media-table').height(splitSectionHeight);
 			});
 		}
 	})(jQuery);
@@ -321,5 +321,8 @@ $(document).ready(function () {
 });
 
 $(window).resize(function () {
-	split_height_init();
+	splitHeightInit();
 });
+
+var mixitupContainer = document.querySelector('.mix-container');
+var mixer = mixitup(mixitupContainer);

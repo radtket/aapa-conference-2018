@@ -1,0 +1,20 @@
+extends layouts/default_layout
+include mixins/page-title-img
+include mixins/special-events-cards
+block content
+	+page-title-img(`background-image: url('images/backgrounds/bg_teal-triangles.svg');`, `Special Events`, `Special Events`)
+
+	section.page-section
+		.container
+			button(class="btn", type='button', data-filter='all') All
+			button(class="btn", type='button', data-filter='.saturday') Saturday
+			button(class="btn", type='button', data-filter='.sunday') Sunday
+			button(class="btn", type='button', data-filter='.monday') Monday
+			button(class="btn", type='button', data-filter='.tuesday') Tuesday
+			button(class="btn", type='button', data-filter='.wednesday') Wednesday
+
+		.container.mix-container
+			+special-events-cards
+			.gap
+			.gap
+			.gap

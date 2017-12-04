@@ -316,18 +316,18 @@ function showHotelDetails() {
 
 hotelBtn.forEach(btn => btn.addEventListener('click', showHotelDetails));
 
-function split_height_init() {
+function splitHeightInit() {
 	(function($) {
 		$('.split-section-media-table, .split-section-content').css('height', 'auto');
 
 		if ($(window).width() > 992) {
 			$('.split-section').each(function() {
-				const split_section_height = $(this)
+				const splitSectionHeight = $(this)
 					.find('.split-section-content')
 					.innerHeight();
 				$(this)
 					.find('.split-section-media-table')
-					.height(split_section_height);
+					.height(splitSectionHeight);
 			});
 		}
 	})(jQuery);
@@ -338,5 +338,8 @@ $(document).ready(() => {
 });
 
 $(window).resize(() => {
-	split_height_init();
+	splitHeightInit();
 });
+
+const mixitupContainer = document.querySelector('.mix-container');
+const mixer = mixitup(mixitupContainer);
