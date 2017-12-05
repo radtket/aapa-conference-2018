@@ -1,0 +1,41 @@
+.mix-container {
+	align-content: flex-start;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 1rem;
+}
+
+.mix,
+.gap {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.mix {
+	@extend %card;
+	@extend %event-card;
+	margin-bottom: 1rem;
+	position: relative;
+}
+
+
+/* Grid Breakpoints
+---------------------------------------------------------------------- */
+
+/* 2 Columns */
+
+.mix,
+.gap {
+	width: calc(100%/2 - (((2 - 1) * 1rem) / 2));
+}
+
+/* 3 Columns */
+
+@media screen and (min-width: 800px) {
+	.mix,
+	.gap {
+		width: calc(100%/3 - (((3 - 1) * 1rem) / 3));
+	}
+}

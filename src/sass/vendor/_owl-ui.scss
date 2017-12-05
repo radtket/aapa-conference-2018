@@ -1,3 +1,16 @@
+.events {
+	// Slider Styles
+	.owl-stage {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.owl-item {
+		@include margin($large-spacing null);
+		@extend %card;
+		@extend %event-card;
+	}
+}
+
 /* Arrows */
 $arrow-icon-height: 1.25rem;
 $slider__nav--size: 105px;

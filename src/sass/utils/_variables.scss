@@ -112,3 +112,10 @@ $card-inner-padding: $base-spacing $small-spacing;
 	max-width: $card-max-width;
 	overflow: hidden;
 }
+
+%event-card {
+	background: $color-snow;
+	cursor: pointer;
+	height: auto;
+	max-width: 100%;
+}

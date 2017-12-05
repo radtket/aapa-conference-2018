@@ -18,6 +18,7 @@
 
 	.promo-section {
 		@include padding($small-spacing null);
+
 		h5 {
 			@extend %text-card-headline;
 		}
@@ -101,7 +102,7 @@
 			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content: space-between;
-			@include margin(null -.5rem);
+			@include margin(null -0.5rem);
 		}
 	}
 
@@ -114,7 +115,7 @@
 		position: relative;
 		text-transform: uppercase;
 
-		&:before {
+		&::before {
 			background-color: $color-teal;
 			bottom: -1px;
 			content: '';
@@ -138,7 +139,7 @@
 		}
 		@include mq($min-width: $cards-brk-sm, $max-width: $page-section-lg) {
 			width: calc(50% - 1rem);
-			@include margin(null .5rem);
+			@include margin(null 0.5rem);
 
 			&:last-of-type {
 				border-bottom: $base-border;

@@ -1,6 +1,6 @@
 extends layouts/default_layout
 include mixins/page-title-img
-include mixins/special-events-cards
+include mixins/special-events-mixitup-cards
 
 block title
 	title AAPA 2018 - Special Events
@@ -25,7 +25,7 @@ block content
 			button(class="btn", type='button', data-filter='.wednesday') Wednesday
 
 		.container.mix-container
-			+special-events-cards
+			+special-events-mixitup-cards
 			.gap
 			.gap
 			.gap

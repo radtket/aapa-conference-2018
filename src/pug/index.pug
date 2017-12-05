@@ -1,4 +1,5 @@
 extends layouts/default_layout
+include mixins/special-events-cards
 block title
   title AAPA 2018
 
@@ -349,245 +350,246 @@ block content
     +section-title-center(`Special Events`, `.`)
 
     .events.owl-carousel
+      +special-events-cards
 
-      figure
-        a.events__photo(href='/shaking-hands-taking-names')
-          img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/09/AAPA2018_Web_ShakingHands.jpg', alt='')
-          span.text-center.date.date__sat
-            | 19
-            span.month MAY
-        .events__text
-          a(href='/shaking-hands-taking-names')
-            h5 Shaking Hands & Taking Names
-          p
-            | Designed just for students! Don’t miss this chance to socialize, share and network with fellow PA students.
-
-
-      figure
-        a.events__photo(href='/aapa-distinguished-fellows-reception')
-          img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/09/AAPA2018_Web_DistinguishFellow.jpg', alt='')
-          span.text-center.date.date__sat
-            | 19
-            span.month MAY
-        .events__text
-          a(href='/aapa-distinguished-fellows-reception')
-            h5 AAPA Distinguished Fellows Reception
-          p
-            | Join your Distinguished Fellow peers and mingle over appetizers and drinks at this invitation-only reception.
+      //- figure
+      //-   a.events__photo(href='/shaking-hands-taking-names')
+      //-     img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/09/AAPA2018_Web_ShakingHands.jpg', alt='')
+      //-     span.text-center.date.date__sat
+      //-       | 19
+      //-       span.month MAY
+      //-   .events__text
+      //-     a(href='/shaking-hands-taking-names')
+      //-       h5 Shaking Hands & Taking Names
+      //-     p
+      //-       | Designed just for students! Don’t miss this chance to socialize, share and network with fellow PA students.
 
 
-      figure
-        a.events__photo(href='#')
-          img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/09/AAPA2018_Web_CareerFair.jpg', alt='')
-          span.text-center.date.date__sun
-            | 20
-            span.month MAY
-        .events__text
-          a(href='')
-            h5 AAPA Career Fair
-          p Get one step closer to that first PA job, or your next career move!
+      //- figure
+      //-   a.events__photo(href='/aapa-distinguished-fellows-reception')
+      //-     img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/09/AAPA2018_Web_DistinguishFellow.jpg', alt='')
+      //-     span.text-center.date.date__sat
+      //-       | 19
+      //-       span.month MAY
+      //-   .events__text
+      //-     a(href='/aapa-distinguished-fellows-reception')
+      //-       h5 AAPA Distinguished Fellows Reception
+      //-     p
+      //-       | Join your Distinguished Fellow peers and mingle over appetizers and drinks at this invitation-only reception.
 
 
-      figure
-        a.events__photo(href='/general-session')
-          img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/10/generalspeaker.png', alt='')
-          span.text-center.date.date__sun
-            | 20
-            span.month MAY
-        .events__text
-          a(href='/general-session')
-            h5 General Session
-          p
-            | Grab your pack and join PA Jeff Evans on a journey to high peaks and exciting locales around the world at MountainVision:
-            | Lessons Beyond the Summit.
+      //- figure
+      //-   a.events__photo(href='#')
+      //-     img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/09/AAPA2018_Web_CareerFair.jpg', alt='')
+      //-     span.text-center.date.date__sun
+      //-       | 20
+      //-       span.month MAY
+      //-   .events__text
+      //-     a(href='')
+      //-       h5 AAPA Career Fair
+      //-     p Get one step closer to that first PA job, or your next career move!
 
 
-      figure
-        a.events__photo(href='/party-purpose-b-b-kings-blues-club')
-          img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/10/PartyPurpose.png', alt='')
-          span.text-center.date.date__sun
-            | 20
-            span.month MAY
-        .events__text
-          a(href='/party-purpose-b-b-kings-blues-club')
-            h5 PA Foundation Party for a Purpose @ B.B. King's Blues Club
-          p It’s a PA party in the Crescent City at B.B. King's Blues Club!
+      //- figure
+      //-   a.events__photo(href='/general-session')
+      //-     img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/10/generalspeaker.png', alt='')
+      //-     span.text-center.date.date__sun
+      //-       | 20
+      //-       span.month MAY
+      //-   .events__text
+      //-     a(href='/general-session')
+      //-       h5 General Session
+      //-     p
+      //-       | Grab your pack and join PA Jeff Evans on a journey to high peaks and exciting locales around the world at MountainVision:
+      //-       | Lessons Beyond the Summit.
 
 
-      figure
-        a.events__photo(href='/satellite-symposia')
-          img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/09/AAPA2018_Web_SatelliteSymposia2.png', alt='')
-          span.text-center.date.date__sat
-            | 19
-            span.month MAY
-          span.text-center.date.date__sun
-            | 20
-            span.month MAY
-          span.text-center.date.date__mon
-            | 21
-            span.month MAY
-          span.text-center.date.date__tue
-            | 22
-            span.month MAY
-          span.text-center.date.date__wed
-            | 23
-            span.month MAY
-        .events__text
-          a(href='/satellite-symposia')
-            h5 Satellite Symposia
-          p
-            | Satellite Symposia are non-commercial scientific sessions carrying AAPA Category 1 CME credit supported by members of
-            | the healthcare industry to complement the conference CME program.
+      //- figure
+      //-   a.events__photo(href='/party-purpose-b-b-kings-blues-club')
+      //-     img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/10/PartyPurpose.png', alt='')
+      //-     span.text-center.date.date__sun
+      //-       | 20
+      //-       span.month MAY
+      //-   .events__text
+      //-     a(href='/party-purpose-b-b-kings-blues-club')
+      //-       h5 PA Foundation Party for a Purpose @ B.B. King's Blues Club
+      //-     p It’s a PA party in the Crescent City at B.B. King's Blues Club!
 
 
-      figure
-        a.events__photo(href='#')
-          img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/09/product-theater.png', alt='')
-          span.text-center.date.date__sat
-            | 19
-            span.month MAY
-          span.text-center.date.date__sun
-            | 20
-            span.month MAY
-          span.text-center.date.date__mon
-            | 21
-            span.month MAY
-          span.text-center.date.date__tue
-            | 22
-            span.month MAY
-        .events__text
-          a(href='#')
-            h5 Product Theaters
-          p
-            | Learn about the latest products and technologies at these free 45-minute sessions that include breakfast or lunch!
+      //- figure
+      //-   a.events__photo(href='/satellite-symposia')
+      //-     img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/09/AAPA2018_Web_SatelliteSymposia2.png', alt='')
+      //-     span.text-center.date.date__sat
+      //-       | 19
+      //-       span.month MAY
+      //-     span.text-center.date.date__sun
+      //-       | 20
+      //-       span.month MAY
+      //-     span.text-center.date.date__mon
+      //-       | 21
+      //-       span.month MAY
+      //-     span.text-center.date.date__tue
+      //-       | 22
+      //-       span.month MAY
+      //-     span.text-center.date.date__wed
+      //-       | 23
+      //-       span.month MAY
+      //-   .events__text
+      //-     a(href='/satellite-symposia')
+      //-       h5 Satellite Symposia
+      //-     p
+      //-       | Satellite Symposia are non-commercial scientific sessions carrying AAPA Category 1 CME credit supported by members of
+      //-       | the healthcare industry to complement the conference CME program.
 
 
-      figure
-        a.events__photo(href='#')
-          img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/09/AAPA2018_Web_SparkSess.jpg', alt='')
-        .events__text
-          a(href='#')
-            h5 Student SPARK Sessions
-          p
-            | SPARK Sessions will give you advice and knowledge for every phase of your PA student career – and beyond!
+      //- figure
+      //-   a.events__photo(href='#')
+      //-     img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/09/product-theater.png', alt='')
+      //-     span.text-center.date.date__sat
+      //-       | 19
+      //-       span.month MAY
+      //-     span.text-center.date.date__sun
+      //-       | 20
+      //-       span.month MAY
+      //-     span.text-center.date.date__mon
+      //-       | 21
+      //-       span.month MAY
+      //-     span.text-center.date.date__tue
+      //-       | 22
+      //-       span.month MAY
+      //-   .events__text
+      //-     a(href='#')
+      //-       h5 Product Theaters
+      //-     p
+      //-       | Learn about the latest products and technologies at these free 45-minute sessions that include breakfast or lunch!
 
 
-      figure
-        a.events__photo(href='#')
-          img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/09/AAPA2018_Web_EPosters.jpg', alt='')
-          span.text-center.date.date__sat
-            | 19
-            span.month MAY
-          span.text-center.date.date__sun
-            | 20
-            span.month MAY
-          span.text-center.date.date__mon
-            | 21
-            span.month MAY
-          span.text-center.date.date__tue
-            | 22
-            span.month MAY
-        .events__text
-          a(href='#')
-            h5 ePoster and Research in Action
-          p
-            | Connect with the Latest PA research. Join us to see and share leading research by and about PAs!
+      //- figure
+      //-   a.events__photo(href='#')
+      //-     img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/09/AAPA2018_Web_SparkSess.jpg', alt='')
+      //-   .events__text
+      //-     a(href='#')
+      //-       h5 Student SPARK Sessions
+      //-     p
+      //-       | SPARK Sessions will give you advice and knowledge for every phase of your PA student career – and beyond!
 
 
-      figure
-        a.events__photo(href='/constituent-organizations')
-          img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/09/AAPA2018_Web_CoCentral.png', alt='')
-          span.text-center.date.date__sun
-            | 20
-            span.month MAY
-        .events__text
-          a(href='/constituent-organizations')
-            h5 Constituent Organizations
-          p
-            | Don’t miss out on numerous state, specialty, and special interest events taking place during conference.
+      //- figure
+      //-   a.events__photo(href='#')
+      //-     img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/09/AAPA2018_Web_EPosters.jpg', alt='')
+      //-     span.text-center.date.date__sat
+      //-       | 19
+      //-       span.month MAY
+      //-     span.text-center.date.date__sun
+      //-       | 20
+      //-       span.month MAY
+      //-     span.text-center.date.date__mon
+      //-       | 21
+      //-       span.month MAY
+      //-     span.text-center.date.date__tue
+      //-       | 22
+      //-       span.month MAY
+      //-   .events__text
+      //-     a(href='#')
+      //-       h5 ePoster and Research in Action
+      //-     p
+      //-       | Connect with the Latest PA research. Join us to see and share leading research by and about PAs!
 
 
-      figure
-        a.events__photo(href='/aapa-national-medical-challenge-bowl')
-          img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/10/challengebowl.png', alt='')
-          span.text-center.date.date__mon
-            | 21
-            span.month MAY
-        .events__text
-          a(href='/aapa-national-medical-challenge-bowl')
-            h5 AAPA National Medical Challenge Bowl
-          p
-            | Cheer on Your PA Program! This high-energy medical game show will be held on Monday, May 21 at 7 p.m. in the Ernest
-            | N. Morial Convention Center in New Orleans, LA.
+      //- figure
+      //-   a.events__photo(href='/constituent-organizations')
+      //-     img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/09/AAPA2018_Web_CoCentral.png', alt='')
+      //-     span.text-center.date.date__sun
+      //-       | 20
+      //-       span.month MAY
+      //-   .events__text
+      //-     a(href='/constituent-organizations')
+      //-       h5 Constituent Organizations
+      //-     p
+      //-       | Don’t miss out on numerous state, specialty, and special interest events taking place during conference.
 
 
-      figure
-        a.events__photo(href='/veterans-caucus-memorial-ceremony-reception')
-          img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/01/Veterans-Caucus.png', alt='')
-          span.text-center.date.date__mon
-            | 21
-            span.month MAY
-        .events__text
-          a(href='/veterans-caucus-memorial-ceremony-reception')
-            h5 Veteran's Caucus Memorial Ceremony and Reception
-          p
-            | All conference attendees are encouraged to participate in this annual event which honors fallen PAs and the profession’s
-            | military roots with music and military symbolism.
+      //- figure
+      //-   a.events__photo(href='/aapa-national-medical-challenge-bowl')
+      //-     img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/10/challengebowl.png', alt='')
+      //-     span.text-center.date.date__mon
+      //-       | 21
+      //-       span.month MAY
+      //-   .events__text
+      //-     a(href='/aapa-national-medical-challenge-bowl')
+      //-       h5 AAPA National Medical Challenge Bowl
+      //-     p
+      //-       | Cheer on Your PA Program! This high-energy medical game show will be held on Monday, May 21 at 7 p.m. in the Ernest
+      //-       | N. Morial Convention Center in New Orleans, LA.
 
 
-      figure
-        a.events__photo(href='/pacers-health-5k-fun-runwalk')
-          img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/10/FunRun.png', alt='')
-          span.text-center.date.date__tue
-            | 22
-            span.month MAY
-        .events__text
-          a(href='/pacers-health-5k-fun-runwalk')
-            h5 Pacers for Health 5K Fun Run/Walk
-          p
-            | Feel the cool breeze of the mighty Mississippi River as you run along its banks and enjoy the sights and sounds of New
-            | Orleans while supporting the PA Foundation.
+      //- figure
+      //-   a.events__photo(href='/veterans-caucus-memorial-ceremony-reception')
+      //-     img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/01/Veterans-Caucus.png', alt='')
+      //-     span.text-center.date.date__mon
+      //-       | 21
+      //-       span.month MAY
+      //-   .events__text
+      //-     a(href='/veterans-caucus-memorial-ceremony-reception')
+      //-       h5 Veteran's Caucus Memorial Ceremony and Reception
+      //-     p
+      //-       | All conference attendees are encouraged to participate in this annual event which honors fallen PAs and the profession’s
+      //-       | military roots with music and military symbolism.
 
 
-      figure
-        a.events__photo(href='/uniformed-services-symposium-uss')
-          img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/10/ussevent.png', alt='')
-          span.text-center.date.date__tue
-            | 22
-            span.month MAY
-        .events__text
-          a(href='/uniformed-services-symposium-uss')
-            h5 Uniformed Services Symposium (USS)
-          p
-            | Earn up to 7 AAPA Category 1 CME credits at this symposium designed for PAs who care for those serving our country.
+      //- figure
+      //-   a.events__photo(href='/pacers-health-5k-fun-runwalk')
+      //-     img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/10/FunRun.png', alt='')
+      //-     span.text-center.date.date__tue
+      //-       | 22
+      //-       span.month MAY
+      //-   .events__text
+      //-     a(href='/pacers-health-5k-fun-runwalk')
+      //-       h5 Pacers for Health 5K Fun Run/Walk
+      //-     p
+      //-       | Feel the cool breeze of the mighty Mississippi River as you run along its banks and enjoy the sights and sounds of New
+      //-       | Orleans while supporting the PA Foundation.
 
 
-      figure
-        a.events__photo(href='/obesity-leadership-edge-symposium')
-          img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/10/CME_Session.png', alt='')
-          span.text-center.date.date__wed
-            | 23
-            span.month MAY
-        .events__text
-          a(href='/obesity-leadership-edge-symposium')
-            h5 Obesity Leadership Edge Symposium
-          p
-            | Earn up to 7.5 AAPA Category 1 CME credits while you build skills to lead a broad-based effort in diagnosing, managing
-            | and treating patients affected by obesity.
+      //- figure
+      //-   a.events__photo(href='/uniformed-services-symposium-uss')
+      //-     img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/10/ussevent.png', alt='')
+      //-     span.text-center.date.date__tue
+      //-       | 22
+      //-       span.month MAY
+      //-   .events__text
+      //-     a(href='/uniformed-services-symposium-uss')
+      //-       h5 Uniformed Services Symposium (USS)
+      //-     p
+      //-       | Earn up to 7 AAPA Category 1 CME credits at this symposium designed for PAs who care for those serving our country.
 
 
-      figure
-        a.events__photo(href='/indian-health-service-symposium-ihs')
-          img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/10/ihsevent.png', alt='')
-          span.text-center.date.date__wed
-            | 23
-            span.month MAY
-        .events__text
-          a(href='/indian-health-service-symposium-ihs')
-            h5 Indian Health Service Symposium (IHS)
-          p
-            | Attend to earn up to 3 AAPA Category 1 CME credits and learn how you’ll find professional fulfillment in caring for
-            | these vulnerable populations.
+      //- figure
+      //-   a.events__photo(href='/obesity-leadership-edge-symposium')
+      //-     img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/10/CME_Session.png', alt='')
+      //-     span.text-center.date.date__wed
+      //-       | 23
+      //-       span.month MAY
+      //-   .events__text
+      //-     a(href='/obesity-leadership-edge-symposium')
+      //-       h5 Obesity Leadership Edge Symposium
+      //-     p
+      //-       | Earn up to 7.5 AAPA Category 1 CME credits while you build skills to lead a broad-based effort in diagnosing, managing
+      //-       | and treating patients affected by obesity.
+
+
+      //- figure
+      //-   a.events__photo(href='/indian-health-service-symposium-ihs')
+      //-     img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/10/ihsevent.png', alt='')
+      //-     span.text-center.date.date__wed
+      //-       | 23
+      //-       span.month MAY
+      //-   .events__text
+      //-     a(href='/indian-health-service-symposium-ihs')
+      //-       h5 Indian Health Service Symposium (IHS)
+      //-     p
+      //-       | Attend to earn up to 3 AAPA Category 1 CME credits and learn how you’ll find professional fulfillment in caring for
+      //-       | these vulnerable populations.
 
 
 

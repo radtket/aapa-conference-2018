@@ -1,30 +1,10 @@
-$card-event-date-width: 20%;
+.event-card {
+	$card-event-date-width: 20%;
 
-.events {
-
-	// Slider Styles
-	.owl-stage {
-		display: flex;
-		flex-wrap: wrap;
-	}
-
-	.owl-item {
-		background: $color-snow;
-		cursor: pointer;
-		height: auto;
-		max-width: 100%;
-		@include margin($large-spacing null);
-		@extend %card;
-	}
-
-	&__photo {
-		display: block;
+	&-photo {
+		display: inline-block;
+		line-height: 0;
 		position: relative;
-
-		img {
-			height: auto;
-			overflow: hidden;
-		}
 
 		.date {
 			background: $color-purple-light;
@@ -78,10 +58,10 @@ $card-event-date-width: 20%;
 		}
 	}
 
-	&__text {
+	&-text {
 		padding: $base-spacing;
 
-		h5 {
+		&-title {
 			color: $color-purple-light;
 			font-weight: $font-weight--medium;
 			@extend %card-title;
