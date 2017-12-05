@@ -1,4 +1,51 @@
 extends layouts/default_layout
+block title
+  title AAPA 2018
+
+block vendorCSS
+  link(href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css", rel="stylesheet")
+
+block vendorScripts
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js')
+
+block scripts
+  script.
+    document.addEventListener('DOMContentLoaded', initTabs);
+    initializeClock('.js-countdown', new Date(2017, 12, 27));
+    // Events Carousel
+    $('.events').owlCarousel({
+      loop: false,
+      margin: 10,
+      nav: true,
+      navText: [
+        '<svg><use xmlns:xlink="http://www.w3.org/2000/xlink" xlink:href="#slick-prev"></use></svg>',
+        '<svg><use xmlns:xlink="http://www.w3.org/2000/xlink" xlink:href="#slick-next"></use></svg>',
+      ],
+      navContainerClass: 'owl-carousel__nav',
+      navClass: ['owl-carousel__nav--prev', 'owl-carousel__nav--next'],
+      navElement: 'button',
+      dotsClass: 'owl-carousel__dots',
+      dotClass: 'owl-carousel__dots--item',
+      stagePadding: 10,
+      responsive: {
+        0: {
+          items: 1,
+          center: true,
+        },
+        600: {
+          items: 2,
+        },
+        872: {
+          items: 3,
+        },
+        1200: {
+          items: 4,
+        },
+        1600: {
+          items: 5,
+        },
+      },
+    });
 include mixins/countdown
 include mixins/section-title-center-stacked-top-w-sub
 include mixins/section-title-left

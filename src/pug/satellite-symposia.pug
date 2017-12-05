@@ -1,0 +1,50 @@
+extends layouts/default_layout
+include mixins/page-title-img
+include mixins/event-single-sidebar
+
+block title
+	title AAPA 2018 - Satellite Symposia
+
+block content
+	+page-title-img(`background-image: url('images/event-pages/ProductTheaters-hero.jpg');`, `Satellite Symposia`, `Satellite Symposia`)
+
+	section.small-section.bg-pattern--blue
+		.container
+			main.event-main
+				header.event-main-photo
+					img(src="images/event-pages/ProductTheaters-event.jpg", alt="Satellite Symposia")
+				article
+					h3 Satellite Symposia
+					p.lead Satellite Symposia are non-commercial scientific sessions carrying AAPA Category 1 CME credit supported by members of the healthcare industry to complement the conference CME program. They undergo a separate accreditation process that includes content review for bias and balance.
+					.text-center.promo-section
+						h5 Interested in hosting a Satellite Symposia?
+						div.inline-list.text-center
+							li
+								a.btn.btn-purple(href='//s23.a2zinc.net/clients/aapas/AC18/Public/Content.aspx?ID=79&sortMenu=104003') Become a Host
+				footer
+					span
+						i.fa.fa-share-alt
+						| share
+					ul.post-share
+						li
+							a(href='#')
+								i.fa.fa-facebook
+						li
+							a(href='#')
+								i.fa.fa-twitter
+						li
+							a(href='#')
+								i.fa.fa-linkedin
+						li
+							a(href='#')
+								i.fa.fa-skype
+						li
+							a(href='#')
+								i.fa.fa-behance
+
+
+			aside.event-sidebar
+				.widget
+					h4 Special Events
+					.widget-flex
+						+event-sidebar

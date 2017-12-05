@@ -2,16 +2,16 @@ doctype html
 html(lang='en')
 	head
 		block title
+			title Default title
 		meta(charset='utf-8')
 		meta(http-equiv='x-ua-compatible', content='ie=edge')
-		title
 		meta(name='description', content='')
 		meta(name='viewport', content='width=device-width,initial-scale=1')
 
 		//- Normalize
 		link(href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css", rel="stylesheet")
-		link(href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css", rel="stylesheet")
-
+		block vendorCSS
+		link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
 		//- Base Styles
 		link(href="css/application.css", rel="stylesheet")
 
@@ -26,6 +26,6 @@ html(lang='en')
 		include ../components/footer
 
 	script(src='https://code.jquery.com/jquery-1.12.4.min.js', type='text/javascript')
-	script(src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js')
-	script(src='https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.2.2/mixitup.js')
+	block vendorScripts
 	script(src='js/app.min.js', type='text/javascript')
+	block scripts

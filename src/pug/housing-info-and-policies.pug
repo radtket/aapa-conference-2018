@@ -4,6 +4,14 @@ include mixins/hotel
 include mixins/section-title-double-left
 include mixins/section-title-left-stacked-top
 include mixins/section-title-left
+block title
+	title AAPA 2018 - Hotel Policy & Rates
+block scripts
+	script.
+		var hotelBtn = document.querySelectorAll('.hotel-btn');
+		hotelBtn.forEach(function (btn) {
+			return btn.addEventListener('click', showHotelDetails);
+		});
 block content
 	+page-title-video(`../video/video__hotels.mp4`, `Hotels & Travel`, `Hotel Policy & Rates`)
 

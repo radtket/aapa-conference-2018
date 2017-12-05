@@ -1,6 +1,17 @@
 extends layouts/default_layout
 include mixins/page-title-img
 include mixins/special-events-cards
+
+block title
+	title AAPA 2018 - Special Events
+
+block vendorScripts
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.2.2/mixitup.js')
+
+block scripts
+	script.
+		const mixitupContainer = document.querySelector('.mix-container');
+		const mixer = mixitup(mixitupContainer);
 block content
 	+page-title-img(`background-image: url('images/backgrounds/bg_teal-triangles.svg');`, `Special Events`, `Special Events`)
 

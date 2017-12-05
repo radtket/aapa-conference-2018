@@ -1,0 +1,53 @@
+extends layouts/default_layout
+include mixins/page-title-img
+include mixins/event-single-sidebar
+
+block title
+	title AAPA 2018 - Product Theaters
+
+block content
+	+page-title-img(`background-image: url('images/event-pages/ProductTheaters-hero.jpg');`, `Product Theaters`, `Product Theaters`)
+
+	section.small-section.bg-pattern--blue
+		.container
+			main.event-main
+				header.event-main-photo
+					img(src="images/event-pages/ProductTheaters-event.jpg", alt="alt")
+				article
+					h3 Product Theaters
+					p.lead Learn about the latest products and technologies at these free 45-minute sessions that include breakfast or lunch!*
+					p
+						em
+							small *Product Theaters are not CME-eligible and are limited to 350 participants on a first-come, first-served basis. Not all days include both a breakfast and lunch session.
+					.text-center.promo-section
+						h5 Looking to sponsor a product theater?
+						div.inline-list.text-center
+							li
+								a.btn.btn-purple(href='http://s23.a2zinc.net/clients/aapas/AC18/Public/Content.aspx?ID=78&sortMenu=104002', target='_blank', rel='noopener') Become a Sponsor
+				footer
+					span
+						i.fa.fa-share-alt
+						| share
+					ul.post-share
+						li
+							a(href='#')
+								i.fa.fa-facebook
+						li
+							a(href='#')
+								i.fa.fa-twitter
+						li
+							a(href='#')
+								i.fa.fa-linkedin
+						li
+							a(href='#')
+								i.fa.fa-skype
+						li
+							a(href='#')
+								i.fa.fa-behance
+
+
+			aside.event-sidebar
+				.widget
+					h4 Special Events
+					.widget-flex
+						+event-sidebar

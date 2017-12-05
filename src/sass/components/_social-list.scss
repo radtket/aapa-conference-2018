@@ -2,6 +2,7 @@
 	a {
 		display: inline-block;
 		margin-right: $small-spacing;
+		vertical-align: middle;
 		@include size($base-spacing);
 
 		@include mq($min-width: $footer-icon-break) {

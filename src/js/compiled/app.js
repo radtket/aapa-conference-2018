@@ -111,182 +111,139 @@ mnThisLi.hover(function () {
 // subnavItems.forEach(subnavItem => subnavItem.addEventListener('mouseleave', navItemHide));
 
 // Toggle
-// $('.accordion > dd').hide();
-// $('.accordion > dt > a').click(function() {
-// 	if ($(this).hasClass('active')) {
-// 		$(this)
-// 			.parent()
-// 			.next()
-// 			.slideUp('easeOutExpo');
-// 		$(this).removeClass('active');
-// 	} else {
-// 		$(this)
-// 			.parent()
-// 			.next('dd');
-// 		$(this).addClass('active');
-// 		$(this)
-// 			.parent()
-// 			.next()
-// 			.slideDown('easeOutExpo');
-// 	}
+$('.accordion > dd').hide();
+$('.accordion > dt > a').click(function () {
+	if ($(this).hasClass('active')) {
+		$(this).parent().next().slideUp('easeOutExpo');
+		$(this).removeClass('active');
+	} else {
+		$(this).parent().next('dd');
+		$(this).addClass('active');
+		$(this).parent().next().slideDown('easeOutExpo');
+	}
 
-// 	return false;
-// });
+	return false;
+});
 
-// // Tabs
+// Tabs
 
-// $('.js-vertical-tab-content').hide();
-// $('.js-vertical-tab-content:first').show();
+$('.js-vertical-tab-content').hide();
+$('.js-vertical-tab-content:first').show();
 
-// /* if in tab mode */
+/* if in tab mode */
 
-// $('.js-vertical-tab').click(function(e) {
-// 	e.preventDefault();
+$('.js-vertical-tab').click(function (e) {
+	e.preventDefault();
 
-// 	$('.js-vertical-tab-content').hide();
-// 	const activeTab = $(this).attr('rel');
-// 	$(`#${activeTab}`).show();
+	$('.js-vertical-tab-content').hide();
+	var activeTab = $(this).attr('rel');
+	$('#' + activeTab).show();
 
-// 	$('.js-vertical-tab').removeClass('is-active');
-// 	$(this).addClass('is-active');
+	$('.js-vertical-tab').removeClass('is-active');
+	$(this).addClass('is-active');
 
-// 	$('.js-vertical-tab-accordion-heading').removeClass('is-active');
-// 	$(`.js-vertical-tab-accordion-heading[rel^='${activeTab}']`).addClass('is-active');
-// });
+	$('.js-vertical-tab-accordion-heading').removeClass('is-active');
+	$('.js-vertical-tab-accordion-heading[rel^=\'' + activeTab + '\']').addClass('is-active');
+});
 
-// /* if in accordion mode */
+/* if in accordion mode */
 
-// $('.js-vertical-tab-accordion-heading').click(function(e) {
-// 	e.preventDefault();
+$('.js-vertical-tab-accordion-heading').click(function (e) {
+	e.preventDefault();
 
-// 	$('.js-vertical-tab-content').slideUp('easeOutExpo');
-// 	const accordionActiveTab = $(this).attr('rel');
-// 	$(`#${accordionActiveTab}`).slideDown('easeOutExpo');
+	$('.js-vertical-tab-content').slideUp('easeOutExpo');
+	var accordionActiveTab = $(this).attr('rel');
+	$('#' + accordionActiveTab).slideDown('easeOutExpo');
 
-// 	$('.js-vertical-tab-accordion-heading').removeClass('is-active');
-// 	$(this).addClass('is-active');
+	$('.js-vertical-tab-accordion-heading').removeClass('is-active');
+	$(this).addClass('is-active');
 
-// 	$('.js-vertical-tab').removeClass('is-active');
-// 	$(`.js-vertical-tab[rel^='${accordionActiveTab}']`).addClass('is-active');
-// });
+	$('.js-vertical-tab').removeClass('is-active');
+	$('.js-vertical-tab[rel^=\'' + accordionActiveTab + '\']').addClass('is-active');
+});
 
 /* ---------------------------------------------
  Countdown Clock
  --------------------------------------------- */
-// function getTimeRemaining(endtime) {
-// 	const t = Date.parse(endtime) - Date.parse(new Date());
-// 	const seconds = Math.floor((t / 1000) % 60);
-// 	const minutes = Math.floor((t / 1000 / 60) % 60);
-// 	const hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-// 	const days = Math.floor(t / (1000 * 60 * 60 * 24));
-// 	return {
-// 		total: t,
-// 		days,
-// 		hours,
-// 		minutes,
-// 		seconds,
-// 	};
-// }
+function getTimeRemaining(endtime) {
+	var t = Date.parse(endtime) - Date.parse(new Date());
+	var seconds = Math.floor(t / 1000 % 60);
+	var minutes = Math.floor(t / 1000 / 60 % 60);
+	var hours = Math.floor(t / (1000 * 60 * 60) % 24);
+	var days = Math.floor(t / (1000 * 60 * 60 * 24));
+	return {
+		total: t,
+		days: days,
+		hours: hours,
+		minutes: minutes,
+		seconds: seconds
+	};
+}
 
-// function initializeClock(id, endtime) {
-// 	const clock = document.querySelector(id);
-// 	const daysSpan = clock.querySelector('.days');
-// 	const hoursSpan = clock.querySelector('.hours');
-// 	const minutesSpan = clock.querySelector('.minutes');
-// 	const secondsSpan = clock.querySelector('.seconds');
-// 	let countdownInterval;
+function initializeClock(id, endtime) {
+	var clock = document.querySelector(id);
+	var daysSpan = clock.querySelector('.days');
+	var hoursSpan = clock.querySelector('.hours');
+	var minutesSpan = clock.querySelector('.minutes');
+	var secondsSpan = clock.querySelector('.seconds');
+	var countdownInterval = void 0;
 
-// 	function updateClock() {
-// 		const t = getTimeRemaining(endtime);
+	function updateClock() {
+		var t = getTimeRemaining(endtime);
 
-// 		daysSpan.innerHTML = t.days;
-// 		hoursSpan.innerHTML = `0${t.hours}`.slice(-2);
-// 		minutesSpan.innerHTML = `0${t.minutes}`.slice(-2);
-// 		secondsSpan.innerHTML = `0${t.seconds}`.slice(-2);
+		daysSpan.innerHTML = t.days;
+		hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+		minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+		secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 
-// 		if (t.total <= 0) {
-// 			clearInterval(countdownInterval);
-// 		}
-// 	}
+		if (t.total <= 0) {
+			clearInterval(countdownInterval);
+		}
+	}
 
-// 	updateClock();
-// 	countdownInterval = setInterval(updateClock, 1000);
-// }
-
-// initializeClock('.js-countdown', new Date(2017, 12, 27));
+	updateClock();
+	countdownInterval = setInterval(updateClock, 1000);
+}
 
 /* ---------------------------------------------
  Tabs
  --------------------------------------------- */
 
-// function initTabs() {
-// 	const tabs = document.querySelector('#tabs');
-// 	const tabsNavItem = tabs.querySelectorAll('.agenda-tabs__nav--link');
-// 	const tabsContainterItem = tabs.querySelectorAll('.agenda-tabs__content-item');
-// 	let activeIndex = 0;
+function initTabs() {
+	var tabs = document.querySelector('#tabs');
+	var tabsNavItem = tabs.querySelectorAll('.agenda-tabs__nav--link');
+	var tabsContainterItem = tabs.querySelectorAll('.agenda-tabs__content-item');
+	var activeIndex = 0;
 
-// 	function goToTab(index) {
-// 		if (index !== activeIndex && index >= 0 && index <= tabsNavItem.length) {
-// 			// Add/Remove class for nav-item
-// 			tabsNavItem[activeIndex].classList.remove('is-active');
-// 			tabsNavItem[index].classList.add('is-active');
-// 			// Add/Remove class for containers
-// 			tabsContainterItem[activeIndex].classList.remove('is-active');
-// 			tabsContainterItem[index].classList.add('is-active');
-// 			// set activeIndex
-// 			activeIndex = index;
-// 		}
-// 	}
-
-// 	// Handle Click
-// 	function handClick(link, index) {
-// 		link.addEventListener('click', e => {
-// 			e.preventDefault();
-// 			goToTab(index);
-// 		});
-// 	}
-
-// 	// set click on all tabs-nav-items
-// 	for (let i = 0; i < tabsNavItem.length; i += 1) {
-// 		const link = tabsNavItem[i];
-// 		handClick(link, i);
-// 	}
-// }
-
-// document.addEventListener('DOMContentLoaded', initTabs);
-
-$('.events').owlCarousel({
-	loop: false,
-	margin: 10,
-	nav: true,
-	navText: ['<svg><use xmlns:xlink="http://www.w3.org/2000/xlink" xlink:href="#slick-prev"></use></svg>', '<svg><use xmlns:xlink="http://www.w3.org/2000/xlink" xlink:href="#slick-next"></use></svg>'],
-	navContainerClass: 'owl-carousel__nav',
-	navClass: ['owl-carousel__nav--prev', 'owl-carousel__nav--next'],
-	navElement: 'button',
-	dotsClass: 'owl-carousel__dots',
-	dotClass: 'owl-carousel__dots--item',
-	stagePadding: 10,
-	responsive: {
-		0: {
-			items: 1,
-			center: true
-		},
-		600: {
-			items: 2
-		},
-		872: {
-			items: 3
-		},
-		1200: {
-			items: 4
-		},
-		1600: {
-			items: 5
+	function goToTab(index) {
+		if (index !== activeIndex && index >= 0 && index <= tabsNavItem.length) {
+			// Add/Remove class for nav-item
+			tabsNavItem[activeIndex].classList.remove('is-active');
+			tabsNavItem[index].classList.add('is-active');
+			// Add/Remove class for containers
+			tabsContainterItem[activeIndex].classList.remove('is-active');
+			tabsContainterItem[index].classList.add('is-active');
+			// set activeIndex
+			activeIndex = index;
 		}
 	}
-});
 
-var hotelBtn = document.querySelectorAll('.hotel-btn');
+	// Handle Click
+	function handClick(link, index) {
+		link.addEventListener('click', function (e) {
+			e.preventDefault();
+			goToTab(index);
+		});
+	}
+
+	// set click on all tabs-nav-items
+	for (var i = 0; i < tabsNavItem.length; i += 1) {
+		var link = tabsNavItem[i];
+		handClick(link, i);
+	}
+}
+
+// const hotelBtn = document.querySelectorAll('.hotel-btn');
 
 function showHotelDetails() {
 	this.parentNode.querySelector('.hotel-details').classList.toggle('show-hotel-details');
@@ -299,9 +256,7 @@ function showHotelDetails() {
 	}
 }
 
-hotelBtn.forEach(function (btn) {
-	return btn.addEventListener('click', showHotelDetails);
-});
+// hotelBtn.forEach(btn => btn.addEventListener('click', showHotelDetails));
 
 function splitHeightInit() {
 	(function ($) {
@@ -324,5 +279,5 @@ $(window).resize(function () {
 	splitHeightInit();
 });
 
-var mixitupContainer = document.querySelector('.mix-container');
-var mixer = mixitup(mixitupContainer);
+// const mixitupContainer = document.querySelector('.mix-container');
+// const mixer = mixitup(mixitupContainer);
