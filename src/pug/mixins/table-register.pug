@@ -1,0 +1,31 @@
+mixin table-register(reg1, reg2, reg3, regWithHotel1, regWithHotel2, regWithHotel3)
+	table.comparison
+		thead
+			tr
+				th.blank-cell   
+				th Early Bird
+					span 11/28/17 – 1/31/18
+				th Advance
+					span 2/1/18 – 3/28/18
+				th Standard
+					span 3/29/18 – 5/23/18
+		tbody
+			tr
+				td.blank-cell
+				td(colspan='4') Registration Rate
+			tr.compare-row
+				td Registration Rate
+				td= '$' + reg1
+				td= '$' + reg2
+				td= '$' + reg3
+			tr
+				td.blank-cell
+				td(colspan='4') Discounted Rate
+					em  (Staying in AAPA Hotel Block)
+			tr.compare-row
+				td Discounted Rate
+					em(style='display: block;')
+						small (Staying in AAPA Hotel Block)
+				td= '$' + regWithHotel1
+				td= '$' + regWithHotel2
+				td= '$' + regWithHotel3

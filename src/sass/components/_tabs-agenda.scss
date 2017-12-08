@@ -3,7 +3,6 @@ $tabs-color--lite: tint($color-pink, 8%);
 $tabs-nav-border: 1px solid $tabs-color--dark;
 $tabs-nav-height: 75px;
 
-
 .agenda-tabs {
 	background: $color-snow;
 	border: $base-border;
@@ -172,5 +171,38 @@ $tabs-nav-height: 75px;
 		&:last-child {
 			margin-bottom: 0;
 		}
+	}
+}
+
+.register-tabs {
+	margin-bottom: $base-spacing;
+	margin-top: $large-spacing + $base-spacing;
+
+	.agenda-tabs__nav {
+		.nav_wrap {
+			@include mq($min-width: $cards-brk-sm) {
+				display: flex;
+				max-width: 90%;
+			}
+		}
+
+		&--link {
+			line-height: $heading-line-height;
+			@include mq($min-width: $cards-brk-sm) {
+				align-items: center;
+				display: flex;
+				flex: 1;
+				float: none;
+				justify-content: center;
+				min-height: 60px;
+			}
+			@include mq($min-width: $cards-brk-sm, $max-width: $cards-brk-md) {
+				font-size: 16px;
+			}
+		}
+	}
+
+	.agenda-tabs__content-item--inner {
+		margin: $small-spacing;
 	}
 }

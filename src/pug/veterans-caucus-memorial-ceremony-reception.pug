@@ -1,0 +1,46 @@
+extends layouts/default_layout
+include mixins/page-title-img
+include mixins/event-single-sidebar
+
+block title
+	title AAPA 2018 - Uniformed Services Symposium (USS)
+
+block content
+	+page-title-img(`background-image: url('../images/event-pages/CME4-hero.jpg'); background-position: 50% 35%;`, `Uniformed Services Symposium (USS)`, `Uniformed Services Symposium (USS)`)
+
+	section.small-section.bg-pattern--blue
+		.container
+			main.event-main
+				header.event-main-photo
+					img(src="images/event-pages/CME1-event.jpg", alt="Uniformed Services Symposium (USS)")
+				article
+					h3 Uniformed Services Symposium (USS)
+					p.lead Earn up to 7 AAPA Category 1 CME credits at this symposium designed for PAs who care for those serving our country. Your educational needs are unique, as are the patients you serve – from the active duty and retired service members and their families at home and abroad to the marginalized and underserved populations across multiple federal agencies. Plus, network with other PAs who work in similar situations!
+
+				footer
+					span
+						i.fa.fa-share-alt
+						| share
+					ul.post-share
+						li
+							a(href='#')
+								i.fa.fa-facebook
+						li
+							a(href='#')
+								i.fa.fa-twitter
+						li
+							a(href='#')
+								i.fa.fa-linkedin
+						li
+							a(href='#')
+								i.fa.fa-skype
+						li
+							a(href='#')
+								i.fa.fa-behance
+
+
+			aside.event-sidebar
+				.widget
+					h4 Special Events
+					.widget-flex
+						+event-sidebar

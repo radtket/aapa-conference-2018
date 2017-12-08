@@ -1,0 +1,108 @@
+extends layouts/default_layout
+include mixins/page-title-img
+include mixins/event-single-sidebar
+
+block title
+	title AAPA 2018 - Constituent Organizations
+
+block content
+	+page-title-img(`background-image: url('images/event-pages/ProductTheaters-hero.jpg'); background-position: 50% 25%;`, `Constituent Organizations`, `Constituent Organizations`)
+
+	section.small-section.bg-pattern--blue
+		.container
+			main.event-main
+				header.event-main-photo
+					img(src="images/event-pages/ConstituentOrganizations-event.jpg", alt="Constituent Organizations")
+				article
+					h3 Constituent Organizations
+					p
+						strong
+							| More than 100 state and federal service chapters, specialty organizations, caucuses and special interest groups make up AAPA’s constituent organization (CO) community.
+					p
+						| Together, AAPA and COs collaborate to equip PAs for expanded opportunities in healthcare, advance the PA identity, and create progressive work environments for PAs. COs provide services and resources at the federal and local levels, by practice specialty, and through special interests.
+					p
+						| COs are a critical element to the development and delivery of PA professional resources. Learn more about how you can get involved today by reviewing a
+						a(href='https://www.aapa.org/about/constituent-organizations/', target='_blank', rel='noopener') list of COs
+						| !
+					p
+						| Check out all AAPA’s
+						a(href='https://connect.aapa.org/login?client=aapawebsite&returnUrl=https%3A%2F%2Fwww.aapa.org%2Fabout%2Fconstituent-organizations%2Fco-resources%2F', target='_blank', rel='noopener') CO resources
+						| , or contact
+						a(href='mailto:coadministrator@aapa.org') coadministrator@aapa.org
+						|  with questions.
+					hr
+					p
+						strong CO Leadership Forum & Reception
+					p Sunday, May 20, 2018
+					p 6-8 p.m.
+					ul
+						li Forum with Outreach and Advocacy Awards Presentation| 6 – 7 p.m.
+						li CO Leadership Reception| 7 – 8 p.m.
+					p
+						| Don’t miss the Constituent Organization Leadership Forum, where we honor outstanding COs and present the annual
+						a(href='https://www.aapa.org/about/aapa-awards/co-awards/', target='_blank', rel='noopener') CO Outreach & Advocacy Awards
+						| . Learn from representatives of the winning COs as they present their project or program, and participate in a Q&A where tips and strategies for success are shared.  Join all CO leaders after the forum for a leadership reception.
+					p  
+					p
+						strong CO Central
+					p
+						| Monday, May 21, 9 a.m. – 5 p.m.
+						br
+						| Tuesday, May 22, 9 a.m. – 2:30 p.m.
+					p
+						| Visit CO leaders in a designated area of the
+						a(href='http://s23.a2zinc.net/clients/aapas/AC18/Public/Enter.aspx', target='_blank', rel='noopener') Exhibit Hall
+						|  to learn about what’s happening in your CO, or relax in CO Central’s seating area for an impromptu meeting.
+					hr
+					p
+						strong Constituent Organization Events
+					p
+						| Don’t miss out on numerous state, specialty, and special interest events taking place during conference.
+					hr
+					p
+						strong Plan Your CO Event at AAPA 2018
+					p
+						| Make big connections in the Big Easy!  Promote your CO at the largest annual gathering of PAs by planning your CO events early.
+					ul
+						li
+							| Complete your annual
+							a(href='https://www.formsite.com/aapa/form620/index.html?1436809824699', target='_blank', rel='noopener') Constituent Organization Update
+							|  which includes registration of your House Delegates.
+							ul
+								li
+									a(href='https://www.aapa.org/about/aapa-governance-leadership/house-of-delegates/co-officer-compliance-for-hod/', target='_blank', rel='noopener') Confirm
+									|  that all CO Officers have current AAPA fellow membership.
+						li
+							a(href='http://s23.a2zinc.net/clients/aapas/AC18/Public/Enter.aspx', target='_blank', rel='noopener') Reserve
+							|  exhibit space in CO Central at a discounted rate. Space is limited.
+						li
+							a(href='https://www.formsite.com/aapa/form881/index.html', target='_blank', rel='noopener') Reserve complimentary meeting/event space
+							|  at AAPA 2018 for board meetings, CO workshops, social events and more. Make your reservations early ­— space is limited. (Standard signage included.)
+
+				footer
+					span
+						i.fa.fa-share-alt
+						| share
+					ul.post-share
+						li
+							a(href='#')
+								i.fa.fa-facebook
+						li
+							a(href='#')
+								i.fa.fa-twitter
+						li
+							a(href='#')
+								i.fa.fa-linkedin
+						li
+							a(href='#')
+								i.fa.fa-skype
+						li
+							a(href='#')
+								i.fa.fa-behance
+
+
+			aside.event-sidebar
+				.widget
+					h4 Special Events
+					.widget-flex
+						+event-sidebar

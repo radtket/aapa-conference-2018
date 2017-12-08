@@ -180,16 +180,6 @@ module.exports = grunt => {
 	if (process.env.NODE_ENV === 'production') {
 		grunt.registerTask('default', ['pug', 'sass', 'babel', 'uglify', 'copy', 'imagemin', 'cssmin']);
 	} else {
-		grunt.registerTask('default', [
-			'pug',
-			'sass',
-			'postcss',
-			'babel',
-			'uglify',
-			'copy',
-			'imagemin',
-			'browserSync',
-			'watch',
-		]);
+		grunt.registerTask('default', ['pug', 'sass', 'postcss', 'babel', 'uglify', 'browserSync', 'watch']);
 	}
 };

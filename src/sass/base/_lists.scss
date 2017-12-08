@@ -27,3 +27,62 @@ dd {
 		}
 	}
 }
+
+.list-headline {
+	@extend %text-countdown-cta-headline;
+
+	small {
+		display: block;
+		margin-top: $base-spacing;
+	}
+}
+
+.list-headline-small {
+	margin-bottom: $x-small-spacing;
+	@extend %text-agenda-subtitle-date;
+}
+
+.list-dots {
+	list-style-type: disc;
+	margin-left: $base-spacing;
+
+	li {
+		line-height: $lead-line-height;
+		margin-bottom: $small-spacing;
+
+		> ul {
+			list-style-type: circle;
+			margin-left: $base-spacing;
+			margin-top: $small-spacing;
+		}
+	}
+}
+
+.list-grouped {
+	> li {
+		@include margin($base-spacing null);
+	}
+}
+
+.list-numbered {
+	list-style-type: decimal;
+	margin-bottom: $small-spacing;
+	padding-left: $base-spacing;
+
+	li {
+		line-height: $lead-line-height;
+		margin-bottom: $small-spacing;
+	}
+}
+
+.list-definition {
+	margin: $base-spacing auto;
+	max-width: $lead-mobile-max-width;
+	text-align: center;
+
+	dt {
+		font-weight: $font-weight--bold;
+		margin-top: $small-spacing;
+		@extend %card-title;
+	}
+}

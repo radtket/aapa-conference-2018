@@ -1,0 +1,514 @@
+extends layouts/default_layout
+include mixins/page-title-img
+include components/svg/timeline-dot
+block title
+	title Frequently Asked Questions
+block vendorCSS
+	link(rel="stylesheet", href="//code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css", attr)
+
+block content
+	+page-title-img(`background-image: url('images/hero-images/hero__faq-alt.jpg');`, `Speakers & Moderators`, `Speakers & Moderators Resource`)
+
+	section.small-section.bg-pattern--teal
+		.container
+			.vertical-tabs
+				nav.vertical-tabs__nav
+					a.js-vertical-tab.vertical-tabs__nav--item.is-active(href='javascript:void(0)', rel='tab1') CME Moderator
+					a.js-vertical-tab.vertical-tabs__nav--item(href='javascript:void(0)', rel='tab2') CME Speakers
+					a.js-vertical-tab.vertical-tabs__nav--item(href='javascript:void(0)', rel='tab3') Presentation Information
+					a.js-vertical-tab.vertical-tabs__nav--item(href='javascript:void(0)', rel='tab4') Remuneration
+					a.js-vertical-tab.vertical-tabs__nav--item(href='javascript:void(0)', rel='tab5') Additional Information
+				.vertical-tab--content
+					a.js-vertical-tab-accordion-heading.vertical-tab-accordion-heading.is-active(href='', rel='tab1') CME Moderator
+					#tab1.js-vertical-tab-content.vertical-tab--content--item
+						dl.accordion
+							dt
+								a(href='') Apply to Be a Moderator
+							dd
+								p Apply to Be a Moderator
+								a.btn(href='//formsite.com/aapa/2018ConferenceModerator/index.html') Apply to Be a Moderator
+							dt
+								a(href='') Moderator Guidelines
+							dd
+								h3.list-headline Prior to the Session
+								ul.list-dots
+									li You will receive your introductions for speakers and any special announcements/instructions during the Moderator Orientation for which you are scheduled (Room 237 of the Ernest N. Morial Convention Center).
+									li Come to the Speaker Ready Room (Room 254 of the Ernest N. Morial Convention Center) at least 4 hours prior to appointed moderator block to find out if there are any changes to your moderating schedule. Please notify conferencecme@aapa.org ASAP if you are unable to fulfill your moderator obligations.
+									li Wear professional attire (business casual, i.e., no shorts, no t-shirts).
+									li Wear Moderator ribbon while you are moderating. You will receive your moderator ribbon from the Speaker Ready Room (Room 254 of the Ernest N. Morial Convention Center) or at orientation in Room 237 of the Ernest N. Morial Convention Center.
+									li Read through introductions and clarify any questions when you pick up your materials.
+									li Arrive at assigned lecture room 30 minutes prior to the beginning of your moderator block.
+									li When a speaker (watch badges for speaker ribbons) enters session area, introduce yourself and inform him/her of your function. Ask the speaker for the proper pronunciation of his/her name.
+									li Instruct speakers to use the microphone.
+									li Identify yourself to the audiovisual technician in the meeting room.
+									li Introduce the speaker (if an introduction is not available, you will be provided with a blank introduction in which to add the speaker’s name and biographical information).
+									li Check with the speaker to determine whether or not s/he wishes you to field audience questions.
+
+								hr
+
+								h3.list-headline During the Session
+								ul.list-dots
+									li SMILE! Say “good morning” or “good afternoon” when beginning each session.
+									li Make any necessary announcements prior to introductions. The following announcements should be made at the beginning of every CME session:
+										ul
+											li Please participate in the interactive portion of the session using the audience polling link for the session in the conference App.
+											li Please fill every seat and move to the center of the rows to allow others to be seated.
+											li As a courtesy to our speaker and to the other attendees, please turn cell phones, tablets, pagers, and computers to silent mode during the session.
+											li You may not sit on the floor or stand along the walls due to safety and fire codes.
+											li Please remember that there should be NO photographs or videos taken of the session.
+											li Please go to one of the microphones in the aisles to ask questions.
+											li Please remember to take your personal belongings with you as you leave the session, depositing trash in appropriate receptacles.
+											li Please remember to evaluate each CME session you attend through the conference App or online through the CME Manager.
+									li Even if the speaker is giving a second presentation, give the introduction – there may be audience members who were not at the first presentation.
+									li The moderator should remain at the podium until the speaker has joined her/him on stage. Greet the speaker at the podium with a handshake, and then quickly leave the stage without walking in front of the speaker.
+									li Please sit in the front row on a side aisle seat, in the event you must be located quickly.
+									li If the speaker asks you to field audience questions during the question and answer portion of the session, be sure questioners are recognized as quickly as possible, encouraged them to use the available microphones, and politely directed them to state their questions succinctly. Recognize questioners from all parts of the room. This means keeping focused at all times on the participants, except when directing the question to a particular individual, such as a panel member. Assure that no answers become long-winded and/or digressive. You may have the uncomfortable task of reining in a particularly loquacious panel member.
+										ul
+											li Please remind the speaker that AAPA is not responsible for distributing copies of any print materials during or after the session. The speaker must fulfill any requests for information herself/himself. S/he may send an electronic copy for posting online following the conference if s/he has not already done so. All electronic handouts that were received by May 1 have been posted.
+											li YOU ARE THE TIMEKEEPER. Keep to the allotted time schedule. Alert the speaker at 10 minutes prior to the end of the schedule session time. It is entirely appropriate that you suggest that participants approach speakers directly following the session outside the room. Please clear this with the speaker ahead of time, i.e., how would you like me to alert you?
+											li It is important that you stick to the script. You may NOT distribute materials or promote your own events.
+
+								hr
+
+								h3.list-headline After the Session
+								ul.list-dots
+									li Complete the online moderator evaluation form (one for each topic) at the URL provided in your final email confirmation. You will be emailed instructions for use of your special discount code after you complete your evaluations. Please remember that your evaluation and comments will be shared with speakers however they will NOT be identified as moderator evaluation/comments.
+								p.alert-blue AAPA would like to informally identify the number of CME sessions that include mention or discussion of “off-label” uses of pharmaceutical products (i.e., uses/indications of drugs that have not been explicitly approved by the FDA). As part of your assignment, we would appreciate your noting if such discussions occurred in the session for which you were moderator.
+
+								hr
+
+								h3.list-headline IN CASE OF EMERGENCY
+								p
+									em
+										strong If a speaker is a “no show” (at least 10 minutes before session start time):
+
+
+								p
+									em
+										strong If audiovisual equipment malfunctions or is not present:
+
+								hr
+
+								h3.list-headline REMINDERS
+								ul.list-dots
+									li
+										strong You must be registered for the annual conference on the day of the conference you are scheduled to moderate.
+									li
+										strong Based upon your initial request, you have been scheduled to attend a specific 30-minute moderator orientation session. Attendance at one of the moderator sessions in mandatory and you will be required to sign in. CCPDE members will be adding up-to-the-minute information at those meetings.
+
+								section.promo-section.text-center
+									a.btn.btn-download(href='//www.aapa.org/wp-content/uploads/2017/09/02-ModeratorGuidelines.pdf', download="Guidelines for CME Moderators") Download Moderator Guidelines
+
+
+
+					a.js-vertical-tab-accordion-heading.vertical-tab-accordion-heading(href='', rel='tab2') CME Speakers
+					#tab2.js-vertical-tab-content.vertical-tab--content--item
+						h3.list-headline.text-center Conference 2018 Faculty Deadlines
+
+						#timeline
+							.timeline-item
+								.timeline-icon
+									+timeline-dot
+								.timeline-content
+									h2 October 15, 2017
+									.timeline-content-body
+										p Conference Speaker Contract must be completed online via the link provided in the acceptance email invitation
+							.timeline-item
+								.timeline-icon
+									+timeline-dot
+								.timeline-content.right
+									h2 January 31, 2018
+									.timeline-content-body
+										p Early Bird registration for faculty without complimentary registration
+										a.btn(href='/register.html') Register
+							.timeline-item
+								.timeline-icon
+									+timeline-dot
+								.timeline-content
+									h2 February 2018
+									.timeline-content-body
+										p Presentation Management site http://AAPA2018.sessionupload.com opens for posting of PowerPoints and Handouts
+										a.btn(href='http://AAPA2018.sessionupload.com') Go NoW
+							.timeline-item
+								.timeline-icon
+									+timeline-dot
+								.timeline-content.right
+									h2 March 16, 2018
+									.timeline-content-body
+										p Self-assessment PowerPoint presentation including questions and rationale due to AAPA for review and final approval via email (conferencecme@aapa.org)
+							.timeline-item
+								.timeline-icon
+									+timeline-dot
+								.timeline-content
+									h2 March 28, 2018
+									.timeline-content-body
+										p All faculty must be registered for conference (http://www.aapaconference.org/register/)
+							.timeline-item
+								.timeline-icon
+									+timeline-dot
+								.timeline-content.right
+									h2 April 9, 2018
+									.timeline-content-body
+										p Upload PowerPoint presentations (http://AAPA2018.sessionupload.com) named: PPTsession title
+							.timeline-item
+								.timeline-icon
+									+timeline-dot
+								.timeline-content
+									h2 April 10, 2018
+									.timeline-content-body
+										p Submit three (3) content-based questions based on the learning objectives to be used for your session evaluation: https://www.formsite.com/aapa/CMEQuestions/index.html. These must be the same as the pre-test/post-test questions in your PowerPoint
+							.timeline-item
+								.timeline-icon
+									+timeline-dot
+								.timeline-content.right
+									h2 April 11, 2018
+									.timeline-content-body
+										p Upload Handouts (http://AAPA2018.sessionupload.com) named: Handout-session title
+							.timeline-item
+								.timeline-icon
+									+timeline-dot
+								.timeline-content
+									h2 April 12, 2018
+									.timeline-content-body
+										p Complete Copyright Release Attestation (https://www.formsite.com/aapa/copyrightrelease/index.html)
+							.timeline-item
+								.timeline-icon
+									+timeline-dot
+								.timeline-content.right
+									h2 April 20, 2018
+									.timeline-content-body
+										p Deadline to make hotel reservations through AAPA’s housing site. Speakers eligible for housing remuneration MUST be booked in one of AAPA’s official conference hotels via AAPA’s housing agent.
+										a(href="index.html", target='_blank') Book Now
+							.timeline-item
+								.timeline-icon
+									+timeline-dot
+								.timeline-content
+									h2 May 19-23, 2018
+										span AAPA Conference 2018
+									.timeline-content-body
+										ul.list-dots
+											li Speakers should pick up registration badges at Express Registration in the Ernest N. Morial Convention Center, 900 Convention Center Blvd, New Orleans, LA 70130.
+											li Speakers should sign in and review their presentations and ARS questions at the Speaker Ready Room (Room 254) the day before their session(s)
+											li Speakers must arrive in their session room at least 15 minutes prior to session start
+							.timeline-item
+								.timeline-icon
+									+timeline-dot
+								.timeline-content.right
+									h2 June 6, 2018
+									.timeline-content-body
+										p Must submit reimbursement form for honorarium and expenses via email to conferenceCME@aapa.org.
+										ul.list-dots
+											li Promised compensation: Refer to your email invitation
+											li Honorarium
+												ul
+													li Must be claimed on reimbursement form to be received
+													li If honorarium for calendar year exceeds $599, you must submit a completed IRS W- 9 form and fax it to Larisa Fitzpatrick, Accounting (571-319-4513)
+											li Flight
+												ul
+													li Up to $500, over $500 requires pre-approval by AAPA staff
+											li Housing
+												ul
+													li Eligible number of nights is listed in your invitation email
+													li Itemized hotel receipt is required
+													li Room must be within AAPA’s official housing room block
+													li Room must be booked through AAPA’s official housing company (https://www.aapa.org/conference/)
+													li Must be within the 24-hour period surrounding your presentation, example Saturday, 1pm session, can receive reimbursement for either Friday night OR Saturday night
+											li Per Diem
+												ul
+													li Up to $40 within the 24-hour period surrounding your presentation
+													li Itemized receipts required for all expenses over $25
+											li Transportation
+												ul
+													li Cab fare to and from airport only
+													li Personal mileage claims must include route map with mileage included
+							.timeline-item
+								.timeline-icon
+									+timeline-dot
+								.timeline-content
+									h2 June 30, 2018
+									.timeline-content-body
+										p Complete the online speaker survey
+
+						section.promo-section.text-center
+							a.btn.btn-download(href='//www.aapa.org/wp-content/uploads/2017/09/03-SpeakerDeadlines.pdf', download="Conference 2018 Faculty Deadlines") Download Faculty Deadlines
+
+					a.js-vertical-tab-accordion-heading.vertical-tab-accordion-heading(href='', rel='tab3') Presentation Information
+					#tab3.js-vertical-tab-content.vertical-tab--content--item
+						//- h3.list-headline.text-center Audience Response System (ARS)
+						dl.accordion
+							dt
+								a(href='') Audience Response System (ARS)
+							dd
+								p Audience Response System (ARS) allows for electronic capture of attendees’ responses in real time and data for measuring learning when compared with aggregate responses to the evaluation questions. AAPA uses an ARS system that allows participants to respond via the conference App, text, or website on their smart devices. Detailed instructions are projected in each CME room at the beginning of each session.
+								p As a reminder, speakers are required to provide a minimum of three content-based multiple choice questions that will serve as pre-test, post-test, and evaluation assessment.
+								h3.list-headline
+									small Tips for Designing an Effective
+									| Audience Response System (ARS) Presentation
+								ul.list-grouped
+									li
+										h3.list-headline-small Tip 1: Keep questions short to optimize legibility
+										p Bear in mind the principles of good slide design (Laidlaw, 1987). The main requirement is legibility. This applies to question design too. Keep your question stem and answer options short and simple in order that the audience can read them easily and respond quickly.
+									li
+										h3.list-headline-small Tip 2: Have no more than four answer options
+										p The second point also relates to the legibility and clarity of the projected image. If more than four options are given, the screen becomes difficult to read and, when it comes to displaying the results, it is cluttered and could be difficult to interpret.
+									li
+										h3.list-headline-small Tip 3: Do not make your questions overly complex
+										p If you present your audience with too much information and expect them to read and digest it then, make an immediate decision, either the response rate will drop as they are put off by such a daunting task, or the presentation has to be slowed considerably to allow time to meaningfully complete the task and the natural momentum is lost.
+										p Neither of these situations is ideal as the aim of using such a system is to create a non-threatening environment which encourages the participation of all audience members, and for the session to be active and fun.
+									li
+										h3.list-headline-small Tip 4: Keep voting straightforward
+										p The system gives the choice of several voting options. These range from a single choice to more complex staged voting or ranking of choices. Again, it is usually best to choose the simpler options, allowing no more than two choices. Anything more complex requires considerable explanation by the lecturer, leads to confusion amongst the audience, reducing the number of valid responses, and becomes cluttered and almost impossible to interpret when the results are displayed on screen.
+									li
+										h3.list-headline-small Tip 5: Allow time for discussion when designing your presentation
+										p Invariably, once the presentation is underway the audience quickly becomes involved and much discussion is stimulated as their responses to the questions are displayed. When preparing your presentation, therefore, you must build in time for such discussion.
+
+								section.promo-section.text-center
+									a.btn.btn-download(href='//www.aapa.org/wp-content/uploads/2017/09/04-ARS-Tips.pdf', download="Audience Response System") Download ARS
+
+
+							dt
+								a(href='') Copyright Release Information
+							dd
+								h3 Copyright Release Information
+								p
+									strong Copyright Release Attestations: Due April 12, 2018
+								p A copyright release is a document written by the copyright holder allowing you to use their copyrighted work in a specified way. It is important that you tell the copyright holder that you would like to use their information in a presentation to the national conference of PAs and, if you plan to include it as part of your electronic handout, that will be posted online for conference registrants.
+								p The following resources will provide you with additional information regarding copyright and how to get a release:
+								ul.list-dots
+									li
+										| Stanford University Libraries Copyright & Fair Use:
+										a(href='http://fairuse.stanford.edu/overview/introduction/getting-permission/') http://fairuse.stanford.edu/overview/introduction/getting-permission/
+									li
+										| Wikipedia How to Write a Copyright Release:
+										a(href='http://www.wikihow.com/Write-a-Copyright-Release') http://www.wikihow.com/Write-a-Copyright-Release
+								h3 Copyright Release Attestation
+								p Complete the following online link for each CME session:
+								a(href='https://www.formsite.com/aapa/copyrightrelease/index.html') https://www.formsite.com/aapa/copyrightrelease/index.html
+
+								section.promo-section.text-center
+									a.btn.btn-download(href='//www.aapa.org/wp-content/uploads/2017/09/05-Copyright.pdf', download="Copyright Release Information") Download Copyright Release Information
+
+							dt
+								a(href='') CME Handouts
+							dd
+								h3 Handouts: Due April 11, 2018
+								p Handouts can be a copy of the presentation, resource list, or other relevant document and are required for each presentation.
+								ul.list-dots
+									li If using slide presentation for handouts:
+										ul
+											li Remove any questions and answer slides
+											li Save the document as a PDF with two slides per page
+									li If NOT using actual slide presentation for handouts:
+										ul
+											li Provide another document in PDF format
+									li If you do not have handouts:
+										ul
+											li Provide a PDF with the title of the session, name(s) of the speaker(s), and contact information for the speaker(s), so that the attendees can reach out with questions
+									li Handouts should not include copyrighted materials without express release for electronic distribution
+									li Upload handouts to Presentation Management (http://aapa2018.sessionupload.com/) named: Handout-SessionTitle
+								section.promo-section.text-center
+									a.btn.btn-download(href='//www.aapa.org/wp-content/uploads/2017/09/06-Handouts.pdf', download="CME Handouts") Download CME Handouts
+
+
+							dt
+								a(href='') PowerPoint for CME Session
+							dd
+								h3.list-headline Presentations: Due April 9, 2018
+								ul.list-dots
+									li Presentations should be a Microsoft PowerPoint presentation that is uploaded to the Presentation Management site (http://aapa2018.sessionupload.com/).
+									li Upload presentation to Presentation Management (http://aapa2018.sessionupload.com/) named: PPT-SessionTitle
+									li There is no slide template for conference. However, your PowerPoint should include the following:
+										ul
+											li Slide 1: Session Title
+											li Slide 2: Your personal disclosures
+											li Slide 3: List of clinical citations used for creation of the presentation
+											li Slide 4: Pre-test question 1 plus 4 answer options
+											li Slide 6: Pre-test question 2 plus 4 answer options
+											li Slide 7: Pre-test question 3 plus 4 answer options
+											li PRESENTATION Slides
+											li Post-test question 1 with 4 answer options (same as pre-test question 1
+											li Post-test question 1 with 4 answer options – correct answer highlighted and rationale provided
+											li Post-test question 2 with 4 answer options (same as pre-test question 1
+											li Post-test question 2 with 4 answer options – correct answer highlighted and rationale provided
+											li Post-test question 3 with 4 answer options (same as pre-test question 1
+											li Post-test question 3 with 4 answer options – correct answer highlighted and rationale provided
+											li Next to last slide: Lessons for Practice - the 3-5 most important ideas that you would like the attendees to take away from attending your session – these should not be the same as your Learning Objectives
+											li Final slide: contact Information to Share with Attendees
+											li Freeman will program all ARS slides
+									li Your PowerPoint is only available to you as speaker, Presentation Management, and AAPA staff via Presentation Management.
+									li If you wish to share your PowerPoint with the audience as a handout, exclude ALL ARS questions and ALL copyrighted materials. Convert the slides to a 2-slide per page PDF document.
+									li Meet the Expert (MTE) and Self-Assessment (SA) CME PowerPoints will be posted AFTER the session.
+									li PowerPoints and handouts for MTEs and Workshops are only available to individuals who are registered for the sessions.
+									li You may make changes to your slides (NOT the ARS questions) until 24 hours prior to the start of your session.
+								section.promo-section.text-center
+									a.btn.btn-download(href='//www.aapa.org/wp-content/uploads/2017/09/07-Presentations.pdf', download="CME Presentations") Download CME Presentations
+
+							dt
+								a(href='') Presentation Management
+							dd
+								h2.text-center Speaker Ready Room and Presentation Management
+								h3.list-headline Speaker Ready Room
+								p This year we have the ability to run presenter mode in the meeting rooms. That allows attendees to see your slides on the monitor, but only you can view the associated notes on the lectern. For more information on presenter mode in PowerPoint click the following site: https://support.office.com/en-us/article/Use-Presenter-view-798dcb21-603c-43c3-a782-9a2d7720ab33.
+								p There will be a “mini-studio” in the Speaker Ready Room for presenters to familiarize themselves with PowerPoint Presenter Mode and how it will work in the meeting room prior to presenting.
+								h3.list-headline Presentation Management Details
+								p Presentation Management is software that allows your presentation to be projected from a master server housed in the Speaker Ready Room. It allows your PowerPoint to:
+								ol.list-numbered
+									li Be seen in “presenter mode” prior to and in the meeting room.
+									li Use the questions you provided with the Audience Response System (ARS).
+									li Be streamed from one room to another during the conference.
+									li Be edited up to 24 hours prior to your session.
+								p All presenters will receive an email from presentationmanagement@freemanco.com in February, which has their username and a custom link to create a password and gain access to Presentation Management. The email also provides detailed information about using Presentation Management.
+								p If you do not receive this email, need another copy or have additional questions about Presentation Management, please email presentationmanagement@freemanco.com.
+								h3.list-headline Timeline for Presentation Management
+								strong.list-headline-small February
+								ul.list-dots
+									li Presentation Management Site http://AAPA2018.sessionupload.com opens
+									li Site accepts PowerPoints and Handouts
+
+								section.promo-section.text-center
+									a.btn.btn-download(href='//www.aapa.org/wp-content/uploads/2017/09/08-PresentationManagementandSpeakerReadyRoom.pdf', download="Presentation Management") Download Presentation Management
+
+
+
+							dt
+								a(href='') Pre/Post-Test and Evaluation Questions
+							dd
+								h2 CME Questions
+								h3 Questions: Due April 10, 2018
+								p Session questions are important to track the learning of conference attendees.
+								p Each presenter needs to provide a minimum of 3 multiple choice questions and answers, which are used for the following:
+								ul
+									li pre-test prior to the start of the session using ARS;
+									li during or at the end of the session via the ARS system; and
+									li as part of the evaluation of the session.
+								p Questions are required for every presenter, including workshop chairs.
+								ul
+									li Please place 1 multiple choice question plus 4 possible answers per slide where you want them to occur in your PowerPoint that you upload to Presentation Management. Freeman will program the questions within your PowerPoint.
+									li You can have as many additional questions in your presentation as can be managed within your session time.
+									li Questions should be based on the learning objectives listed for the session
+									li Provide the 3 questions, 4 different answer options per question and all 3 correct answers via the online form: https://www.formsite.com/aapa/CMEQuestions/index.html
+								p Some resources for writing multiple choice questions:
+								ul.list-dots
+									li Page 5 of Self-Assessment Design Guide for Live CME Activities
+									li https://cft.vanderbilt.edu/guides-sub-pages/writing-good-multiple-choice-test-questions/
+									li https://facultyinnovate.utexas.edu/teaching/check-learning/question-types/multiple-choice
+									li http://theelearningcoach.com/elearning_design/rules-for-multiple-choice-questions/
+									li https://testing.byu.edu/handbooks/14%20Rules%20for%20Writing%20Multiple-Choice%20Questions.pdf
+								h3 ARS Details
+								p Audience Response System (ARS) allows for electronic capture of attendees’ responses in real time and data for measuring learning when compared with aggregate responses to the evaluation questions. AAPA uses an ARS system that allows participants to respond via the conference App, text, or website on their smart devices. Detailed instructions are projected in each CME room at the beginning of each session.
+								section.promo-section.text-center
+									a.btn.btn-download(href='//www.aapa.org/wp-content/uploads/2017/09/09-Questions.pdf', download="CME Questions") Download CME Questions
+
+
+							dt
+								a(href='') Self-Assessment Presentation
+							dd
+								h2.text-center Self-Assessment CME
+								h3 Self-Assessment Presentation, Questions, and Rationale: Due March 16, 2018
+								p Please email your self-assessment PowerPoint presentation, questions, and rationale to conferencecme@aapa.org by the deadline.
+								h3 Guidelines for Writing Self-Assessment Questions
+								p The purpose of self-assessment is to allow learners to systematically review their knowledge and skill in a given area of practice, identify gaps, and to remediate the identified gaps through the use of a rationale or other materials provided as part of the learning activity. Although self-assessment can take a number of forms, the most common format involves a series of multiple-choice questions supported by a rationale for the correct answer and other supporting information. Learners generally engage in self-assessment in an “open book” format.
+								p Self-assessment activities usually focus on assessing a particular area of medicine or practice and cover knowledge and skills that are considered foundational to successful practice. Developers of self-assessment activities should be guided by the Competencies for the PA Profession in selecting material for assessment to ensure that self-assessment is relevant to PA practice and the regulatory and requirements for Certification Maintenance, state licensing, and institutional privileging. More information on competencies and competency assessment may be found here: https://www.aapa.org/career-central/employer-tools/employing-a-pa/competencies-physician-assistant-profession/
+								p Self-assessment is NOT intended to be a test of the ability to recall trivial information, nor should it focus on the recall of factual information alone. At its best, self-assessment should help a PA to assess his or her ability to apply basic concepts from a particular area of medicine or surgery in a realistic clinical context. While a good fund of knowledge is foundational, it is the ability to use what one knows productively that matters most. Self-assessment test developers may feel the need to test for the most important foundational knowledge. However, they are urged to assess the application of knowledge whenever possible.
+								p A self-assessment question generally consists of the following parts:
+								ul.list-dots
+									li Stem (the question)
+									li Correct answer
+									li Alternative answers
+									li Detailed rationale
+									li References to other supporting literature
+								p Most self-assessment questions are preceded by a clinical vignette or case. The vignette helps to place the issue into a meaningful clinical context. The added clinical context also aids the question writer in ensuring that the question involves the use of knowledge rather than simple recall of facts.
+								h3 Copyright
+								p When preparing self-assessment questions it is important to avoid plagiarism and other practices that might infringe on the rights of others. When developing self-assessment questions, be sure that the end product is clearly your work rather than a lightly edited “borrowing” of the work belonging to someone else.
+								p Below is an example of what is considered plagiarism and copyright infringement. The following vignette was submitted by a test committee member:
+								p A 58 year old smoker is found to have malignant squamous cells in a sputum cytology specimen. Chest x-ray (CXR), computer tomography (CT) scans and bronchoscopy are all normal. Random biopsies of all segmental orifices reveal squamous cell carcinoma at the origin of the anterior segment of the right upper lobe. A right thoracotomy is performed, but no palpable tumor can be found. What is the next most appropriate course of action?
+								p A very similar question was found in The Annals of Thoracic Surgery, the official journal of The Society of Thoracic Surgeons and the Southern Thoracic Surgical Association:
+								p A 55-year-old smoker is found to have malignant squamous cells in a sputum cytology specimen. Chest roentgenogram, tomograms of both lungs, and bronchoscopy are all normal. Random biopsies of all segmental orifices reveal squamous cell carcinoma at the origin of the anterior segment of the right upper lobe. A right thoracotomy is done, but no palpable tumor can be found. The appropriate treatment would be:
+								p (Thoracic Surgery Quiz. Ann Thorac Surg. 1982;33:414. http://ats.ctsnetjournals.org/cgi/reprint/33/4/414.pdf. Published April 1982. Accessed February 5, 2012.)
+								p In short, changing the words of someone else’s work does not make it your own and is against the law.
+								p Some resources for writing multiple choice questions:
+								ul.list-dots
+									li Page 5 of Self-Assessment Design Guide for Live CME Activities
+									li https://cft.vanderbilt.edu/guides-sub-pages/writing-good-multiple-choice-test-questions/
+									li https://facultyinnovate.utexas.edu/teaching/check-learning/question-types/multiplechoice
+									li http://theelearningcoach.com/elearning_design/rules-for-multiple-choice-questions/
+									li https://testing.byu.edu/handbooks/14%20Rules%20for%20Writing%20MultipleChoice%20Questions.pdf
+								section.promo-section.text-center
+									a.btn.btn-download(href='//www.aapa.org/wp-content/uploads/2017/09/10-Self-Assessment.pdf', download="Self-Assessment Presentation") Download Self-Assessment Presentation
+
+					a.js-vertical-tab-accordion-heading.vertical-tab-accordion-heading(href='', rel='tab4') Remuneration
+					#tab4.js-vertical-tab-content.vertical-tab--content--item
+						//- h3.list-headline.text-center Audience Response System (ARS)
+						dl.accordion
+							dt
+								a(href='') General Information
+							dd
+								h3 Remuneration Forms and Receipts: Due May 31, 2018
+								p Speakers and workshops assistants must meet all deadlines to receive their full remuneration. The amount that an individual is eligible to receive can be found in the original invitation email from AAPA.
+								p All forms and receipts must be sent via email to conferenceCME@aapa.org
+								h3 Remuneration Details
+								ul.list-dots
+									li You MUST submit receipts for anything over $25
+									li Complete the reimbursement form, even if you are only requesting your honorarium
+									li Expenses that you can claim: flight, 1 night of hotel, ground transportation to and from airport and 1 day’s per diem
+									li Refer to original email invitation for maximum remuneration
+									li Hotel expenses can only be claimed if you were booked in one of AAPA’s official conference hotels
+									li You need to submit a W-9, only if your honorarium for the calendar year exceeds $599
+								h3 Explanation of expenses
+								p Maximum up to $900 may be used to cover:
+								ul.list-dots
+									li Coach airfare up to $500. Airfare over $500 requires preapproval by AAPA staff.
+									li One night of housing at any hotel within AAPA’s official room block and booked through AAPA’s official housing company. An itemized hotel receipt is required.
+									li Ground transportation to and from airport.
+									li One day of per diem up to $40. Itemized receipts are required for all expenditures over $25.
+									li If personal mileage is claimed, you must provide a route map with mileage noted.
+								h3 Forms
+								ul.list-dots
+									li W-9
+									li AAPA Reimbursement Form
+									section.promo-section.text-center
+										a.btn.btn-download(href='//www.aapa.org/wp-content/uploads/2017/09/12-FY17-AAPA-Annl-Conf-Speaker-Travel-Reimbursement-Form.xlsx', download="Reimbursement Form") Download Reimbursement Form
+
+
+							dt
+								a(href='') AAPA Reimbursement Form
+							dd
+								h3 ANNUAL CONFERENCE TRAVEL REIMBURSEMENT GUIDELINES
+								ol.list-dots(type="a", style="list-style-type: lower-alpha;")
+									li Receipts are required for items that cost $25 or more and they must be submitted ELECTRONICALLY.
+									li Travel by personal automobile shall be reimbursed at the current IRS standard mileage rate, if such travel is necessary or other modes of travel are not available. The current mileage rate is $0.535 per mile for business miles driven.
+									li Airport parking and travel to and from airport will be reimbursed at cost upon submission of receipts. Use of personal automobile to and from the airport shall be reimbursed at the current IRS standard mileage rate.
+									li Reimbursement of up to $40 per day will be paid for meals and tips on meals during annual conferences.  The calendar day (midnight to midnight) or any part of a calendar day is the unit for computing per diem allowance.  Receipts for meals of $25 or more must be included with request for reimbursement.
+									li Airline fees for overweight checked bags will not be reimbursed.  Airline fees for one checked bag will be reimbursed. If you travel on an airline that allows one free checked bag, AAPA will reimburse you for a second checked bag. If you travel on an airline that charges a fee for all checked bags, AAPA will reimburse you for the first bag.
+									li AAPA will only reimburse flights up to $500 without additional ADVANCE approval VIA CONFERENCECME@AAPA.ORG
+									li Cabs are only paid to and from airport to hotel and to and from airport to HOME as well as to and from a meeting/event.
+									li AAPA WILL  ONLY PAY GRATUITIES/TIPS UP TO 20% OF THE TOTAL CHARGE.
+									li AAPA Does Not Reimburse:
+										ul.list-dots
+											li In-Room Internet Access (with permission only, prior approval required)
+											li Entertainment:  In room movies, concerts, museums
+											li ALCOHOLIC BEVERAGES
+									em NOTE: If you need additional details about travel reimbursement, PLEASE CONTACT CONFERENCECME@AAPA.ORG.
+								section.promo-section.text-center
+									a.btn.btn-download(href='//www.aapa.org/wp-content/uploads/2017/09/10-Self-Assessment.pdf', download="AAPA Reimbursement Form") Download AAPA Reimbursement Form
+
+
+							dt
+								a(href='') W-9
+							dd
+								section.promo-section.text-center
+									a.btn.btn-download(href='//www.aapa.org/wp-content/uploads/2017/09/13-W-9-Blank.pdf', download="W-9") Download W-9
+
+
+
+
+
+					a.js-vertical-tab-accordion-heading.vertical-tab-accordion-heading(href='', rel='tab5') Additional Information
+					#tab5.js-vertical-tab-content.vertical-tab--content--item
+						//- h3.list-headline.text-center Audience Response System (ARS)
+						dl.accordion
+							dt
+								a(href='') AAPA’s CME Standards for Commercial Support of Live Programs: Conflict of Interest and Disclosure
+							dd
+								section.promo-section.text-center
+									a.btn.btn-download(href='//www.aapa.org/wp-content/uploads/2017/09/13-W-9-Blank.pdf', download="W-9") Download W-9

@@ -1,0 +1,98 @@
+extends layouts/default_layout
+include mixins/page-title-img
+include mixins/event-single-sidebar
+
+block title
+  title AAPA 2018 - AAPA National Medical Challenge Bowl
+
+block content
+  +page-title-img(`background-image: url('images/event-pages/ChallengeBowl-hero.jpg'); background-position: 50% 35%;`, `AAPA National Medical Challenge Bowl`, `AAPA National Medical Challenge Bowl`)
+
+  section.small-section.bg-pattern--blue
+    .container
+      main.event-main
+        header.event-main-photo
+          img(src="images/event-pages/ChallengeBowl-event.jpg", alt="AAPA National Medical Challenge Bowl")
+        article
+          h3 AAPA National Medical Challenge Bowl
+          h4 Cheer on Your PA Program!
+          p
+            | This high-energy medical game show will be held on Monday, May 21 at 7 p.m. in the Ernest N. Morial Convention Center in New Orleans, LA. All teams will answer multiple choice questions on a screen using an Audience Response System (ARS) keypad. The top-scoring 36 teams will then advance to the on-stage rounds and will answer free response questions on a variety of topics ranging from anatomy, microbiology and psychiatry.
+          p  
+          h4 Challenge Bowl Rules & Procedures:
+          p
+            | Find information about Challenge Bowl orientation, game scoring and policies in the 
+            a(href='https://www.aapa.org/wp-content/uploads/2017/10/CB-procedure-2018.pdf', target='_blank', rel='noopener') Challenge Bowl Rules & Procedures
+            | .
+          p  
+          h4 What types of questions are asked during the competition?
+          p
+            | Questions are asked on a variety of subjects, including physical diagnosis, microbiology, anatomy, OB/GYN, pulmonary, cardiology, primary care, emergency medicine and surgery.
+          p
+            img.alignnone.wp-image-25021(src='https://www.aapa.org/wp-content/uploads/2017/10/Challenge_Bowl_Logo-300x228.png', alt='', width='200', height='152', srcset='https://www.aapa.org/wp-content/uploads/2017/10/Challenge_Bowl_Logo-300x228.png 300w, https://www.aapa.org/wp-content/uploads/2017/10/Challenge_Bowl_Logo-768x584.png 768w, https://www.aapa.org/wp-content/uploads/2017/10/Challenge_Bowl_Logo-524x398.png 524w, https://www.aapa.org/wp-content/uploads/2017/10/Challenge_Bowl_Logo-262x199.png 262w, https://www.aapa.org/wp-content/uploads/2017/10/Challenge_Bowl_Logo.png 800w', sizes='(max-width: 200px) 100vw, 200px')
+          h4 What are the eligibility requirements?
+          ul.list-dots
+            li
+              | At least 75 percent of all PA students in the team’s PA program must be AAPA student members.
+            li
+              | The team’s Assembly of Representatives representative must attend the AOR meeting held during AAPA’s annual conference.
+            li
+              | All team members must be AAPA student members currently enrolled in an accredited PA program that has a student society registered with AAPA.
+            li All team members must be registered for AAPA’s annual conference.
+            li Only one team member per team can be graduating within 30 days of competition.
+          p  
+          h4 How do I register a team?
+          p
+            | 2018
+            a(href='https://www.formsite.com/aapa/challengebowlAC12/index.html?1506979524128') Challenge Bowl registration
+            |  will open February 1.
+          p  
+          h4 What is the cost of registration?
+          p
+            | There is no entrance fee. Participants must be registered as conference attendees and show their conference name badge at team registration.
+          p  
+          h4 When will I know if my team has been accepted?
+          ul.list-dots
+            li All teams will be notified of their eligibility status in March.
+            li
+              | For more information, contact the Student Academy National Office at 571-319-4310 or email 
+              a(href='mailto:students@aapa.org') students@aapa.org
+              | .
+          p  
+          h4 More on the Challenge Bowl:
+          ul.list-dots
+            li
+              a(href='https://www.aapa.org/about/aapa-governance-leadership/student-academy/challenge-bowl-past-winners/', target='_blank', rel='noopener') Past winners
+            li
+              a(href='https://www.aapa.org/about/aapa-governance-leadership/student-academy/challenge-bowl-statement/', target='_blank', rel='noopener') Challenge Bowl statement
+            li
+              a(href='https://www.aapa.org/wp-content/uploads/2017/05/Challenge-Bowl-Completed-Bracket-2017.pdf', target='_blank', rel='noopener') Challenge Bowl 2017 Bracket
+
+
+        footer
+          span
+            i.fa.fa-share-alt
+            | share
+          ul.post-share
+            li
+              a(href='#')
+                i.fa.fa-facebook
+            li
+              a(href='#')
+                i.fa.fa-twitter
+            li
+              a(href='#')
+                i.fa.fa-linkedin
+            li
+              a(href='#')
+                i.fa.fa-skype
+            li
+              a(href='#')
+                i.fa.fa-behance
+
+
+      aside.event-sidebar
+        .widget
+          h4 Special Events
+          .widget-flex
+            +event-sidebar

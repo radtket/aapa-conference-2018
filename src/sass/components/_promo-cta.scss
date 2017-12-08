@@ -3,4 +3,8 @@
 		margin-bottom: $base-spacing;
 		@extend %text-countdown-cta-headline;
 	}
+
+	.btn-download {
+		margin: $base-spacing auto;
+	}
 }

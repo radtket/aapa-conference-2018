@@ -18,7 +18,7 @@
 
 		li {
 			display: inline-block;
-			font-size: rem(30);
+			font-size: calcRem(30);
 			position: relative;
 			@include margin(null $x-small-spacing);
 

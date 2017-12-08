@@ -20,7 +20,7 @@ $_button-background-color-hover: shade($white, 20%);
 	cursor: pointer;
 	display: inline-block;
 	font-family: $base-font-family;
-	font-size: rem(12);
+	font-size: calcRem(12);
 	-webkit-font-smoothing: antialiased;
 	font-weight: $font-weight--medium;
 	letter-spacing: $base-letter-spacing;

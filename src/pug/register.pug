@@ -1,0 +1,147 @@
+extends layouts/default_layout
+include mixins/page-title-img
+include mixins/table-register
+include mixins/section-title-left-stacked-top
+include mixins/section-title-center-stacked-top-w-sub
+include mixins/section-title-left
+block title
+	title AAPA 2018 - Contact Information
+block scripts
+	script.
+		let regRates = tabs({
+			el: '#regRates',
+			tabNavigationLinks: '.agenda-tabs__nav--link',
+			tabContentContainers: '.agenda-tabs__content-item'
+		});
+		let regSingleRates = tabs({
+			el: '#regSingleRates',
+			tabNavigationLinks: '.agenda-tabs__nav--link',
+			tabContentContainers: '.agenda-tabs__content-item'
+		});
+		let regPkgRates = tabs({
+			el: '#regPkgRates',
+			tabNavigationLinks: '.agenda-tabs__nav--link',
+			tabContentContainers: '.agenda-tabs__content-item'
+		});
+		regRates.init();
+		regSingleRates.init();
+		regPkgRates.init();
+block content
+	+page-title-img(`background-image: url('images/hero-images/hero__aapa-staff.jpg');`, `Registration Pricing`, `Registration Pricing`)
+
+	section.page-section.bg-pattern--purple
+		.container
+			+section-title-left-stacked-top(`AAPA 2018`, `.`, `Registration Rates`)
+		.container
+			#regRates.agenda-tabs.register-tabs
+				nav.agenda-tabs__nav.text-center
+					.nav_wrap
+						a.agenda-tabs__nav--link.is-active(href='#') Member
+						a.agenda-tabs__nav--link(href='#') Nonmember
+						a.agenda-tabs__nav--link(href='#') Student Member
+						a.agenda-tabs__nav--link(href='#') Student Nonmember
+				.agenda-tabs__content-item.is-active
+					.agenda-tabs__content-item--inner
+						+table-register('600', '600', '600', '600', '600', '600')
+
+				.agenda-tabs__content-item
+					.agenda-tabs__content-item--inner
+						+table-register('365', '365', '365', '165', '165', '165')
+
+				.agenda-tabs__content-item
+					.agenda-tabs__content-item--inner
+						+table-register('1,200', '1,250', '1,300', '1,000', '1,050', '1,100')
+
+				.agenda-tabs__content-item
+					.agenda-tabs__content-item--inner
+						+table-register('445', '445', '445', '245', '245', '245')
+
+
+	section.page-section.bg-pattern--teal
+		.container
+			+section-title-left-stacked-top(`Single Day`, `.`, `Registration Rates`)
+		.container
+			#regSingleRates.agenda-tabs.register-tabs
+				nav.agenda-tabs__nav.text-center
+					.nav_wrap
+						a.agenda-tabs__nav--link.is-active(href='#') Member
+						a.agenda-tabs__nav--link(href='#') Nonmember
+						a.agenda-tabs__nav--link(href='#') Student
+				.agenda-tabs__content-item.is-active
+					.agenda-tabs__content-item--inner
+						+table-register('485',	'495',	'505', '285',	'295',	'305')
+
+				.agenda-tabs__content-item
+					.agenda-tabs__content-item--inner
+						+table-register('545',	'555',	'565', '345',	'355',	'365')
+
+				.agenda-tabs__content-item
+					.agenda-tabs__content-item--inner
+						+table-register('315',	'325',	'335', '115',	'125',	'135')
+
+
+	section.page-section.bg-pattern--blue
+		.container
+			+section-title-center-stacked-top-w-sub(`Package Rates`, `.`, `AAPA 2018 Membership & Conference`, `Rates include one year of AAPA membership and registration for AAPA 2018. You can add your membership during the registration process.`)
+		.container
+			#regPkgRates.agenda-tabs.register-tabs
+				nav.agenda-tabs__nav.text-center
+					.nav_wrap
+						a.agenda-tabs__nav--link.is-active(href='#') Fellow
+						a.agenda-tabs__nav--link(href='#') Retired
+						a.agenda-tabs__nav--link(href='#') Sustaining & Affiliate
+						a.agenda-tabs__nav--link(href='#') Student
+						a.agenda-tabs__nav--link(href='#') Physician
+						a.agenda-tabs__nav--link(href='#') Associate
+
+				.agenda-tabs__content-item.is-active
+					.agenda-tabs__content-item--inner
+						dl.list-definition
+							dt Fellow or Distinguished Fellow (DFAAPA):
+							dd A PA member who either graduated from a PA program accredited by ARC-PA (or a predecessor agency) or passed the PANCE. Fellow members may vote and hold office.
+						+table-register('1,095',	'1,145',	'1,195', '895',	'945',	'995')
+				.agenda-tabs__content-item
+					.agenda-tabs__content-item--inner
+						dl.list-definition
+							dt Retired
+							dd A PA who is a former fellow member, has chosen to retire from practice, and opts to be classified as a retired member. Retired members shall be entitled to privileges of the floor, but may not vote or hold office.
+						+table-register('875', '925', '975', '675', '725', '775')
+				.agenda-tabs__content-item
+					.agenda-tabs__content-item--inner
+						dl.list-definition
+							dt Sustaining
+							dd A PA who graduated from a PA program accredited by ARC-PA (or a predecessor agency), but has chosen not to actively practice in the profession and opts to be classified as a sustaining member. Sustaining members shall be entitled to privileges of the floor of the AAPA House of Delegates. However, they may not vote or hold office, and do not have access to Huddle, our online members-only community, or the AAPA Salary Report.
+						dl.list-definition
+							dt Affiliate
+							dd Pre-PA students and other healthcare professionals who want to stay current with the PA profession. Affiliate members shall be entitled to privileges of the floor, but may not vote or hold office, and do not have access to Huddle, our online members-only community.
+						+table-register('900', '950', '1,000', '700', '750', '800')
+				.agenda-tabs__content-item
+					.agenda-tabs__content-item--inner
+						dl.list-definition
+							dt Student
+							dd A student currently enrolled in an ARC-PA accredited PA program. Student members may not vote or hold office. Your one-time $75 dues keeps your membership active until you graduate!
+						+table-register('440', '440', '440', '240', '240', '240')
+				.agenda-tabs__content-item
+					.agenda-tabs__content-item--inner
+						dl.list-definition
+							dt Physician
+							dd Licensed physicians who wish to associate with AAPA. Physician members shall be entitled to privileges of the floor, but may not vote or hold office, and do not have access to Huddle, our online members-only community.
+						+table-register('975', '1,025', '1,075', '775', '825', '875')
+				.agenda-tabs__content-item
+					.agenda-tabs__content-item--inner
+						dl.list-definition
+							dt Associate
+							dd Representatives of businesses that sell products or services to PAs or individuals employed by government agencies who do not qualify for any other membership category. Associate members are not entitled to privileges of the floor, may not vote or hold office, and do not have access to Huddle, our online members-only community.
+						+table-register('1,000', '1,050', '1,100', '800', '850', '900')
+
+			p.text-center
+				small
+					em *Registration categories with an asterisk (*) do not include CME.
+
+			p.text-center
+				small
+					em If you have any questions, please contact AAPA Customer Care 703-836-2272 Monday – Friday, 9 a.m. – 5 p.m. EST.
+
+	section.page-section.bg-pattern--lime
+		.container
+			+section-title-left-stacked-top(`Information`, `.`, `Additional`)

@@ -1,0 +1,66 @@
+extends layouts/default_layout
+include mixins/page-title-img
+include mixins/event-single-sidebar
+
+block title
+	title AAPA 2018 - ePoster And Research in Action
+
+block content
+	+page-title-img(`background-image: url('images/event-pages/EPosters-hero.jpg'); background-position: 50% 75%;`, `ePoster And Research in Action`, `ePoster And Research in Action`)
+
+	section.small-section.bg-pattern--blue
+		.container
+			main.event-main
+				header.event-main-photo
+					img(src="images/event-pages/EPosters-event.jpg", alt="ePoster And Research in Action")
+				article
+					h3 ePoster And Research in Action
+					h4 The Latest Research By and About PAs
+					p AAPA Research is now accepting proposals for ePosters and Research in Action for AAPA 2018
+					p Showcase your original research at AAPA 2018 within the Research in Action Series and the ePoster Sessions. This is your opportunity to showcase your research to the PA community. Submissions are now open through December 31, 2017 to all PA and PA student researchers.
+					p To submit your abstract for consideration, visit our online portal. NOTE: The submission process for this year has changed! Please make sure to read the AAPA 2018 Research Guidelines.
+
+					h4 ePosters
+					p The AAPA ePoster Session features original research from PAs and PA students on topics from case studies and clinical research to educational and outreach innovations.
+					p Select poster abstracts will be published online by JAAPA and indexed in Ovid.
+
+					h4 Research in Action
+					p The AAPA Research in Action series will highlight the work researchers are doing to in the following areas:
+					p Connect Research to the Profession – We are looking for research on leadership paths, full practice authority, access to care, and more. How can you connect your research to advancing our understanding of the PA profession?
+					p Connecting Research to Education – We are looking for research on PA students and the educational process. How can you connect your research to advancing our understanding of the PA education?
+					p Connecting PAs Globally – We are looking for updates on the PA profession outside the US, including sharing success and roadblock to professional success. How can you connect the profession across the globe?
+					p Connecting Research to Practice – What is the latest in research on AAPA initiatives and how can it be integrated into practice?
+					p Posters will be displayed onsite at AAPA 2018 from Friday, May 18, to Wednesday, May 23.
+					p Research in Action will occur from Sunday May 20 to Monday May 21.
+					p Questions? Email us.
+
+					h4 Support PA Research
+					p One simple way you can support PA research is to become a peer reviewer. Both the Poster Session and Research in Action series rely on peer reviewers from JAAPA to maintain the high quality of submissions and participants.
+					p Interested in becoming a peer reviewer? Visit JAAPA.com.
+				footer
+					span
+						i.fa.fa-share-alt
+						| share
+					ul.post-share
+						li
+							a(href='#')
+								i.fa.fa-facebook
+						li
+							a(href='#')
+								i.fa.fa-twitter
+						li
+							a(href='#')
+								i.fa.fa-linkedin
+						li
+							a(href='#')
+								i.fa.fa-skype
+						li
+							a(href='#')
+								i.fa.fa-behance
+
+
+			aside.event-sidebar
+				.widget
+					h4 Special Events
+					.widget-flex
+						+event-sidebar

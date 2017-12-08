@@ -11,7 +11,13 @@ block vendorScripts
 
 block scripts
   script.
-    document.addEventListener('DOMContentLoaded', initTabs);
+    let myTabs = tabs({
+      el: '#tabs',
+      tabNavigationLinks: '.agenda-tabs__nav--link',
+      tabContentContainers: '.agenda-tabs__content-item'
+    });
+    myTabs.init();
+
     initializeClock('.js-countdown', new Date(2017, 12, 27));
     // Events Carousel
     $('.events').owlCarousel({
@@ -391,13 +397,13 @@ block content
 
 
       //- figure
-      //-   a.events__photo(href='/general-session')
+      //-   a.events__photo(href='/keynote')
       //-     img.image--wrap(src='https://www.aapa.org/wp-content/uploads/2017/10/generalspeaker.png', alt='')
       //-     span.text-center.date.date__sun
       //-       | 20
       //-       span.month MAY
       //-   .events__text
-      //-     a(href='/general-session')
+      //-     a(href='/keynote')
       //-       h5 General Session
       //-     p
       //-       | Grab your pack and join PA Jeff Evans on a journey to high peaks and exciting locales around the world at MountainVision:

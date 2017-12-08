@@ -1,0 +1,58 @@
+extends layouts/default_layout
+include mixins/page-title-img
+include mixins/event-single-sidebar
+
+block title
+	title AAPA 2018 - AAPA Distinguished Fellows Reception
+
+block content
+	+page-title-img(`background-image: url('images/event-pages/DFReception-hero.jpg'); background-position: 50% 25%;`, `AAPA Distinguished Fellows Reception`, `AAPA Distinguished Fellows Reception`)
+
+	section.small-section.bg-pattern--blue
+		.container
+			main.event-main
+				header.event-main-photo
+					img(src="images/event-pages/DFReception-event.jpg", alt="AAPA Distinguished Fellows Reception")
+				article
+					h3 AAPA Distinguished Fellows Reception
+					p.lead Join your Distinguished Fellow peers and mingle over appetizers and drinks at this invitation-only reception. AAPA celebrates the achievements of this truly distinguished group that has gone above and beyond to serve the profession.
+					p.lead Distinguished Fellows are AAPA fellows or sustaining members who have demonstrated outstanding dedication to their profession in at least three of the following areas:
+					ul.list-dots
+						li Distinction in medical practice, education, research or healthcare management
+						li Leadership in medicine and healthcare
+						li Professional involvement
+						li Commitment to lifelong learning
+						li Community service
+					.text-center.promo-section
+						h5 See if you qualify to join the ranks of AAPA’s Distinguished Fellows
+						div.inline-list.text-center
+							li
+								a.btn.btn-purple(href='//www.aapa.org/career-central/leaders-innovators/distinguished-fellow-program/') apply now
+						em.text-center Contact df@aapa.org if you have any questions.
+				footer
+					span
+						i.fa.fa-share-alt
+						| share
+					ul.post-share
+						li
+							a(href='#')
+								i.fa.fa-facebook
+						li
+							a(href='#')
+								i.fa.fa-twitter
+						li
+							a(href='#')
+								i.fa.fa-linkedin
+						li
+							a(href='#')
+								i.fa.fa-skype
+						li
+							a(href='#')
+								i.fa.fa-behance
+
+
+			aside.event-sidebar
+				.widget
+					h4 Special Events
+					.widget-flex
+						+event-sidebar
