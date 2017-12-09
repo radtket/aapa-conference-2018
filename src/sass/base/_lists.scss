@@ -87,7 +87,6 @@ dd {
 	}
 }
 
-
 ul.share-list {
 	li {
 		border-right: $base-border;
@@ -106,6 +105,7 @@ ul.share-list {
 		outline: 0;
 		padding: $x-small-spacing $small-spacing;
 		position: relative;
+
 		&:hover {
 			svg {
 				fill: $color-purple-light;
