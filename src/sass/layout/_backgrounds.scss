@@ -7,9 +7,27 @@ $bg-color-name-list: purple, teal, lime, pink, blue;
 	}
 }
 
+.bg-pattern--purple,
+.bg-blue {
+	[class*=section-title] {
+		color: $white;
+	}
+
+	.section-title__mark {
+		color: $color-pink;
+	}
+}
+
+.bg-pattern--teal {
+	.section-title__title::after {
+		background-color: $color-blue;
+	}
+}
+
 @each $color-name, $color-value in $named-color-list {
 	.bg-#{$color-name} {
 		background-color: $color-value !important;
+
 		.slanted-angle {
 			fill: $color-value;
 		}

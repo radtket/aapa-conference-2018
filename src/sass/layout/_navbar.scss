@@ -1,6 +1,5 @@
 $navbar-bottom-height: 55px;
 $nav-item-mobile-height: 35px;
-$nav-item-desktop-hover-triangle-size: $small-spacing;
 $nav-bar-z: 99;
 
 .mobile-on .sub-nav {
@@ -19,12 +18,18 @@ $nav-bar-z: 99;
 	// Top Navbar
 	&__top {
 		background-color: $color-purple;
+		text-align: center;
 		@include padding($x-small-spacing null);
+		@include mq($min-width: 450px) {
+			text-align: left;
+		}
 
 		ul {
-			text-align: center;
-			@include mq($min-width: $navbar-colapse) {
-				text-align: left;
+			margin-bottom: $x-small-spacing;
+			@include mq($min-width: 450px) {
+				display: inline-block;
+				line-height: 27px;
+				margin-bottom: 0;
 			}
 
 			li {
@@ -48,6 +53,13 @@ $nav-bar-z: 99;
 					max-height: calcRem(14);
 					max-width: calcRem(14);
 				}
+			}
+		}
+
+		.btn-cme {
+			@include mq($min-width: 450px) {
+				display: inline-block;
+				float: right;
 			}
 		}
 	}
@@ -128,12 +140,12 @@ $nav-bar-z: 99;
 								background-size: contain;
 								content: '';
 								display: block;
-								height: $nav-item-desktop-hover-triangle-size;
-								margin-left: -$nav-item-desktop-hover-triangle-size;
+								height: $small-spacing;
+								margin-left: -$small-spacing;
 								transform: scaleY(0);
 								transform-origin: 50% 100%;
 								transition: transform 0.12s linear;
-								width: ($nav-item-desktop-hover-triangle-size * 2);
+								width: ($small-spacing * 2);
 								@include position(absolute, null null 0 50%);
 							}
 
