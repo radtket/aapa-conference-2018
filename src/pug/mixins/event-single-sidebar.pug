@@ -3,3 +3,27 @@ mixin event-sidebar
 	each event in events
 		.post-thumb
 			a(href='./' + event.slug + '.html')= event.eventName
+
+mixin event-footer
+	footer
+		ul.share-list
+			li
+				span
+					svg.icon
+						use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#sharethis')
+					| Share
+			li
+				a(href='#')
+					svg.icon
+						use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#icon-solid-facebook')
+						span.invisible Facebook
+			li
+				a(href='#')
+					svg.icon
+						use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#icon-solid-linkedin')
+						span.invisible Linkedin
+			li
+				a(href='#')
+					svg.icon
+						use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#icon-solid-twitter')
+						span.invisible Twitter

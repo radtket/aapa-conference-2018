@@ -53,6 +53,13 @@
 			display: inline-block;
 			font-weight: $font-weight--medium;
 			margin-right: $small-spacing;
+			vertical-align: sub;
+
+			svg {
+				margin-right: $x-small-spacing;
+				vertical-align: text-top;
+				fill: $color-teal;;
+			}
 
 			i {
 				color: $color-teal;

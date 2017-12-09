@@ -86,3 +86,40 @@ dd {
 		@extend %card-title;
 	}
 }
+
+
+ul.share-list {
+	li {
+		border-right: $base-border;
+		display: inline-block;
+		vertical-align: middle;
+
+		&:last-of-type,
+		&:first-of-type {
+			border-right: 0;
+		}
+	}
+
+	a {
+		display: block;
+		line-height: 1;
+		outline: 0;
+		padding: $x-small-spacing $small-spacing;
+		position: relative;
+		&:hover {
+			svg {
+				fill: $color-purple-light;
+			}
+		}
+	}
+}
+
+.icon {
+	display: inline-block;
+	fill: $base-font-color;
+	font-size: 14px;
+	max-height: 14px;
+	max-width: 100%;
+	max-width: 14px;
+	vertical-align: middle;
+}
