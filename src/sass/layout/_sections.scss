@@ -26,15 +26,15 @@
 }
 
 .page-section {
-	padding: 60px 0;
+	padding: $page-section-pad 0;
 	@include mq($min-width: $page-section-sm) {
-		padding: 80px 0;
+		padding: $page-section-pad-sm 0;
 	}
 	@include mq($min-width: $page-section-md) {
-		padding: 120px 0;
+		padding: $page-section-pad-md 0;
 	}
 	@include mq($min-width: $page-section-lg) {
-		padding: 140px 0;
+		padding: $page-section-pad-lg 0;
 	}
 }
 

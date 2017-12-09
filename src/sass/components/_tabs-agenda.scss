@@ -7,7 +7,7 @@ $tabs-nav-height: 75px;
 	background: $color-snow;
 	border: $base-border;
 	box-shadow: $boxshadow-large;
-	margin-top: $large-spacing;
+	@include margin($large-spacing auto $base-spacing);
 	@include mq($max-width: $cards-brk-sm) {
 		padding: $small-spacing;
 	}

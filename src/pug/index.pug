@@ -89,7 +89,10 @@ block content
       +card-price(`Member`, `$550`, `$750`, `pink`)
 
 
-  section.page-section.bg-blue
+  section.small-section.slant__section.bg-blue
+    .slanted-angle-top
+      svg.slanted-angle(height='100%', preserveaspectratio='none', version='1.1', viewbox='0 0 100 100', width='100%', xmlns='http://www.w3.org/2000/svg')
+        path(d='M0 0 L100 100 L0 100', stroke-width='0')
     .container
       +section-title-left(`Agenda`, `.`)
 
@@ -357,7 +360,9 @@ block content
               .agenda__item
                 .agenda__item--time 1:00 p.m. - 5:00 p.m.
                 .agenda__item--name CME Sessions & Workshops
-
+    .slanted-angle-bottom
+      svg.slanted-angle(height='100%', preserveaspectratio='none', version='1.1', viewbox='0 0 100 100', width='100%', xmlns='http://www.w3.org/2000/svg')
+        path(d='M100,100L0,0h100', stroke-width='0')
 
 
   section.page-section.bg-pattern--purple
