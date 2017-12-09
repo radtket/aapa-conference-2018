@@ -388,3 +388,16 @@ $(window).resize(() => {
 $('.list-item').on('click', function() {
 	$(this).toggleClass('is-checked');
 });
+
+// Intro Split
+function introSplitHeightInit() {
+	const splitSectionItems = Array.from(document.querySelectorAll('.intro-split-section'));
+
+	if (window.innerWidth > 1050) {
+		for (let i = 0; i < splitSectionItems.length; i += 1) {
+			const element = splitSectionItems[i];
+			const splitSectionHeight = element.querySelector('.intro-split-section__content').offsetHeight;
+			element.querySelector('.intro-split-section__video--table').style.height = `${splitSectionHeight}px`;
+		}
+	}
+}
