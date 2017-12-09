@@ -44,10 +44,12 @@ a {
 		color: shade($action-color, 25%);
 	}
 
-	// &:focus {
-	// 	outline: $focus-outline;
-	// 	outline-offset: $focus-outline-offset;
-	// }
+	&:focus {
+		// outline: $focus-outline;
+		// outline-offset: $focus-outline-offset;
+		outline: 0;
+		outline-offset: 0;
+	}
 }
 
 hr {

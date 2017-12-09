@@ -34,6 +34,7 @@ $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
 $white: #fff;
+$white-75: rgba($white, 0.75);
 $black: #000;
 $color-snow: #f8f8f8;
 $color-snow-d: #c5c5c5;
@@ -48,7 +49,6 @@ $color-blue: #636cb2;
 $color-pink: #ed3e7a;
 $color-pink-l: tint($color-pink, 20%);
 $color-pink-d: shade($color-pink, 20%);
-
 $color-lime: #c9da2a;
 $color-black: #202020;
 $color-gray: $medium-gray;
@@ -58,7 +58,7 @@ $base-font-color: $dark-gray;
 $action-color: $color-purple;
 
 // Color Lists
-$named-color-list: (purple, $color-purple), (teal, $color-teal), (purple-light, $color-purple-light), (blue, $color-blue), (pink, $color-pink), (lime, $color-lime);
+$named-color-list: (purple, $color-purple, $color-snow), (teal, $color-teal, $color-black), (purple-light, $color-purple-light, $color-snow), (blue, $color-blue, $color-snow), (pink, $color-pink, $color-snow), (lime, $color-lime, $color-black);
 
 
 // Border
@@ -93,9 +93,7 @@ $navbar-colapse: 850px;
 $cards-brk-sm: 650px;
 $cards-brk-md: 900px;
 $footer-icon-break: 450px;
-
 $lead-mobile-max-width: $cards-brk-sm;
-
 $page-section-sm: 480px;
 $page-section-md: 768px;
 $page-section-lg: 1024px;

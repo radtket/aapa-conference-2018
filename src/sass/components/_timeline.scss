@@ -2,12 +2,13 @@ $timeline-color: $color-purple;
 
 
 // Timeline
-#timeline {
+.timeline {
 	margin: $base-spacing;
 	position: relative;
 	transition: all 0.4s ease;
 	width: 90%;
 	@include clearfix;
+
 	&::before {
 		background-color: $timeline-color;
 		content: '';
@@ -24,81 +25,83 @@ $timeline-color: $color-purple;
 		}
 	}
 
-	.timeline-item {
+	&-item {
 		margin-bottom: $large-spacing;
 		position: relative;
 		@include clearfix;
+	}
 
-		.timeline-icon {
-			margin-left: -($large-spacing / 2);
-			overflow: hidden;
-			@include position(absolute, 0 null null 0);
-			@include size($large-spacing);
+	&-content {
+		background-color: $color-snow;
+		border-radius: $large-border-radius;
+		box-shadow: $boxshadow-large;
+		float: right;
+		overflow: hidden;
+		// padding: 20px;
+		transition: all 0.3s ease;
+		width: 90%;
+		@include mq($min-width: $page-section-lg) {
+			float: none;
+			width: 45%;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			@include position(absolute, 16px null null 45%);
+			@include triangle(16px, $timeline-color, right);
+		}
+
+		&.right {
 			@include mq($min-width: $page-section-lg) {
-				left: 50%;
+				float: right;
+
+				&::before {
+					border-left: 0;
+					left: inherit;
+					right: 45%;
+					@include triangle(16px, $timeline-color, left);
+				}
 			}
 		}
 
-		.timeline-content {
-			background-color: $color-snow;
-			border-radius: $large-border-radius;
-			box-shadow: $boxshadow-large;
-			float: right;
-			overflow: hidden;
-			// padding: 20px;
-			transition: all 0.3s ease;
-			width: 90%;
+		&-title {
+			color: $white;
+			margin-bottom: 0;
+			padding: $small-spacing;
+			@extend %card-title;
 			@include mq($min-width: $page-section-lg) {
-				float: none;
-				width: 45%;
+				text-align: center;
 			}
 
-			&::before {
-				content: '';
-				position: absolute;
-				@include position(absolute, 16px null null 45%);
-				@include triangle(16px, $timeline-color, right);
+			> span {
+				display: block;
+				font-weight: $font-weight--light;
 			}
+		}
 
-			&.right {
-				@include mq($min-width: $page-section-lg) {
-					float: right;
+		&-body {
+			padding: $card-inner-padding;
 
-					&::before {
-						border-left: 0;
-						left: inherit;
-						right: 45%;
-						@include triangle(16px, $timeline-color, left);
-					}
-				}
+			.btn {
+				margin-top: $base-spacing;
 			}
+		}
+	}
 
-			h2 {
-				background: $timeline-color;
-				color: $white;
-				font-weight: $font-weight--medium;
-				letter-spacing: $base-letter-spacing;
-				margin-bottom: 0;
-				padding: $small-spacing;
-				@extend %text-agenda-subtitle-date;
-				@include mq($min-width: $page-section-lg) {
-					text-align: center;
-				}
-				> span {
-					display: block;
-					font-weight: $font-weight--light;
-				}
-			}
-
-			&-body {
-				padding: $card-inner-padding;
-			}
+	&-icon {
+		margin-left: -($large-spacing / 2);
+		overflow: hidden;
+		@include position(absolute, 0 null null 0);
+		@include size($large-spacing);
+		@include mq($min-width: $page-section-lg) {
+			left: 50%;
 		}
 	}
 }
 
 @media screen and (max-width: $page-section-lg) {
-	#timeline {
+	.timeline {
 		// margin: 25px;
 		// padding: 0;
 		// width: 90%;
@@ -107,7 +110,7 @@ $timeline-color: $color-purple;
 		// 	left: 0;
 		// }
 
-		.timeline-item {
+		&-item {
 			.timeline-content {
 				&::before,
 				&.right::before {
