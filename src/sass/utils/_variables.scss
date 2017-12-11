@@ -58,6 +58,10 @@ $color-lime: #c9da2a;
 $color-black: #202020;
 $color-gray: $medium-gray;
 
+$accordion-color: $color-purple-light;
+$accordion-active: darken($color-purple-light, 7%);
+$accordion-accent: darken($color-purple-light, 10%);
+
 // Font Colors
 $base-font-color: $dark-gray;
 $action-color: $color-purple;

@@ -1,0 +1,264 @@
+extends layouts/default_layout
+include mixins/page-title-img
+block title
+	title Agenda
+block content
+	+page-title-img(`background-image: url('images/hero-images/hero__faq-alt.jpg');`, `Agenda`, `Agenda`)
+
+	section.small-section.bg-pattern--teal
+		.container
+
+			.alt-agenda-tabs-container
+				.alt-agenda-tabs
+					.alt-agenda-tabs-title
+						span Date
+					a.js-alt-agenda-tab.alt-agenda-tab.is-active(href='javascript:void(0)', rel='tab1') Friday
+						span May 18
+					a.js-alt-agenda-tab.alt-agenda-tab(href='javascript:void(0)', rel='tab2') Saturday
+						span May 19
+					a.js-alt-agenda-tab.alt-agenda-tab(href='javascript:void(0)', rel='tab3') Sunday
+						span May 20
+					a.js-alt-agenda-tab.alt-agenda-tab(href='javascript:void(0)', rel='tab4') Monday
+						span May 21
+					a.js-alt-agenda-tab.alt-agenda-tab(href='javascript:void(0)', rel='tab5') Tuesday
+						span May 22
+					a.js-alt-agenda-tab.alt-agenda-tab(href='javascript:void(0)', rel='tab6') Wednesday
+						span May 23
+				.alt-agenda-tab-content-container
+					.alt-agenda-tabs-title
+						span Time
+						span Session Title
+					a.js-alt-agenda-tab-accordion-heading.alt-agenda-tab-accordion-heading.is-active(href='', rel='tab1') Friday
+						span May 18
+					#tab1.js-alt-agenda-tab-content.alt-agenda-tab-content
+						.agenda-item
+							.agenda-item--time 8:00 a.m. – 6:00 p.m.
+							.agenda-item--event AAPA Board of Directors Meeting
+						.agenda-item
+							.agenda-item--time 1:00 p.m. – 7:00 p.m.
+							.agenda-item--event Registration Open
+						.agenda-item
+							.agenda-item--time 3:30 p.m. – 7:00 p.m.
+							.agenda-item--event House of Delegates Credentialing
+						.agenda-item
+							.agenda-item--time 6:30 p.m. – 8:00 p.m.
+							.agenda-item--event House of Delegates Reference Committee Orientation
+						.agenda-item
+							.agenda-item--time 6:00 p.m. – 8:00 p.m.
+							.agenda-item--event Student Academy Board Meeting
+
+					a.js-alt-agenda-tab-accordion-heading.alt-agenda-tab-accordion-heading(href='', rel='tab2') Saturday
+						span May 19
+					#tab2.js-alt-agenda-tab-content.alt-agenda-tab-content
+						.agenda-item
+							.agenda-item--time 6:30 a.m. – 6:00 p.m.
+							.agenda-item--event Registration Open
+						.agenda-item
+							.agenda-item--time 8:00 a.m. – 11:00 p.m.
+							.agenda-item--event CME Sessions & Workshops
+						.agenda-item
+							.agenda-item--time 8:00 a.m. – 8:45 a.m.
+							.agenda-item--event House of Delegates Delegate Orientation
+						.agenda-item
+							.agenda-item--time 8:00 a.m. – 5:00 p.m.
+							.agenda-item--event House of Delegates Credentialing
+						.agenda-item
+							.agenda-item--time 9:00 a.m. – 3:00 p.m.
+							.agenda-item--event Blood Drive
+						.agenda-item
+							.agenda-item--time 9:00 a.m. – 5:30 p.m.
+							.agenda-item--event Assembly of Representatives (AOR) Meeting
+						.agenda-item
+							.agenda-item--time 9:00 a.m. – 5:00 p.m.
+							.agenda-item--event House of Delegates Meeting
+						.agenda-item
+							.agenda-item--time 12:00 p.m. – 12:45 p.m.
+							.agenda-item--event Product Theaters
+						.agenda-item
+							.agenda-item--time 12:00 p.m. – 2:00 p.m.
+							.agenda-item--event ePoster Meet the Author Sessions
+						.agenda-item
+							.agenda-item--time 1:00 p.m. – 5:00 p.m.
+							.agenda-item--event CME Sessions & Workshops
+						.agenda-item
+							.agenda-item--time 6:00 p.m. – 7:00 p.m.
+							.agenda-item--event Shaking Hands & Taking Names
+						.agenda-item
+							.agenda-item--time 6:00 p.m. – 7:00 p.m.
+							.agenda-item--event House of Delegates Reception (Invitation Only)
+						.agenda-item
+							.agenda-item--time 7:00 p.m. – 8:00 p.m.
+							.agenda-item--event AAPA Distinguished Fellows Reception (Invitation Only)
+						.agenda-item
+							.agenda-item--time 5:30 p.m. – 8:00 p.m.
+							.agenda-item--event Satellite Symposia (eligible for CME)
+
+					a.js-alt-agenda-tab-accordion-heading.alt-agenda-tab-accordion-heading(href='', rel='tab3') Sunday
+						span May 20
+					#tab3.js-alt-agenda-tab-content.alt-agenda-tab-content
+						.agenda-item
+							.agenda-item--time 6:45 a.m. – 7:30 a.m.
+							.agenda-item--event Product Theaters
+						.agenda-item
+							.agenda-item--time 7:00 a.m. – 6:00 p.m.
+							.agenda-item--event Registration Open
+						.agenda-item
+							.agenda-item--time 8:00 a.m. – 9:00 a.m.
+							.agenda-item--event House of Delegates Credentialing
+						.agenda-item
+							.agenda-item--time 8:00 a.m. – 3:30 p.m.
+							.agenda-item--event House of Delegates Meeting
+						.agenda-item
+							.agenda-item--time 8:00 a.m. – 11:00 p.m.
+							.agenda-item--event CME Sessions & Workshops
+						.agenda-item
+							.agenda-item--time 9:00 a.m. – 11:00 a.m.
+							.agenda-item--event AAPA Career Fair
+						.agenda-item
+							.agenda-item--time 9:00 a.m. – 2:30 p.m.
+							.agenda-item--event Student SPARK Sessions
+						.agenda-item
+							.agenda-item--time 9:00 a.m. – 3:00 p.m.
+							.agenda-item--event Blood Drive
+						.agenda-item
+							.agenda-item--time 12:00 p.m. – 12:45 p.m.
+							.agenda-item--event Product Theaters
+						.agenda-item
+							.agenda-item--time 12:00 p.m. – 2:00 p.m.
+							.agenda-item--event ePoster Meet the Author Sessions
+						.agenda-item
+							.agenda-item--time 12:00 p.m. – 2:00 p.m.
+							.agenda-item--event AAPA Career Fair
+						.agenda-item
+							.agenda-item--time 1:00 p.m. – 5:30 p.m.
+							.agenda-item--event CME Sessions & Workshops
+						.agenda-item
+							.agenda-item--time 4:00 p.m. – 5:30 p.m.
+							.agenda-item--event General Session
+						.agenda-item
+							.agenda-item--time 6:00 p.m. – 7:00 p.m.
+							.agenda-item--event Constituent Organization Leadership Forum
+						.agenda-item
+							.agenda-item--time 7:00 p.m. – 8:00 p.m.
+							.agenda-item--event Constituent Organization Leadership Reception
+						.agenda-item
+							.agenda-item--time 5:30 p.m. – 8:00 p.m.
+							.agenda-item--event Satellite Symposia (eligible for CME)
+						.agenda-item
+							.agenda-item--time 7:00 p.m – 10:00 p.m.
+							.agenda-item--event PA Foundation Event
+
+					a.js-alt-agenda-tab-accordion-heading.alt-agenda-tab-accordion-heading(href='', rel='tab4') Monday
+						span May 21
+					#tab4.js-alt-agenda-tab-content.alt-agenda-tab-content
+						.agenda-item
+							.agenda-item--time 6:45 a.m. – 7:30 a.m.
+							.agenda-item--event Product Theaters
+						.agenda-item
+							.agenda-item--time 7:00 a.m. – 6:00 p.m.
+							.agenda-item--event Registration Open
+						.agenda-item
+							.agenda-item--time 8:00 a.m. – 11:00 a.m.
+							.agenda-item--event CME Sessions & Workshops
+						.agenda-item
+							.agenda-item--time 8:00 a.m. – 12:00 p.m.
+							.agenda-item--event House of Delegates Meeting
+						.agenda-item
+							.agenda-item--time 8:00 a.m. – 12:00 p.m.
+							.agenda-item--event Research in Action
+						.agenda-item
+							.agenda-item--time 9:00 a.m. – 2:30 p.m.
+							.agenda-item--event Student SPARK Sessions
+						.agenda-item
+							.agenda-item--time 9:00 a.m. – 5:00 p.m.
+							.agenda-item--event Exhibit Hall Open
+						.agenda-item
+							.agenda-item--time 12:00 p.m. – 12:45 p.m.
+							.agenda-item--event Product Theaters
+						.agenda-item
+							.agenda-item--time 12:00 p.m. – 2:00 p.m.
+							.agenda-item--event ePoster Meet the Author Sessions
+						.agenda-item
+							.agenda-item--time 12:30 p.m. – 2:00 p.m.
+							.agenda-item--event Researchers Luncheon
+						.agenda-item
+							.agenda-item--time 12:30 p.m. – 3:30 p.m.
+							.agenda-item--event PA Foundation Board Meeting
+						.agenda-item
+							.agenda-item--time 1:00 p.m. – 5:00 p.m.
+							.agenda-item--event CME Sessions & Workshops
+						.agenda-item
+							.agenda-item--time 5:00 p.m. – 6:30 p.m.
+							.agenda-item--event Veteran’s Caucus Memorial Ceremony
+						.agenda-item
+							.agenda-item--time 6:30 p.m. – 7:30 p.m.
+							.agenda-item--event Veteran’s Caucus Memorial Reception
+						.agenda-item
+							.agenda-item--time 5:30 p.m. – 8:00 p.m.
+							.agenda-item--event Satellite Symposia (eligible for CME)
+						.agenda-item
+							.agenda-item--time 6:00 p.m. – 7:00 p.m.
+							.agenda-item--event Program Directors Reception (Invitation Only)
+						.agenda-item
+							.agenda-item--time 7:00 p.m.
+							.agenda-item--event AAPA’s National Medical Challenge Bowl
+
+
+					a.js-alt-agenda-tab-accordion-heading.alt-agenda-tab-accordion-heading(href='', rel='tab4') Monday
+						span May 22
+					#tab5.js-alt-agenda-tab-content.alt-agenda-tab-content
+						.agenda-item
+							.agenda-item--time 6:30 a.m. – Race Start
+							.agenda-item--event PA Foundation Pacers for Health 5K Fun Run/Walk
+						.agenda-item
+							.agenda-item--time 6:30 a.m. – 7:45 a.m.
+							.agenda-item--event Satellite Symposia (eligible for CME)
+						.agenda-item
+							.agenda-item--time 7:00 a.m. – 6:00 p.m.
+							.agenda-item--event Registration Open
+						.agenda-item
+							.agenda-item--time 8:00 a.m. – 12:00 p.m.
+							.agenda-item--event CHLM & ASU Leadership Academy for PAs
+						.agenda-item
+							.agenda-item--time 8:00 a.m. – 11:00 p.m.
+							.agenda-item--event CME Sessions & Workshops
+						.agenda-item
+							.agenda-item--time 9:00 a.m. – 2:30 p.m.
+							.agenda-item--event Exhibit Hall Open
+						.agenda-item
+							.agenda-item--time 11:00 a.m. – 1:00 p.m.
+							.agenda-item--event Exhibit Hall Brunch Bites
+						.agenda-item
+							.agenda-item--time 12:00 p.m. – 12:45 p.m.
+							.agenda-item--event Product Theaters
+						.agenda-item
+							.agenda-item--time 12:00 p.m. – 2:00 p.m.
+							.agenda-item--event ePoster Meet the Author Sessions
+						.agenda-item
+							.agenda-item--time 1:00 p.m. – 5:00 p.m.
+							.agenda-item--event CME Sessions & Workshops
+						.agenda-item
+							.agenda-item--time 5:30 p.m. – 8:00 p.m.
+							.agenda-item--event Satellite Symposia (eligible for CME)
+
+
+					a.js-alt-agenda-tab-accordion-heading.alt-agenda-tab-accordion-heading(href='', rel='tab4') Monday
+						span May 23
+					#tab6.js-alt-agenda-tab-content.alt-agenda-tab-content
+						.agenda-item
+							.agenda-item--time 6:30 a.m. – 7:45 a.m.
+							.agenda-item--event Satellite Symposia (eligible for CME)
+						.agenda-item
+							.agenda-item--time 7:00 a.m. – 3:00 p.m.
+							.agenda-item--event Registration Open
+						.agenda-item
+							.agenda-item--time 8:00 a.m. – 12:00 p.m.
+							.agenda-item--event CME Sessions & Workshops
+						.agenda-item
+							.agenda-item--time 12:00 p.m. – 2:00 p.m.
+							.agenda-item--event ePoster Meet the Author Sessions
+						.agenda-item
+							.agenda-item--time 1:00 p.m. – 5:00 p.m.
+							.agenda-item--event CME Sessions & Workshops
+			.text-center
+				a.btn.btn-lg.btn-circle.btn-pink.mt-base(href='') Download Agenda

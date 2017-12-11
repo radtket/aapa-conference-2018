@@ -125,6 +125,10 @@ hr {
 	font-size: calcRem(20);
 }
 
+%lead {
+	font-size: calcRem(18);
+}
+
 %text-card-headline {
 	font-size: calcRem(18);
 	letter-spacing: $base-letter-spacing;
