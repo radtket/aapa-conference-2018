@@ -174,7 +174,7 @@ $tab-border: $base-border-size solid $color-pink-d;
 		@include mq($min-width: $page-section-md) {
 			background-color: $accordion-color;
 			border-bottom: 1px solid $accordion-active;
-			color: #fff;
+			color: $white;
 			display: block;
 			font-size: calcRem(20);
 			padding: $small-spacing $base-grid-gutter;
@@ -278,6 +278,14 @@ $tab-border: $base-border-size solid $color-pink-d;
 	padding: $small-spacing;
 	@include clearfix;
 
+	@include mq($min-width: $page-section-md) {
+		@include padding(null 0);
+
+		> * {
+			padding-left: $base-grid-gutter;
+		}
+	}
+
 	> * {
 		line-height: $heading-line-height;
 	}
@@ -290,19 +298,10 @@ $tab-border: $base-border-size solid $color-pink-d;
 		@extend %lead;
 	}
 
-	@include mq($min-width: $page-section-md) {
-		padding-left: 0;
-		padding-right: 0;
-
-		> * {
-			padding-left: $base-grid-gutter;
-		}
-	}
-
 	@include mq($min-width: $cards-brk-sm) {
 		> * {
 			float: left;
-			font-size: 14px !important;
+			font-size: calcRem(14) !important;
 
 			&:first-of-type {
 				width: 200px;
