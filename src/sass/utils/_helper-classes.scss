@@ -23,8 +23,16 @@
 	margin-bottom: $base-spacing;
 }
 
+.mb-small {
+	margin-bottom: $small-spacing;
+}
+
 .mt-base {
 	margin-top: $base-spacing;
+}
+
+.uppercase {
+	text-transform: uppercase;
 }
 
 .clearfix {
@@ -42,6 +50,19 @@
 	top: -999px;
 }
 
+.mw-lead {
+	max-width: $lead-mobile-max-width;
+}
+
+.mw-navbreak {
+	max-width: $navbar-colapse;
+}
+
 .block {
 	display: block;
+}
+
+.center-block {
+	display: block;
+	@include margin(auto);
 }

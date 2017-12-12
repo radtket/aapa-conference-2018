@@ -3,9 +3,10 @@ include mixins/page-title-img
 include mixins/table-register
 include mixins/section-title-left-stacked-top
 include mixins/section-title-center-stacked-top-w-sub
+include mixins/section-title-double-left
 include mixins/section-title-left
 block title
-	title AAPA 2018 - Contact Information
+	title AAPA 2018 - Registration Pricing
 block scripts
 	script.
 		let regRates = tabs({
@@ -28,6 +29,37 @@ block scripts
 		regPkgRates.init();
 block content
 	+page-title-img(`background-image: url('images/hero-images/hero__aapa-staff.jpg');`, `Registration Pricing`, `Registration Pricing`)
+
+	section.split-section
+		.clearfix.relative
+
+			.split-section-media.right
+				.split-section-media-table(style="background-image: url('../images/backgrounds/bg_pink-triangles.png')")
+					.split-section-media-cell.page-section.bg-scroll(style="background: url('../images/clipart/new.svg')")
+
+			.split-section-content.page-section.left
+				.split-section-content-wrapper
+					.split-section-content-text
+						+section-title-double-left(`Housing`, `&`, `Registration Policy`, '.')
+						p New this year, AAPA will be offering a $200 registration discount for attendees who book their hotel room within any of the official AAPA hotel blocks through our official housing agent, Experient. This year, you have 10 properties to choose from in the New Orleans area! You will be prompted to book your hotel during your registration process in order to receive the discount. No deposit is required to make a reservation until Friday, May 4, 2018.
+
+	section.split-section
+		.clearfix.relative
+
+			.split-section-media.left
+				.split-section-media-table(style="background-image: url('../images/backgrounds/bg_lime-triangles.png')")
+					.split-section-media-cell.page-section.bg-scroll(style="background: url('../images/clipart/question.svg')")
+
+			.split-section-content.page-section.right
+				.split-section-content-wrapper
+					.split-section-content-text
+						+section-title-left-stacked-top(`New Policy`, `?`, `Why are we enacting this`)
+						p In order to negotiate discounted hotel room rates for conference attendees, AAPA is required to fill a certain number of hotel rooms — an increasingly difficult task given the rise of discounted-hotel websites and Airbnb. When rooms aren’t filled, AAPA faces a loss. This new offered discount is an alternative to increasing registration rates to compensate for that loss.
+						p Special considerations will be made for those who live in the New Orleans area and don’t require a hotel room. Contact us at the email above for more information.
+						small
+							em
+								strong Note:
+								|  Reservations made in official conference hotels through other websites (Expedia, Priceline, etc.) will not be eligible for the registration discount.
 
 	section.page-section.bg-pattern--purple
 		.container
@@ -96,40 +128,40 @@ block content
 
 				.agenda-tabs__content-item.is-active
 					.agenda-tabs__content-item--inner
-						dl.list-definition
+						dl.list-definition.text-center
 							dt Fellow or Distinguished Fellow (DFAAPA):
 							dd A PA member who either graduated from a PA program accredited by ARC-PA (or a predecessor agency) or passed the PANCE. Fellow members may vote and hold office.
 						+table-register('1,095',	'1,145',	'1,195', '895',	'945',	'995')
 				.agenda-tabs__content-item
 					.agenda-tabs__content-item--inner
-						dl.list-definition
+						dl.list-definition.text-center
 							dt Retired
 							dd A PA who is a former fellow member, has chosen to retire from practice, and opts to be classified as a retired member. Retired members shall be entitled to privileges of the floor, but may not vote or hold office.
 						+table-register('875', '925', '975', '675', '725', '775')
 				.agenda-tabs__content-item
 					.agenda-tabs__content-item--inner
-						dl.list-definition
+						dl.list-definition.text-center
 							dt Sustaining
 							dd A PA who graduated from a PA program accredited by ARC-PA (or a predecessor agency), but has chosen not to actively practice in the profession and opts to be classified as a sustaining member. Sustaining members shall be entitled to privileges of the floor of the AAPA House of Delegates. However, they may not vote or hold office, and do not have access to Huddle, our online members-only community, or the AAPA Salary Report.
-						dl.list-definition
+						dl.list-definition.text-center
 							dt Affiliate
 							dd Pre-PA students and other healthcare professionals who want to stay current with the PA profession. Affiliate members shall be entitled to privileges of the floor, but may not vote or hold office, and do not have access to Huddle, our online members-only community.
 						+table-register('900', '950', '1,000', '700', '750', '800')
 				.agenda-tabs__content-item
 					.agenda-tabs__content-item--inner
-						dl.list-definition
+						dl.list-definition.text-center
 							dt Student
 							dd A student currently enrolled in an ARC-PA accredited PA program. Student members may not vote or hold office. Your one-time $75 dues keeps your membership active until you graduate!
 						+table-register('440', '440', '440', '240', '240', '240')
 				.agenda-tabs__content-item
 					.agenda-tabs__content-item--inner
-						dl.list-definition
+						dl.list-definition.text-center
 							dt Physician
 							dd Licensed physicians who wish to associate with AAPA. Physician members shall be entitled to privileges of the floor, but may not vote or hold office, and do not have access to Huddle, our online members-only community.
 						+table-register('975', '1,025', '1,075', '775', '825', '875')
 				.agenda-tabs__content-item
 					.agenda-tabs__content-item--inner
-						dl.list-definition
+						dl.list-definition.text-center
 							dt Associate
 							dd Representatives of businesses that sell products or services to PAs or individuals employed by government agencies who do not qualify for any other membership category. Associate members are not entitled to privileges of the floor, may not vote or hold office, and do not have access to Huddle, our online members-only community.
 						+table-register('1,000', '1,050', '1,100', '800', '850', '900')
@@ -145,3 +177,90 @@ block content
 	section.page-section.bg-pattern--lime
 		.container
 			+section-title-left-stacked-top(`Information`, `.`, `Additional`)
+			dl.accordion.mw-navbreak.center-block
+				dt
+					a(href='') Registration Discounts
+				dd
+					p Certain registration discounts are available for the categories below. If you are eligible, call AAPA Customer Care at
+						a(href='tel:7038362272') 703-836-2272
+						|  to confirm and receive your promo code.
+					ul.list-dots
+						li International PAs who are members of their national PA organization
+						li International PA students
+						li Pre-PA Students (members and nonmembers of AAPA)
+						li House of Delegates – Delegate attending only the HOD Meeting
+						li House of Delegates – Delegate attending the HOD Meeting and CME sessions
+						li Federal, Uniformed Services and Veteran PAs
+						li Constituent Organization (CO) Executives
+
+				dt
+					a(href='') Fund Your Trip
+				dd
+					p Many PA Programs or employers offer financial assistance for professional conferences like AAPA 2018. You can use the letter templates below to personalize your request for financial assistance. Students – for the best results, submit both the PA Program Request and the Request from AAPA President to your PA Program.
+					.row.text-center
+						a.featured-item-small.text-center(href="//www.aapa.org/about/aapa-governance-leadership/student-academy/challenge-bowl-past-winners/", target="_blank")
+							svg.featured-item-small-icon
+								use(xmlns:xlink='http://www.w3.org/2000/xlink', xlink:href='#icon-badge')
+							h5.featured-item-small-title.font-alt Attendee
+							p.center-block(style='max-width: 200px;') Employer Request
+
+						a.featured-item-small.text-center(href="//www.aapa.org/about/aapa-governance-leadership/student-academy/challenge-bowl-statement/", target="_blank")
+							svg.featured-item-small-icon
+								use(xmlns:xlink='http://www.w3.org/2000/xlink', xlink:href='#icon-student-m')
+							h5.featured-item-small-title.font-alt Student
+							p.center-block(style='max-width: 200px;') PA Program Request
+
+						a.featured-item-small.text-center(href="//www.aapa.org/wp-content/uploads/2017/05/Challenge-Bowl-Completed-Bracket-2017.pdf", target="_blank")
+							svg.featured-item-small-icon
+								use(xmlns:xlink='http://www.w3.org/2000/xlink', xlink:href='#icon-student-f')
+							h5.featured-item-small-title.font-alt Student
+							p.center-block(style='max-width: 200px;') Request from AAPA President
+					//- ul.inline-list
+					//- 	li
+					//- 		a.btn.btn-pink(href='https://www.aapa.org/wp-content/uploads/2017/10/AAPA-2018-Fund-Your-Trip-Employer_Final.docx', target='_blank', rel='noopener') Attendee – Employer Request
+					//- 	li
+					//- 		a.btn.btn-teal(href='https://www.aapa.org/wp-content/uploads/2017/10/AAPA-2018-Fund-Your-Trip-Dean_FINAL.docx', target='_blank', rel='noopener') Student – PA Program Request
+					//- 	li
+					//- 		a.btn.btn-purple(href='https://www.aapa.org/wp-content/uploads/2017/10/AAPA-2018-Fund-Your-Trip-Program-Director_Final.pdf', target='_blank', rel='noopener') Student – Request from AAPA President
+
+
+
+				dt
+					a(href='') Register a Group
+				dd
+					p Are you registering a group of two or more?
+						a(href='http://connect.aapa.org/conference/groupreg')  Use our Group Registration Portal!
+					p If you are registering 10 or more AAPA PA Fellow Members from the same organization, you may be eligible for $25 off standard registration fees (does not apply to single day passes).
+					small
+						em All individuals must be registered at the same time for the discount to apply. All memberships must be current through May 31, 2018.
+
+				dt
+					a(href='') What’s Included with Registration
+				dd
+					h4 Your AAPA 2018 Registration includes:
+					ul.list-dots
+						li 250+ credits of AAPA category 1 CME
+						li General Session
+						li 2-day Exhibit Hall featuring innovative companies
+						li Daily 45-minute Product Theaters
+						li Dozens of alumni, networking and constituent organization events
+						li Access to additional paid events, workshops and CME during registration
+
+				dt
+					a(href="") Registration Cancellation Policy
+				dd
+					ul.list-dots
+						li Cancellations received on or before Friday, April 13, 2018 will receive a full refund, minus a $75 processing fee.
+						li Cancellations received April 14 – April 27, 2018 will receive a 50% refund.
+						li No refunds will be made for cancellations after April 27, 2018 or for no-shows
+						li Cancellation requests for membership purchases will be refunded directly by AAPA within 30 days.
+						li You may cancel Speak Like a Pro, Workshops and/or Meet the Expert sessions and receive a full refund if cancellation is received in writing by March 29, 2018. No refunds will be given for Speak Like a Pro, Workshops and/or Meet the Expert session cancellations after March 29, 2018.
+						li Cancellation requests must be sent by email to AAPA@Experient-inc.com, fax to 888-772-1888 (US & Canada), 301-694-5124 (International) or mail to:
+							br
+							b Attn: AAPA 2018 Conference Registration
+							br
+							b 5202 Presidents Court
+							br
+							b Suite G100
+							br
+							b Frederick, MD 21703
