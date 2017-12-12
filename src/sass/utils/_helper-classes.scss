@@ -10,8 +10,17 @@
 	text-align: center;
 }
 
+.row {
+	@include grid-collapse;
+	@include grid-container;
+}
+
 .mb-0 {
 	margin-bottom: 0;
+}
+
+.mb-base {
+	margin-bottom: $base-spacing;
 }
 
 .mt-base {
@@ -31,4 +40,8 @@
 	overflow: hidden;
 	position: absolute;
 	top: -999px;
+}
+
+.block {
+	display: block;
 }

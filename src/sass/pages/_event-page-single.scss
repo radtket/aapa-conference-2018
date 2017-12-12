@@ -33,6 +33,11 @@
 			text-transform: uppercase;
 		}
 
+		h4 {
+			@extend %text-card-headline;
+			margin-top: $base-spacing;
+		}
+
 		p {
 			&:last-of-type {
 				margin-bottom: $base-spacing;
