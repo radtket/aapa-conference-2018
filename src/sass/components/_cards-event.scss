@@ -1,10 +1,25 @@
 .event-card {
+	overflow: hidden;
+	position: relative;
 	$card-event-date-width: 20%;
+
+	&:hover {
+		.event-card-photo img {
+			transform: scale(1.15);
+		}
+	}
 
 	&-photo {
 		display: inline-block;
 		line-height: 0;
+		overflow: hidden;
 		position: relative;
+
+		img {
+			display: block;
+			overflow: hidden;
+			transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1);
+		}
 
 		.date {
 			background: $color-purple-light;

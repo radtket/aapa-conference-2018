@@ -4,6 +4,7 @@
 	],
   "extends": "stylelint-config-sass-guidelines",
   "rules": {
+    "no-missing-end-of-source-newline": false,
     "order/order": [
 			"custom-properties",
 			"declarations"
