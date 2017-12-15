@@ -1,3 +1,34 @@
+(function($) {
+	$(window).load(() => {
+		// Page loader
+		$('body').imagesLoaded(() => {
+			$('.page-loader div').fadeOut();
+			$('.page-loader')
+				.delay(200)
+				.fadeOut('slow');
+		});
+
+		$(window).trigger('scroll');
+		$(window).trigger('resize');
+
+		// Hash menu forwarding
+		if (window.location.hash && $(window.location.hash).length) {
+			const hash_offset = $(window.location.hash).offset().top;
+			$('html, body').animate({
+				scrollTop: hash_offset,
+			});
+		}
+	});
+
+	$(document).on('ready', () => {
+		$(window).trigger('resize');
+	});
+
+	$(window).on('resize', () => {
+		console.log(`I'm Resized`);
+	});
+})($);
+
 /* ---------------------------------------------
  Hamburger Animation and Dropdown
  --------------------------------------------- */
