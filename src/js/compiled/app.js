@@ -411,3 +411,73 @@ $('.js-alt-agenda-tab-accordion-heading').click(function (event) {
 	$('.js-alt-agenda-tab').removeClass('is-active');
 	$('.js-alt-agenda-tab[rel^=\'' + accordionActiveTab + '\']').addClass('is-active');
 });
+
+// Slider Resize
+function textboxHeightCalculator() {
+	var slides = Array.from(document.querySelectorAll('.carousel-container'));
+	slides.forEach(function (element) {
+		var textbox = element.querySelector('.carousel-text');
+		var polygon = element.querySelector('.polygon');
+		var textboxWidth = textbox.offsetHeight;
+		var textboxHeight = textbox.offsetWidth;
+		var windowDiff = (window.innerWidth - 1200) / 2;
+		if (windowDiff >= 0) {
+			polygon.style.width = textboxWidth + textboxHeight + windowDiff + 'px';
+		} else {
+			polygon.style.width = textboxWidth + textboxHeight + 'px';
+		}
+	});
+}
+
+// $(document).ready(() => {
+// 	// Declare Carousel jquery object
+// 	const owl = $('.owl-carousel');
+
+// 	// Carousel initialization
+// 	owl.owlCarousel({
+// 		loop: true,
+// 		margin: 0,
+// 		navSpeed: 500,
+// 		nav: true,
+// 		navText: [
+// 			'<svg><use xmlns:xlink="http://www.w3.org/2000/xlink" xlink:href="#slider-nav-prev"></use></svg>',
+// 			'<svg><use xmlns:xlink="http://www.w3.org/2000/xlink" xlink:href="#slider-nav-next"></use></svg>',
+// 		],
+// 		navContainerClass: 'owl-carousel__nav',
+// 		navClass: ['owl-carousel__nav--prev', 'owl-carousel__nav--next'],
+// 		navElement: 'button',
+// 		dotsClass: 'owl-carousel__dots',
+// 		dotClass: 'owl-carousel__dots--item',
+// 		items: 1,
+// 	});
+
+// 	// add animate.css class(es) to the elements to be animated
+// 	function setAnimation(_elem, _InOut) {
+// 		// Store all animationend event name in a string.
+// 		// cf animate.css documentation
+// 		const animationEndEvent = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+
+// 		_elem.each(function() {
+// 			const $elem = $(this);
+// 			const $animationType = `animated ${$elem.data(`animation-${_InOut}`)}`;
+
+// 			$elem.addClass($animationType).one(animationEndEvent, () => {
+// 				$elem.removeClass($animationType); // remove animate.css Class at the end of the animations
+// 			});
+// 		});
+// 	}
+
+// 	// Fired before current slide change
+// 	owl.on('change.owl.carousel', event => {
+// 		const $currentItem = $('.owl-item', owl).eq(event.item.index);
+// 		const $elemsToanim = $currentItem.find('[data-animation-out]');
+// 		setAnimation($elemsToanim, 'out');
+// 	});
+
+// 	// Fired after current slide has been changed
+// 	owl.on('changed.owl.carousel', event => {
+// 		const $currentItem = $('.owl-item', owl).eq(event.item.index);
+// 		const $elemsToanim = $currentItem.find('[data-animation-in]');
+// 		setAnimation($elemsToanim, 'in');
+// 	});
+// });

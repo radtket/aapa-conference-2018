@@ -1,0 +1,10 @@
+mixin carousel-item(bgImage, svgColor, headline, body, btnText, btnLink, btnColor)
+	.carousel.carousel-purple(class= 'carousel-' + svgColor, style= bgImage)
+		.carousel-container
+			.carousel-text
+				h4.carousel-text-head(data-animation-in="slideInDown" data-animation-out="animate-out slideOutUp")= headline
+				p.carousel-text-body(data-animation-in="slideInUp" data-animation-out="animate-out fadeOut")= body
+				a.btn(class= 'btn-' + btnColor, href=btnLink ,data-animation-in="slideInUp" data-animation-out="animate-out slideOutDown")= btnText
+			.polygon(data-animation-in="animate-out slideInLeft" data-animation-out="animate-out slideOutDown")
+				svg(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 500 500')
+					polygon(points='500 500 0 0 0 500 500 500', opacity='1')

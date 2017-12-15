@@ -4,8 +4,9 @@
 		display: flex;
 		flex-wrap: wrap;
 	}
+
 	.owl-item {
-		@include margin($large-spacing null);
+		@include margin($base-spacing null);
 		@extend %card;
 		@extend %event-card;
 	}
@@ -13,17 +14,17 @@
 
 /* Arrows */
 $arrow-icon-height: 1.25rem;
-$slider__nav--size: 105px;
+$slider-nav--size: 105px;
 
-%slider__nav--outer {
+%slider-nav--outer {
 	display: none;
 	@include mq($min-width: 600px) {
-		@include size($slider__nav--size);
+		@include size($slider-nav--size);
 		@include position(absolute, 50% null null null);
 		color: $white;
 		display: block;
-		line-height: $slider__nav--size;
-		margin-top: -$slider__nav--size / 2;
+		line-height: $slider-nav--size;
+		margin-top: -$slider-nav--size / 2;
 		opacity: 0;
 		padding: 0;
 		text-align: center;
@@ -34,11 +35,11 @@ $slider__nav--size: 105px;
 
 //original selectors
 //.owl-carousel__nav--prev:before, .owl-carousel__nav--next:before
-%slider__nav--inner {
+%slider-nav--inner {
 	display: none;
 	@include mq($min-width: 600px) {
 		@include size(66%);
-		@include position(absolute, ($arrow-icon-height / 2) null null null);
+		@include position(absolute, $arrow-icon-height null null null);
 		background: $color-pink;
 		border-radius: 2px;
 		box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
@@ -59,11 +60,11 @@ $slider__nav--size: 105px;
 		}
 
 		.owl-carousel__nav--prev {
-			left: -$slider__nav--size * 0.33;
+			left: -$slider-nav--size * 0.33;
 		}
 
 		.owl-carousel__nav--next {
-			right: -$slider__nav--size * 0.33;
+			right: -$slider-nav--size * 0.33;
 		}
 	}
 	// Styling Next and Prev buttons
@@ -72,10 +73,10 @@ $slider__nav--size: 105px;
 
 		&--prev,
 		&--next {
-			@extend %slider__nav--outer;
+			@extend %slider-nav--outer;
 
 			&::before {
-				@extend %slider__nav--inner;
+				@extend %slider-nav--inner;
 			}
 
 			&:hover {
@@ -96,15 +97,16 @@ $slider__nav--size: 105px;
 			}
 
 			svg {
+				height: $arrow-icon-height;
 				margin: auto;
-				max-height: $arrow-icon-height;
 				max-width: 50%;
 				position: relative;
+				top: $arrow-icon-height / 2;
 			}
 		}
 
 		&--prev {
-			left: -$slider__nav--size / 2;
+			left: -$slider-nav--size / 2;
 
 			&::before {
 				left: 0;
@@ -112,7 +114,7 @@ $slider__nav--size: 105px;
 		}
 
 		&--next {
-			right: -$slider__nav--size / 2;
+			right: -$slider-nav--size / 2;
 
 			&::before {
 				right: 0;
@@ -120,62 +122,74 @@ $slider__nav--size: 105px;
 		}
 	}
 
-	&__dots {
+
+	&__dots-purple,
+	&__dots-teal {
 		-webkit-tap-highlight-color: transparent;
-		// @include margin($small-spacing null);
+		@include margin($small-spacing null);
 		text-align: center;
+	}
 
-		&--item {
-			@include margin(null $x-small-spacing);
-			cursor: pointer;
-			display: inline-block;
-			position: relative;
-			zoom: 1;
+	&__dots-purple {
+		.owl-carousel__dots--item > span::before {
+			background-image: url('../images/slider-ui/slider-dots__purple.svg');
+		}
 
-			&.active {
-				span {
-					&::before {
-						background-image: url('../images/slider-ui/slider-dots__teal--active.svg');
-						opacity: 0.75;
-					}
-				}
-			}
+		.owl-carousel__dots--item.active > span::before {
+			background-image: url('../images/slider-ui/slider-dots__purple--active.svg');
+		}
+	}
 
-			span {
-				@include size($arrow-icon-height);
-				display: block;
 
-				&:hover,
-				&:focus {
-					outline: none;
+	&__dots-teal {
+		.owl-carousel__dots--item > span::before {
+			background-image: url('../images/slider-ui/slider-dots__teal.svg');
+		}
 
-					&::before {
-						opacity: 1;
-					}
-				}
-
-				&::before {
-					@include size(100%);
-					@include position(absolute, 0);
-					background-image: url('../images/slider-ui/slider-dots__teal.svg');
-					background-position: center center;
-					background-repeat: no-repeat;
-					background-size: contain;
-					content: '';
-					-webkit-font-smoothing: antialiased;
-					opacity: 0.25;
-				}
-			}
+		.owl-carousel__dots--item.active > span::before {
+			background-image: url('../images/slider-ui/slider-dots__teal--active.svg');
 		}
 	}
 }
 
-.purple-dots {
-	.owl-carousel__dots--item > span::before {
-		background-image: url('../images/slider-ui/slider-dots__purple.svg');
+
+.owl-carousel__dots--item {
+	@include margin(null $x-small-spacing);
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	zoom: 1;
+
+	&.active {
+		span {
+			&::before {
+				opacity: 0.75;
+			}
+		}
 	}
 
-	.owl-carousel__dots--item.active > span::before {
-		background-image: url('../images/slider-ui/slider-dots__purple--active.svg');
+	span {
+		@include size($arrow-icon-height);
+		display: block;
+
+		&:hover,
+		&:focus {
+			outline: none;
+
+			&::before {
+				opacity: 1;
+			}
+		}
+
+		&::before {
+			@include size(100%);
+			@include position(absolute, 0);
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			content: '';
+			-webkit-font-smoothing: antialiased;
+			opacity: 0.25;
+		}
 	}
 }

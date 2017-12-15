@@ -66,3 +66,12 @@
 	display: block;
 	@include margin(auto);
 }
+
+.animated {
+	animation-delay: 500ms;
+	animation-duration: 3s;
+}
+
+.animate-out {
+	animation-delay: 0ms;
+}
