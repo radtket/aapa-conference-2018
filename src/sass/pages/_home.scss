@@ -18,6 +18,10 @@
 
 			.respnsive-video-wrapper {
 				box-shadow: $boxshadow-large;
+				video {
+					height: auto;
+					max-width: 100%;
+				}
 			}
 		}
 	}
