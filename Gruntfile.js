@@ -27,6 +27,33 @@ module.exports = grunt => {
 			},
 		},
 
+		htmlmin: {
+			dist: {
+				options: {
+					removeComments: true,
+					collapseWhitespace: true,
+				},
+				files: [
+					{
+						expand: true,
+						cwd: 'dist/',
+						src: '*.html',
+						dest: 'dist',
+					},
+				],
+			},
+			dev: {
+				files: [
+					{
+						expand: true,
+						cwd: 'dist/',
+						src: '*.html',
+						dest: 'dist',
+					},
+				],
+			},
+		},
+
 		// sass task
 		sass: {
 			dist: {
@@ -80,7 +107,7 @@ module.exports = grunt => {
 
 		// uglify task (js minify)
 		uglify: {
-			my_target: {
+			js: {
 				files: {
 					'dist/js/pages/index.min.js': [
 						'src/_compiled-js/pages/index-compiled.js',
@@ -105,7 +132,7 @@ module.exports = grunt => {
 			main: {
 				expand: true,
 				cwd: 'src',
-				src: ['libraries/**', 'fonts/**', 'video/**'],
+				src: ['fonts/**', 'video/**'],
 				dest: 'dist/',
 			},
 		},
@@ -131,8 +158,12 @@ module.exports = grunt => {
 				],
 			},
 		},
+
 		// minify css (only tun in production)
 		cssmin: {
+			options: {
+				report: 'gzip',
+			},
 			target: {
 				files: [
 					{
@@ -145,6 +176,7 @@ module.exports = grunt => {
 				],
 			},
 		},
+
 		// auto refresh view on change in dist directory
 		browserSync: {
 			dev: {
@@ -158,11 +190,22 @@ module.exports = grunt => {
 			},
 		},
 
+		// Combine Media Queries
+		combine_mq: {
+			new_filename: {
+				options: {
+					beautify: true,
+				},
+				src: 'dist/css/application.css',
+				dest: 'dist/css/application.css',
+			},
+		},
+
 		// watch change inside directory to run task
 		watch: {
 			pug: {
 				files: ['src/pug/**/*.pug'],
-				tasks: ['pug'],
+				tasks: ['pug', 'htmlmin:dev'],
 			},
 			sass: {
 				files: ['src/sass/**/*.scss'],
@@ -171,10 +214,6 @@ module.exports = grunt => {
 			js: {
 				files: ['src/js/**/*.js'],
 				tasks: ['babel', 'uglify'],
-			},
-			copy: {
-				files: ['src/libraries/**'],
-				tasks: ['copy'],
 			},
 			imagemin: {
 				files: ['src/images/**'],
@@ -186,8 +225,10 @@ module.exports = grunt => {
 	// initial
 	grunt.loadNpmTasks('grunt-babel');
 	grunt.loadNpmTasks('grunt-browser-sync');
+	grunt.loadNpmTasks('grunt-combine-mq');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-pug');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -196,9 +237,27 @@ module.exports = grunt => {
 	grunt.loadNpmTasks('grunt-postcss');
 
 	// register default task
-	if (process.env.NODE_ENV === 'production') {
-		grunt.registerTask('default', ['pug', 'sass', 'babel', 'uglify', 'copy', 'imagemin', 'cssmin']);
-	} else {
-		grunt.registerTask('default', ['pug', 'sass', 'postcss', 'babel', 'uglify', 'browserSync', 'watch']);
-	}
+	grunt.registerTask('default', [
+		'pug',
+		'sass',
+		'postcss',
+		'combine_mq',
+		'babel',
+		'uglify',
+		'htmlmin:dev',
+		'browserSync',
+		'watch',
+	]);
+	grunt.registerTask('build', [
+		'pug',
+		'sass',
+		'postcss',
+		'combine_mq',
+		'babel',
+		'uglify',
+		'imagemin',
+		'copy',
+		'cssmin',
+		'htmlmin:dist',
+	]);
 };

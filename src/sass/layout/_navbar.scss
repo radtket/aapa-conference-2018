@@ -20,13 +20,13 @@ $nav-bar-z: 99;
 		background-color: $color-purple;
 		text-align: center;
 		@include padding($x-small-spacing null);
-		@include mq($min-width: 450px) {
+		@include mq($min-width: $footer-icon-break) {
 			text-align: left;
 		}
 
 		ul {
 			margin-bottom: $x-small-spacing;
-			@include mq($min-width: 450px) {
+			@include mq($min-width: $footer-icon-break) {
 				display: inline-block;
 				line-height: 27px;
 				margin-bottom: 0;
@@ -57,7 +57,7 @@ $nav-bar-z: 99;
 		}
 
 		.btn-cme {
-			@include mq($min-width: 450px) {
+			@include mq($min-width: $footer-icon-break) {
 				display: inline-block;
 				float: right;
 			}
