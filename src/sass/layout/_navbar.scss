@@ -7,7 +7,7 @@ $nav-bar-z: 99;
 }
 
 .navbar {
-	box-shadow: $boxshadow-navbar;
+	// box-shadow: $boxshadow-navbar;
 	font-size: calcRem(12);
 	left: 0;
 	position: fixed;
@@ -67,6 +67,7 @@ $nav-bar-z: 99;
 
 	&__bottom {
 		background-color: $white;
+		box-shadow: $boxshadow-navbar;
 		position: relative;
 
 		&--logo {
