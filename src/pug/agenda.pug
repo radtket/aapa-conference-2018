@@ -2,6 +2,10 @@ extends layouts/default_layout
 include mixins/page-title-img
 block title
 	title Agenda
+
+block vendorScripts
+	script(src="js/pages/agenda.min.js")
+
 block content
 	+page-title-img(`background-image: url('images/hero-images/hero__faq-alt.jpg');`, `Agenda`, `Agenda`)
 

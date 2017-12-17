@@ -7,11 +7,9 @@ block title
 
 block vendorScripts
 	script(src='https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.2.2/mixitup.js')
+	var mixitupContainer = document.querySelector('.mix-container');
+	var mixer = mixitup(mixitupContainer);
 
-block scripts
-	script.
-		const mixitupContainer = document.querySelector('.mix-container');
-		const mixer = mixitup(mixitupContainer);
 block content
 	+page-title-img(`background-image: url('images/backgrounds/bg_teal-triangles.svg');`, `Special Events`, `Special Events`)
 

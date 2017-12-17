@@ -66,9 +66,15 @@ module.exports = grunt => {
 				presets: ['env'],
 			},
 			dist: {
-				files: {
-					'src/js/compiled/app.js': 'src/js/app.js',
-				},
+				files: [
+					{
+						expand: true,
+						cwd: 'src/js/',
+						src: ['**/*.js'],
+						dest: 'src/_compiled-js',
+						ext: '-compiled.js',
+					},
+				],
 			},
 		},
 
@@ -76,7 +82,19 @@ module.exports = grunt => {
 		uglify: {
 			my_target: {
 				files: {
-					'dist/js/app.min.js': ['src/js/compiled/app.js'],
+					'dist/js/pages/index.min.js': [
+						'src/_compiled-js/pages/index-compiled.js',
+						'src/_compiled-js/components/countdown-clock-compiled.js',
+					],
+					'dist/js/pages/housing-info-and-policies.min.js': [
+						'src/_compiled-js/pages/housing-info-and-policies-compiled.js',
+					],
+					'dist/js/pages/agenda.min.js': ['src/_compiled-js/pages/agenda-compiled.js'],
+					'dist/js/pages/register.min.js': ['src/_compiled-js/pages/register-compiled.js'],
+					'dist/js/app.min.js': ['src/_compiled-js/app-compiled.js'],
+					'dist/js/components/accordion.min.js': ['src/_compiled-js/components/accordion-compiled.js'],
+					'dist/js/components/tabs-vertical.min.js': ['src/_compiled-js/components/tabs-vertical-compiled.js'],
+					'dist/js/components/tabs-horizontal.min.js': ['src/_compiled-js/components/tabs-horizontal-compiled.js'],
 				},
 			},
 		},

@@ -126,8 +126,9 @@ $slider-nav--size: 105px;
 	&__dots-purple,
 	&__dots-teal {
 		-webkit-tap-highlight-color: transparent;
-		@include margin($small-spacing null);
+		position: relative;
 		text-align: center;
+		@include margin($small-spacing null);
 	}
 
 	&__dots-purple {

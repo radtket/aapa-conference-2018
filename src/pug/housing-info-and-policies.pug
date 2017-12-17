@@ -6,45 +6,10 @@ include mixins/section-title-left-stacked-top
 include mixins/section-title-left
 block title
 	title AAPA 2018 - Hotel Policy & Rates
-block scripts
-	script.
-		var hotelBtn = document.querySelectorAll('.hotel-btn');
-		hotelBtn.forEach(function (btn) {
-			return btn.addEventListener('click', showHotelDetails);
-		});
+block vendorScripts
+	script(src="js/pages/housing-info-and-policies.min.js")
 block content
 	+page-title-video(`../video/video__hotels.mp4`, `Hotels & Travel`, `Hotel Policy & Rates`)
-
-	//- section.small-section
-	//- 	.container
-	//- 		.col-two-third
-	//- 			.mw_700
-	//- 				svg
-	//- 					use(xmlns:xlink='http://www.w3.org/2000/xlink', xlink:href='#clipart-new')
-	//- 				+section-title-double-left(`Housing`, `&`, `Registration Policy`, '.')
-	//- 				p.lead New this year, AAPA will be offering a $200 registration discount for attendees who book their hotel room within any of the official AAPA hotel blocks through our official housing agent, Experient. This year, you have 10 properties to choose from in the New Orleans area! You will be prompted to book your hotel during your registration process in order to receive the discount. No deposit is required to make a reservation until Friday, May 4, 2018.
-	//- 		figure.col-third
-	//- 			svg
-	//- 				use(xmlns:xlink='http://www.w3.org/2000/xlink', xlink:href='#clipart-new')
-
-
-	//- section.small-section
-	//- 	.container
-	//- 		figure.col-third
-	//- 			svg
-	//- 				use(xmlns:xlink='http://www.w3.org/2000/xlink', xlink:href='#clipart-question')
-	//- 		.col-two-third
-	//- 			.mw_700
-	//- 				svg
-	//- 					use(xmlns:xlink='http://www.w3.org/2000/xlink', xlink:href='#clipart-question')
-	//- 				+section-title-left-stacked-top(`New Policy`, `?`, `Why are we enacting this`)
-	//- 				p.lead In order to negotiate discounted hotel room rates for conference attendees, AAPA is required to fill a certain number of hotel rooms — an increasingly difficult task given the rise of discounted-hotel websites and Airbnb. When rooms aren’t filled, AAPA faces a loss. This new offered discount is an alternative to increasing registration rates to compensate for that loss.
-	//- 				p.lead Special considerations will be made for those who live in the New Orleans area and don’t require a hotel room. Contact us at the email above for more information.
-	//- 				small
-	//- 					em
-	//- 						strong Note:
-	//- 						|  Reservations made in official conference hotels through other websites (Expedia, Priceline, etc.) will not be eligible for the registration discount.
-
 
 	section.split-section
 		.clearfix.relative

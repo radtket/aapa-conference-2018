@@ -7,26 +7,12 @@ include mixins/section-title-double-left
 include mixins/section-title-left
 block title
 	title AAPA 2018 - Registration Pricing
-block scripts
-	script.
-		let regRates = tabs({
-			el: '#regRates',
-			tabNavigationLinks: '.agenda-tabs__nav--link',
-			tabContentContainers: '.agenda-tabs__content-item'
-		});
-		let regSingleRates = tabs({
-			el: '#regSingleRates',
-			tabNavigationLinks: '.agenda-tabs__nav--link',
-			tabContentContainers: '.agenda-tabs__content-item'
-		});
-		let regPkgRates = tabs({
-			el: '#regPkgRates',
-			tabNavigationLinks: '.agenda-tabs__nav--link',
-			tabContentContainers: '.agenda-tabs__content-item'
-		});
-		regRates.init();
-		regSingleRates.init();
-		regPkgRates.init();
+
+block vendorScripts
+	script(src='js/components/tabs-horizontal.min.js')
+	script(src="js/components/accordion.min.js")
+	script(src="js/pages/register.min.js")
+
 block content
 	+page-title-img(`background-image: url('images/hero-images/hero__aapa-staff.jpg');`, `Registration Pricing`, `Registration Pricing`)
 

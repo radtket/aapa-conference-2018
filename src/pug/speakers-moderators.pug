@@ -2,7 +2,10 @@ extends layouts/default_layout
 include mixins/page-title-img
 include components/svg/timeline-dot
 block title
-	title Frequently Asked Questions
+	title Speakers & Moderators
+block vendorScripts
+	script(src="js/components/accordion.min.js")
+	script(src="js/components/tabs-vertical.min.js")
 block vendorCSS
 	link(rel="stylesheet", href="//code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css", attr)
 
