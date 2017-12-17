@@ -93,6 +93,7 @@ module.exports = grunt => {
 					'dist/js/pages/register.min.js': ['src/_compiled-js/pages/register-compiled.js'],
 					'dist/js/app.min.js': ['src/_compiled-js/app-compiled.js'],
 					'dist/js/components/accordion.min.js': ['src/_compiled-js/components/accordion-compiled.js'],
+					'dist/js/components/googleMap-venue.min.js': ['src/_compiled-js/components/googleMap-venue-compiled.js'],
 					'dist/js/components/tabs-vertical.min.js': ['src/_compiled-js/components/tabs-vertical-compiled.js'],
 					'dist/js/components/tabs-horizontal.min.js': ['src/_compiled-js/components/tabs-horizontal-compiled.js'],
 				},
