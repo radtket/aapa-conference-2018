@@ -7,7 +7,9 @@ mixin event-sidebar
 				each event in events
 					.post-thumb
 						a(href='./' + event.slug + '.html')= event.eventName
-
+		.widget
+			h4 Tweets
+			#twitterFeed
 mixin event-footer
 	footer
 		ul.share-list

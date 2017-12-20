@@ -102,3 +102,23 @@ function initNavbarNav() {
 		}
 	);
 }
+
+// const config3 = {
+// 	id: '943235979355312128',
+// 	domId: 'example3',
+// 	maxTweets: 5,
+// 	enableLinks: true,
+// 	showImages: false,
+// };
+// twitterFetcher.fetch(config3);
+
+const twitterFeed = {
+	profile: { screenName: 'AAPAorg' },
+	domId: 'twitterFeed',
+	maxTweets: 3,
+	enableLinks: true,
+	showUser: true,
+	showTime: true,
+	showImages: false,
+	lang: 'en',
+};

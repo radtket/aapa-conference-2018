@@ -4,10 +4,12 @@ include mixins/event-single-sidebar
 
 block title
   title AAPA 2018 - AAPA National Medical Challenge Bowl
-
 block vendorScripts
+  script(src="js/twitterFetcher_min.js")
   script(src="js/components/accordion.min.js")
-
+block scripts
+  script.
+    twitterFetcher.fetch(twitterFeed);
 block content
   +page-title-img(`background-image: url('images/event-pages/ChallengeBowl-hero.jpg'); background-position: 50% 35%;`, `AAPA National Medical Challenge Bowl`, `AAPA National Medical Challenge Bowl`)
 
@@ -84,8 +86,8 @@ block content
               ul.list-dots
                 li All teams will be notified of their eligibility status in March.
                 li For more information, contact the Student Academy National Office at 571-319-4310 or email 
-                    a(href='mailto:students@aapa.org') students@aapa.org
-                    | .
+                  a(href='mailto:students@aapa.org') students@aapa.org
+                  | .
 
 
         +event-footer

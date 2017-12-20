@@ -4,7 +4,11 @@ include mixins/event-single-sidebar
 
 block title
 	title AAPA 2018 - Constituent Organizations
-
+block vendorScripts
+	script(src="js/twitterFetcher_min.js")
+block scripts
+	script.
+		twitterFetcher.fetch(twitterFeed);
 block content
 	+page-title-img(`background-image: url('images/event-pages/ProductTheaters-hero.jpg'); background-position: 50% 25%;`, `Constituent Organizations`, `Constituent Organizations`)
 

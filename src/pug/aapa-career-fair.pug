@@ -4,7 +4,11 @@ include mixins/event-single-sidebar
 
 block title
 	title AAPA 2018 - AAPA Career Fair
-
+block vendorScripts
+	script(src="js/twitterFetcher_min.js")
+block scripts
+	script.
+		twitterFetcher.fetch(twitterFeed);
 block content
 	+page-title-img(`background-image: url('images/event-pages/CareerFair-hero.jpg'); background-position: 50% 40%;`, `AAPA Career Fair`, `AAPA Career Fair`)
 

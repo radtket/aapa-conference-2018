@@ -4,7 +4,11 @@ include mixins/event-single-sidebar
 
 block title
 	title AAPA 2018 - Shaking Hands & Taking Names
-
+block vendorScripts
+	script(src="js/twitterFetcher_min.js")
+block scripts
+	script.
+		twitterFetcher.fetch(twitterFeed);
 block content
 	+page-title-img(`background-image: url('images/event-pages/ShakingHands-hero.jpg'); background-position: 50% 25%;`, `Shaking Hands & Taking Names`, `Shaking Hands & Taking Names`)
 
