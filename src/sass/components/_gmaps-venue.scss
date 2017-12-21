@@ -1,9 +1,12 @@
 $venue_map-height: 550px;
 
 #map_wrapper {
-	height: $venue_map-height;
+	height: $footer-icon-break;
 	position: relative;
 	width: 100%;
+	@include mq($min-width: $cards-brk-sm) {
+		height: $venue_map-height;
+	}
 }
 
 #map_canvas {
@@ -18,6 +21,10 @@ $venue_map-height: 550px;
 	height: $venue_map-height;
 	padding: $small-spacing $base-spacing;
 	position: relative;
+
+	@include mq($max-width: $cards-brk-sm) {
+		display: none !important;
+	}
 
 	.section-title {
 		text-shadow: $venue-title-shadow;
