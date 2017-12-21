@@ -132,7 +132,7 @@ module.exports = grunt => {
 			main: {
 				expand: true,
 				cwd: 'src',
-				src: ['fonts/**', 'video/**'],
+				src: ['fonts/**', 'video/**', 'libraries/**'],
 				dest: 'dist/',
 			},
 			favicons: {
@@ -275,5 +275,21 @@ module.exports = grunt => {
 		'copy:htaccess',
 		'cssmin',
 		'htmlmin:dist',
+	]);
+	grunt.registerTask('build-serve', [
+		'pug',
+		'sass',
+		'postcss',
+		'combine_mq',
+		'babel',
+		'uglify',
+		'imagemin',
+		'copy',
+		'copy:favicons',
+		'copy:htaccess',
+		'cssmin',
+		'htmlmin:dist',
+		'browserSync',
+		'watch',
 	]);
 };
