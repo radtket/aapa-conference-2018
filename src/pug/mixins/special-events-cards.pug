@@ -2,7 +2,7 @@ mixin special-events-cards
 	include ../components/data/data-events
 	each event in events
 		figure.event-card
-			a.event-card-photo(href= '/' + event.slug + '.html')
+			a.event-card-photo(href= './' + event.slug + '.html')
 				img(src='images/event-pages/' + event.filePrefix + '-card.jpg', alt=event.eventName)
 				if event.friday
 					span.text-center.date.date__sat
