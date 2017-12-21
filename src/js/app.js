@@ -58,14 +58,18 @@ function initNavbarNav() {
 	const mnHasSub = $('.has__sub-nav');
 	let mnThisLi;
 
+	$('.mobile-on .has__sub-nav').removeClass('subnav-opened');
+
 	mnHasSub.click(function() {
 		if ($('.navbar').hasClass('mobile-on')) {
 			mnThisLi = $(this).parent('li:first');
 			if (mnThisLi.hasClass('js-opened')) {
 				mnThisLi.find('.sub-nav:first').slideUp(() => {
 					mnThisLi.removeClass('js-opened');
+					mnThisLi.find('.has__sub-nav').removeClass('subnav-opened');
 				});
 			} else {
+				mnThisLi.find('.has__sub-nav').addClass('subnav-opened');
 				mnThisLi.addClass('js-opened');
 				mnThisLi.find('.sub-nav:first').slideDown();
 			}

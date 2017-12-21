@@ -128,7 +128,28 @@ $nav-bar-z: 99;
 						background-color: $color-snow;
 						border-top: $base-border;
 						color: $base-font-color;
+						position: relative;
 						@extend %text-nav;
+						@include mq($max-width: $navbar-colapse) {
+							&.subnav-opened::after {
+								background-position: right -15px;
+							}
+							&::after {
+								background-image: url('../images/icons/menu-arrow.png');
+								background-image: url('../images/icons/menu-arrow.svg');
+								background-repeat: no-repeat;
+								background-size: 10px 24px;
+								content: '';
+								display: block;
+								height: 12px;
+								margin-top: -6px;
+								padding-right: 1rem;
+								background-position: right 3px;
+								transition: all 0.12s linear;
+								@include position(absolute, 50% $small-spacing null null);
+							}
+						}
+
 						@include mq($min-width: $navbar-colapse) {
 							background-color: transparent;
 							border-top: 0;
@@ -136,7 +157,7 @@ $nav-bar-z: 99;
 							@include padding(null 0);
 
 							&::before {
-								background-image: url('../images/icons/selected-indicator.png?text=fallback');
+								background-image: url('../images/icons/selected-indicator.png');
 								background-image: url('../images/icons/selected-indicator.svg');
 								background-size: contain;
 								content: '';
@@ -165,7 +186,7 @@ $nav-bar-z: 99;
 							}
 
 							span {
-								background-image: url('../images/icons/menu-arrow.png?text=fallback');
+								background-image: url('../images/icons/menu-arrow.png');
 								background-image: url('../images/icons/menu-arrow.svg');
 								background-position: right 3px;
 								background-repeat: no-repeat;
