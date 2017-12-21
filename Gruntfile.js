@@ -135,6 +135,20 @@ module.exports = grunt => {
 				src: ['fonts/**', 'video/**'],
 				dest: 'dist/',
 			},
+			favicons: {
+				expand: true,
+				flatten: true,
+				cwd: 'src/images/favicons/',
+				src: ['**'],
+				dest: 'dist/',
+			},
+			htaccess: {
+				expand: true,
+				flatten: true,
+				cwd: './',
+				src: ['.htaccess'],
+				dest: 'dist/',
+			},
 		},
 
 		// image compress task (compress all image src/images to dist/images)
@@ -257,6 +271,8 @@ module.exports = grunt => {
 		'uglify',
 		'imagemin',
 		'copy',
+		'copy:favicons',
+		'copy:htaccess',
 		'cssmin',
 		'htmlmin:dist',
 	]);
