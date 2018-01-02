@@ -58,8 +58,7 @@ typings/
 .env
 
 # videos
-*.mov
-*.mp4
+
 
 
 dist
