@@ -19,7 +19,7 @@ module.exports = grunt => {
 					{
 						src: '*.pug',
 						cwd: 'src/pug/',
-						dest: 'dist',
+						dest: 'docs',
 						expand: true,
 						ext: '.html',
 					},
@@ -36,9 +36,9 @@ module.exports = grunt => {
 				files: [
 					{
 						expand: true,
-						cwd: 'dist/',
+						cwd: 'docs/',
 						src: '*.html',
-						dest: 'dist',
+						dest: 'docs',
 					},
 				],
 			},
@@ -46,9 +46,9 @@ module.exports = grunt => {
 				files: [
 					{
 						expand: true,
-						cwd: 'dist/',
+						cwd: 'docs/',
 						src: '*.html',
-						dest: 'dist',
+						dest: 'docs',
 					},
 				],
 			},
@@ -64,7 +64,7 @@ module.exports = grunt => {
 					{
 						src: '*.scss',
 						cwd: 'src/sass/',
-						dest: 'dist/css',
+						dest: 'docs/css',
 						expand: true,
 						ext: '.css',
 					},
@@ -82,7 +82,7 @@ module.exports = grunt => {
 				],
 			},
 			dist: {
-				src: 'dist/css/application.css',
+				src: 'docs/css/application.css',
 			},
 		},
 
@@ -109,49 +109,49 @@ module.exports = grunt => {
 		uglify: {
 			js: {
 				files: {
-					'dist/js/pages/index.min.js': [
+					'docs/js/pages/index.min.js': [
 						'src/_compiled-js/pages/index-compiled.js',
 						'src/_compiled-js/components/countdown-clock-compiled.js',
 					],
-					'dist/js/pages/housing-info-and-policies.min.js': [
+					'docs/js/pages/housing-info-and-policies.min.js': [
 						'src/_compiled-js/pages/housing-info-and-policies-compiled.js',
 					],
-					'dist/js/pages/agenda.min.js': ['src/_compiled-js/pages/agenda-compiled.js'],
-					'dist/js/pages/register.min.js': ['src/_compiled-js/pages/register-compiled.js'],
-					'dist/js/app.min.js': ['src/_compiled-js/app-compiled.js'],
-					'dist/js/components/accordion.min.js': ['src/_compiled-js/components/accordion-compiled.js'],
-					'dist/js/components/googleMap-venue.min.js': ['src/_compiled-js/components/googleMap-venue-compiled.js'],
-					'dist/js/components/tabs-vertical.min.js': ['src/_compiled-js/components/tabs-vertical-compiled.js'],
-					'dist/js/components/tabs-horizontal.min.js': ['src/_compiled-js/components/tabs-horizontal-compiled.js'],
+					'docs/js/pages/agenda.min.js': ['src/_compiled-js/pages/agenda-compiled.js'],
+					'docs/js/pages/register.min.js': ['src/_compiled-js/pages/register-compiled.js'],
+					'docs/js/app.min.js': ['src/_compiled-js/app-compiled.js'],
+					'docs/js/components/accordion.min.js': ['src/_compiled-js/components/accordion-compiled.js'],
+					'docs/js/components/googleMap-venue.min.js': ['src/_compiled-js/components/googleMap-venue-compiled.js'],
+					'docs/js/components/tabs-vertical.min.js': ['src/_compiled-js/components/tabs-vertical-compiled.js'],
+					'docs/js/components/tabs-horizontal.min.js': ['src/_compiled-js/components/tabs-horizontal-compiled.js'],
 				},
 			},
 		},
 
-		// copy task (copy src/libraries to dist/libraries)
+		// copy task (copy src/libraries to docs/libraries)
 		copy: {
 			main: {
 				expand: true,
 				cwd: 'src',
 				src: ['fonts/**', 'video/**', 'libraries/**'],
-				dest: 'dist/',
+				dest: 'docs/',
 			},
 			favicons: {
 				expand: true,
 				flatten: true,
 				cwd: 'src/images/favicons/',
 				src: ['**'],
-				dest: 'dist/',
+				dest: 'docs/',
 			},
 			htaccess: {
 				expand: true,
 				flatten: true,
 				cwd: './',
 				src: ['.htaccess'],
-				dest: 'dist/',
+				dest: 'docs/',
 			},
 		},
 
-		// image compress task (compress all image src/images to dist/images)
+		// image compress task (compress all image src/images to docs/images)
 		imagemin: {
 			dynamic: {
 				options: {
@@ -167,7 +167,7 @@ module.exports = grunt => {
 						expand: true,
 						cwd: 'src/',
 						src: ['images/**/*.{png,jpg,gif,svg}'],
-						dest: 'dist',
+						dest: 'docs',
 					},
 				],
 			},
@@ -182,9 +182,9 @@ module.exports = grunt => {
 				files: [
 					{
 						expand: true,
-						cwd: 'dist/css',
+						cwd: 'docs/css',
 						src: ['*.css', '!*.min.css'],
-						dest: 'dist/css',
+						dest: 'docs/css',
 						ext: '.css',
 					},
 				],
@@ -195,11 +195,11 @@ module.exports = grunt => {
 		browserSync: {
 			dev: {
 				bsFiles: {
-					src: ['dist/**.*'],
+					src: ['docs/**.*'],
 				},
 				options: {
 					watchTask: true,
-					server: './dist',
+					server: './docs',
 				},
 			},
 		},
@@ -210,8 +210,8 @@ module.exports = grunt => {
 				options: {
 					beautify: true,
 				},
-				src: 'dist/css/application.css',
-				dest: 'dist/css/application.css',
+				src: 'docs/css/application.css',
+				dest: 'docs/css/application.css',
 			},
 		},
 
