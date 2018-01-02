@@ -1,6 +1,7 @@
 extends layouts/default_layout
 include mixins/page-title-img
 include mixins/event-single-sidebar
+include mixins/single-event-days
 
 block title
 	title AAPA 2018 - Veterans Caucus Memorial Ceremony and Reception
@@ -15,8 +16,7 @@ block content
 	section.small-section.bg-pattern--blue
 		.container
 			main.event-main
-				header.event-main-photo
-					img(src="images/event-pages/VeteransCaucusMemorial-event.jpg", alt="Veterans Caucus Memorial Ceremony and Reception")
+				+single-event-days('veterans-caucus-memorial-ceremony-reception')
 				article
 					h3 Veterans Caucus Memorial Ceremony and Reception
 

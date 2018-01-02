@@ -1,6 +1,7 @@
 extends layouts/default_layout
 include mixins/page-title-img
 include mixins/event-single-sidebar
+include mixins/single-event-days
 
 block title
 	title AAPA 2018 - Indian Health Service Symposium (IHS)
@@ -16,8 +17,7 @@ block content
 	section.small-section.bg-pattern--blue
 		.container
 			main.event-main
-				header.event-main-photo
-					img(src="images/event-pages/CME4-event.jpg", alt="Indian Health Service Symposium (IHS)")
+				+single-event-days('indian-health-service-symposium-ihs')
 				article
 					h3 Indian Health Service Symposium (IHS)
 					p.lead The Indian Health Service provides PAs with many unique opportunities to meet critical healthcare needs within underserved and vulnerable population groups, American Indians, and Alaska Natives. PAs within the Indian Health Service practice within every conceivable specialty practice – not only in rural locations, but also in state-of-the-art-medical centers. Attend to earn up to 3 AAPA Category 1 CME credits and learn how you’ll find professional fulfillment in caring for these vulnerable populations.

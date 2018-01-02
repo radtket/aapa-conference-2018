@@ -1,6 +1,7 @@
 extends layouts/default_layout
 include mixins/page-title-img
 include mixins/event-single-sidebar
+include mixins/single-event-days
 
 block title
 	title AAPA 2018 - Student SPARK Sessions
@@ -15,8 +16,7 @@ block content
 	section.small-section.bg-pattern--blue
 		.container
 			main.event-main
-				header.event-main-photo
-					img(src="images/event-pages/SparkSession-event.jpg", alt="Student SPARK Sessions")
+				+single-event-days('student-spark-sessions')
 				article
 					h3 Student SPARK Sessions
 					p.lead SPARK Sessions will give you advice and knowledge for every phase of your PA student career – and beyond!

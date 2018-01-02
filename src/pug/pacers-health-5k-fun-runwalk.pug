@@ -1,6 +1,7 @@
 extends layouts/default_layout
 include mixins/page-title-img
 include mixins/event-single-sidebar
+include mixins/single-event-days
 
 block title
 	title AAPA 2018 - Pacers for Health 5K Fun Run/Walk
@@ -15,8 +16,7 @@ block content
 	section.small-section.bg-pattern--blue
 		.container
 			main.event-main
-				header.event-main-photo
-					img(src="images/event-pages/FunRun-event.jpg", alt="Pacers for Health 5K Fun Run/Walk")
+				+single-event-days('pacers-health-5k-fun-runwalk')
 				article
 					h3 Pacers for Health 5K Fun Run/Walk
 					h4 6:30 a.m. Race Start

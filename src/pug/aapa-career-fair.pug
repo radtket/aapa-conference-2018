@@ -1,6 +1,7 @@
 extends layouts/default_layout
 include mixins/page-title-img
 include mixins/event-single-sidebar
+include mixins/single-event-days
 
 block title
 	title AAPA 2018 - AAPA Career Fair
@@ -15,8 +16,7 @@ block content
 	section.small-section.bg-pattern--blue
 		.container
 			main.event-main
-				header.event-main-photo
-					img(src="images/event-pages/CareerFair-event.jpg", alt="AAPA Career Fair")
+				+single-event-days('aapa-career-fair')
 				article
 					h3 AAPA Career Fair
 					p.lead Get one step closer to that first PA job, or your next career move! Meet with representatives from top employers from across the country looking to hire qualified PAs in all settings and specialties. Sign up when you register or at the door.

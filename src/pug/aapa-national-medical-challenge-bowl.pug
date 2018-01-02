@@ -1,6 +1,7 @@
 extends layouts/default_layout
 include mixins/page-title-video
 include mixins/event-single-sidebar
+include mixins/single-event-days
 
 block title
   title AAPA 2018 - AAPA National Medical Challenge Bowl
@@ -16,8 +17,7 @@ block content
   section.small-section.bg-pattern--blue
     .container
       main.event-main
-        header.event-main-photo
-          img(src="images/event-pages/ChallengeBowl-event.jpg", alt="AAPA National Medical Challenge Bowl")
+        +single-event-days('aapa-distinguished-fellows-reception')
         article
           h3 AAPA National Medical Challenge Bowl
           p.mb-base This high-energy medical game show will be held on Monday, May 21 at 7 p.m. in the Ernest N. Morial Convention Center in New Orleans, LA. All teams will answer multiple choice questions on a screen using an Audience Response System (ARS) keypad. The top-scoring 36 teams will then advance to the on-stage rounds and will answer free response questions on a variety of topics ranging from anatomy, microbiology and psychiatry.

@@ -1,6 +1,8 @@
 extends layouts/default_layout
 include mixins/page-title-img
 include mixins/event-single-sidebar
+include mixins/single-event-days
+
 block title
 	title AAPA 2018 - Exhibit Hall
 block content
@@ -9,8 +11,7 @@ block content
 	section.small-section.bg-pattern--blue
 		.container
 			main.event-main
-				header.event-main-photo
-					img(src="images/event-pages/ExhibitHall-event.jpg", alt="alt")
+				+single-event-days('exhibit-hall')
 				article
 					h3 Exhibit Hall
 					p.lead The interactive Exhibit Hall will keep you on the cutting edge of medicine.

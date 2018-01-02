@@ -1,6 +1,7 @@
 extends layouts/default_layout
 include mixins/page-title-img
 include mixins/event-single-sidebar
+include mixins/single-event-days
 
 block title
 	title AAPA 2018 - AAPA Distinguished Fellows Reception
@@ -15,8 +16,7 @@ block content
 	section.small-section.bg-pattern--blue
 		.container
 			main.event-main
-				header.event-main-photo
-					img(src="images/event-pages/DFReception-event.jpg", alt="AAPA Distinguished Fellows Reception")
+				+single-event-days('aapa-distinguished-fellows-reception')
 				article
 					h3 AAPA Distinguished Fellows Reception
 					p.lead Join your Distinguished Fellow peers and mingle over appetizers and drinks at this invitation-only reception. AAPA celebrates the achievements of this truly distinguished group that has gone above and beyond to serve the profession.

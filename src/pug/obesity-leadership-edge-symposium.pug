@@ -1,6 +1,7 @@
 extends layouts/default_layout
 include mixins/page-title-img
 include mixins/event-single-sidebar
+include mixins/single-event-days
 
 block title
 	title AAPA 2018 - Obesity Leadership Edge Symposium
@@ -15,8 +16,7 @@ block content
 	section.small-section.bg-pattern--blue
 		.container
 			main.event-main
-				header.event-main-photo
-					img(src="images/event-pages/CME2-event.jpg", alt="Obesity Leadership Edge Symposium")
+				+single-event-days('obesity-leadership-edge-symposium')
 				article
 					h3 Obesity Leadership Edge Symposium
 					p.lead Do your part to fight the obesity epidemic with this symposium! Earn up to 7.5 AAPA Category 1 CME credits while you build skills to lead a broad-based effort in diagnosing, managing and treating patients affected by obesity. You’ll hear about the science of obesity, see the latest in obesity medications, hear about new bariatric surgery approaches, learn how to prescribe physical activity – and much more.

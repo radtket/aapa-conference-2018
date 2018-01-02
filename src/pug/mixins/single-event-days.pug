@@ -1,0 +1,35 @@
+mixin single-event-days(pageSlug)
+	include ../components/data/data-events
+	each event in events
+		if event.slug === pageSlug
+			header.event-card-photo.event-main-photo
+				img(src='images/event-pages/' + event.filePrefix + '-event.jpg', alt=event.eventName)
+				if event.friday
+					span.text-center.date.date__sat
+						| 18
+						span.month MAY
+				else
+				if event.saturday
+					span.text-center.date.date__sat
+						| 19
+						span.month MAY
+				else
+				if event.sunday
+					span.text-center.date.date__sun
+						| 20
+						span.month MAY
+				else
+				if event.monday
+					span.text-center.date.date__mon
+						| 21
+						span.month MAY
+				else
+				if event.tuesday
+					span.text-center.date.date__tue
+						| 22
+						span.month MAY
+				else
+				if event.wednesday
+					span.text-center.date.date__wed
+						| 23
+						span.month MAY

@@ -1,6 +1,7 @@
 extends layouts/default_layout
 include mixins/page-title-img
 include mixins/event-single-sidebar
+include mixins/single-event-days
 
 block title
 	title AAPA 2018 - Product Theaters
@@ -15,8 +16,7 @@ block content
 	section.small-section.bg-pattern--blue
 		.container
 			main.event-main
-				header.event-main-photo
-					img(src="images/event-pages/ProductTheaters-event.jpg", alt="alt")
+				+single-event-days('product-theaters')
 				article
 					h3 Product Theaters
 					p.lead Learn about the latest products and technologies at these free 45-minute sessions that include breakfast or lunch!*

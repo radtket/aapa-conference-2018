@@ -1,6 +1,7 @@
 extends layouts/default_layout
 include mixins/page-title-video
 include mixins/event-single-sidebar
+include mixins/single-event-days
 
 block title
 	title AAPA 2018 - Constituent Organizations
@@ -15,8 +16,7 @@ block content
 	section.small-section.bg-pattern--blue
 		.container
 			main.event-main
-				header.event-main-photo
-					img(src="images/event-pages/ConstituentOrganizations-event.jpg", alt="Constituent Organizations")
+				+single-event-days('constituent-organizations')
 				article
 					h3 Constituent Organizations
 					p

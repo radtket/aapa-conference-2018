@@ -1,6 +1,7 @@
 extends layouts/default_layout
 include mixins/page-title-img
 include mixins/event-single-sidebar
+include mixins/single-event-days
 
 block title
 	title AAPA 2018 - ePoster And Research in Action
@@ -15,8 +16,7 @@ block content
 	section.small-section.bg-pattern--blue
 		.container
 			main.event-main
-				header.event-main-photo
-					img(src="images/event-pages/EPosters-event.jpg", alt="ePoster And Research in Action")
+				+single-event-days('eposter-research-action')
 				article
 					h3 ePoster And Research in Action
 					h4 The Latest Research By and About PAs

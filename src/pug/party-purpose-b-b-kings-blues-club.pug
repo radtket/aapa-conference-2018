@@ -1,6 +1,7 @@
 extends layouts/default_layout
 include mixins/page-title-img
 include mixins/event-single-sidebar
+include mixins/single-event-days
 
 block title
 	title AAPA 2018 - Party for a Purpose
@@ -15,8 +16,7 @@ block content
 	section.small-section.bg-pattern--blue
 		.container
 			main.event-main
-				header.event-main-photo
-					img(src="images/event-pages/Party4Purpose-event.jpg", alt="Party for a Purpose")
+				+single-event-days('party-purpose-b-b-kings-blues-club')
 				article
 					h3 Party for a Purpose
 					p.lead It’s a PA party in the Crescent City at B.B. King’s Blues Club! Come enjoy hors d’oeuvres, drinks, live music and dancing with your friends and colleagues. Funds raised benefit the PA Foundation and its work to promote better health by providing PAs and PA students with philanthropic opportunities and resources.
