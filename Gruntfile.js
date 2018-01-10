@@ -123,6 +123,7 @@ module.exports = grunt => {
 					'docs/js/components/googleMap-venue.min.js': ['src/_compiled-js/components/googleMap-venue-compiled.js'],
 					'docs/js/components/tabs-vertical.min.js': ['src/_compiled-js/components/tabs-vertical-compiled.js'],
 					'docs/js/components/tabs-horizontal.min.js': ['src/_compiled-js/components/tabs-horizontal-compiled.js'],
+					'docs/js/components/splitSection.min.js': ['src/_compiled-js/components/splitSection-compiled.js'],
 				},
 			},
 		},
