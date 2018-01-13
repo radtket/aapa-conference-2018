@@ -4,8 +4,8 @@
   "description": "boilerplate of Pug Sass project using Grunt",
   "main": "index.js",
   "scripts": {
-    "start": "npm run dev:build",
-    "dev:build": "npm run grunt",
+    "start": "grunt",
+    "build": "grunt build",
     "prod:build": "NODE_ENV=production npm run grunt",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
