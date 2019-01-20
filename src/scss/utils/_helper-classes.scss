@@ -1,0 +1,77 @@
+//Pixels to Rems
+
+@function calc-rem($size) {
+	$rem-size: $size / 16;
+
+	@return #{$rem-size}rem;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.row {
+	@include grid-collapse;
+	@include grid-container;
+}
+
+.mb-0 {
+	margin-bottom: 0;
+}
+
+.mb-base {
+	margin-bottom: $base-spacing;
+}
+
+.mb-small {
+	margin-bottom: $small-spacing;
+}
+
+.mt-base {
+	margin-top: $base-spacing;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.clearfix {
+	@include clearfix;
+}
+
+.bg-scroll {
+	background-attachment: scroll !important;
+}
+
+.invisible {
+	left: -999px;
+	overflow: hidden;
+	position: absolute;
+	top: -999px;
+}
+
+.mw-lead {
+	max-width: $lead-mobile-max-width;
+}
+
+.mw-navbreak {
+	max-width: $navbar-colapse;
+}
+
+.block {
+	display: block;
+}
+
+.center-block {
+	@include margin(auto);
+	display: block;
+}
+
+.animated {
+	animation-delay: 500ms;
+	animation-duration: 3s;
+}
+
+.animate-out {
+	animation-delay: 0ms;
+}

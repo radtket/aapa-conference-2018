@@ -1,0 +1,54 @@
+.container {
+	@include grid-container;
+	@include margin(null auto);
+	@include padding(null $small-spacing);
+	max-width: $container-max-width;
+}
+
+.container-full {
+	@include grid-container;
+	@include margin(null auto);
+	@include padding(null 2%);
+	max-width: 100%;
+}
+
+.page-section,
+.small-section {
+	background-attachment: fixed;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-sizing: border-box;
+	display: block;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.page-section {
+	padding: $page-section-pad 0;
+
+	@include mq($min-width: $page-section-sm) {
+		padding: $page-section-pad-sm 0;
+	}
+
+	@include mq($min-width: $page-section-md) {
+		padding: $page-section-pad-md 0;
+	}
+
+	@include mq($min-width: $page-section-lg) {
+		padding: $page-section-pad-lg 0;
+	}
+}
+
+.small-section {
+	@include padding($base-spacing);
+
+	@include mq($min-width: 480px) {
+		@include padding($large-spacing $base-spacing);
+	}
+
+	@include mq($min-width: 768px) {
+		@include padding(($base-spacing * 3) $base-spacing);
+	}
+}

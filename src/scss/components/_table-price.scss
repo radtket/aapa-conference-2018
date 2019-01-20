@@ -1,0 +1,137 @@
+table.comparison {
+	@include margin($base-spacing auto);
+	border-spacing: 0;
+	color: $color-snow;
+	text-align: center;
+
+	th,
+	td {
+		empty-cells: show;
+		padding: $small-spacing;
+		width: 25%;
+	}
+
+	.compare-row:last-of-type td:first-of-type {
+		border-bottom-left-radius: $large-border-radius;
+		border-top: 0;
+		border-top-left-radius: 0;
+	}
+
+	.compare-row:last-of-type td:nth-of-type(2) {
+		@include mq($max-width: $page-section-md) {
+			border-bottom-left-radius: $large-border-radius;
+		}
+	}
+
+	.compare-row:last-of-type td:last-of-type {
+		border-bottom-right-radius: $large-border-radius;
+	}
+
+	th {
+		&:nth-of-type(2) {
+			background-color: $color-blue;
+			border-top-left-radius: $large-border-radius;
+		}
+
+		&:nth-of-type(3) {
+			background-color: $color-purple-light;
+		}
+
+		&:nth-of-type(4) {
+			background-color: $color-purple;
+		}
+
+		&:last-of-type {
+			border-top-right-radius: $large-border-radius;
+		}
+	}
+
+	.compare-row td {
+		border-bottom: 1px solid $color-gray;
+		border-top: 1px solid $color-gray;
+
+		@include mq($min-width: $page-section-md) {
+			border-top: 0;
+
+			&:first-of-type {
+				border-top: 1px solid $color-gray;
+			}
+		}
+
+		&:nth-of-type(2) {
+			background-color: transparentize($color-blue, 0.24);
+			border-color: $color-blue;
+		}
+
+		&:nth-of-type(3) {
+			background-color: transparentize($color-purple-light, 0.24);
+			border-color: $color-purple-light;
+		}
+
+		&:nth-of-type(4) {
+			background-color: transparentize($color-purple, 0.24);
+			border-color: $color-purple;
+		}
+	}
+
+	thead {
+		th {
+			font-size: calc-rem(24);
+			font-weight: $font-weight--regular;
+
+			&:first-child {
+				display: none;
+
+				@include mq($min-width: $page-section-md) {
+					display: table-cell;
+				}
+			}
+
+			>span {
+				@extend %accordion-title;
+				display: block;
+				letter-spacing: $base-letter-spacing;
+				line-height: $heading-line-height;
+			}
+		}
+	}
+
+	tbody {
+		tr {
+			background: $color-snow;
+
+			&:nth-child(odd) {
+				display: table-row;
+
+				@include mq($min-width: $page-section-md) {
+					display: none;
+				}
+
+				td {
+					border-right: 1px solid $color-gray;
+					color: $color-black;
+					font-size: calc-rem(16);
+				}
+			}
+
+			td {
+				@extend %card-title;
+				border-left: 1px solid $color-gray;
+
+				&:first-child {
+					display: none;
+
+					@include mq($min-width: $page-section-md) {
+						border-top-left-radius: $large-border-radius;
+						color: $color-black;
+						display: table-cell;
+						font-size: calc-rem(16);
+						font-weight: $font-weight--medium;
+						padding-right: $base-spacing;
+						text-align: right;
+					}
+				}
+			}
+		}
+	}
+}

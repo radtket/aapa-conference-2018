@@ -5,13 +5,10 @@ include mixins/single-event-days
 
 block title
 	title AAPA 2018 - ePoster And Research in Action
-block vendorScripts
-	script(src="libraries/twitterFetcher_min.js")
 block scripts
-	script.
-		twitterFetcher.fetch(twitterFeed);
+	script(src="js/getTweets.js")
 block content
-	+page-title-img(`background-image: url('images/event-pages/EPosters-hero.jpg'); background-position: 50% 75%;`, `ePoster And Research in Action`, `ePoster And Research in Action`)
+	+page-title-img(`background-image: url('img/event-pages/EPosters-hero.jpg'); background-position: 50% 75%;`, `ePoster And Research in Action`, `ePoster And Research in Action`)
 
 	section.small-section.bg-pattern--blue
 		.container

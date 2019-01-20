@@ -1,0 +1,79 @@
+.owl-carousel.opening-slider {
+	.owl-item {
+		display: table;
+	}
+
+	.carousel {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		display: table-cell;
+		height: 70vh;
+		vertical-align: bottom;
+
+		@each $color-name,
+		$color-value,
+		$font-color in $named-color-list {
+			&-#{$color-name} {
+				.carousel-text {
+					color: $font-color;
+				}
+
+				.polygon {
+					fill: $color-value;
+				}
+			}
+		}
+
+		&-container {
+			@include grid-container;
+			@include margin(null auto);
+			max-width: $container-max-width;
+		}
+
+		.carousel-text {
+			@include padding(null null $large-spacing $base-spacing);
+			max-width: $slider-text-box-max-width;
+			position: relative;
+			z-index: 2;
+
+			>* {
+				position: relative;
+				z-index: 3;
+			}
+
+			&-head {
+				@extend %text-card-headline;
+				font-weight: $font-weight--light;
+				margin-bottom: $base-spacing;
+			}
+
+			&-body {
+				@extend %text-headline-lowercase;
+				line-height: $base-line-height;
+
+				&:last-of-type {
+					margin-bottom: ($base-spacing + $small-spacing);
+				}
+			}
+
+			// &::before {
+			// 	content: "";
+			// 	z-index: 1;
+			// 	@include position(absolute, null null 0 0);
+			// 	@include triangle(($slider-text-box-max-width + 241px), red transparent, down-left);
+			// }
+		}
+	}
+}
+
+.polygon {
+	@include position(absolute, null null 0 0);
+	line-height: 0;
+	opacity: 0.85;
+	width: $page-section-md;
+
+	svg {
+		@include size(100%);
+	}
+}

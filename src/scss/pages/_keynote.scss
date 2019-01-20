@@ -1,0 +1,67 @@
+$keynote-img-container: 250px;
+
+.keynote__img {
+	text-align: center;
+
+	@include mq($min-width: $page-section-md) {
+		@include grid-column(4);
+	}
+
+	@include mq($min-width: 1000px) {
+		@include grid-column(3);
+	}
+
+	img {
+		@include margin(null auto $small-spacing);
+		border-radius: 50%;
+		box-shadow: $boxshadow-large;
+		width: 100px;
+
+		@include mq($min-width: $page-section-md) {
+			margin-bottom: $base-spacing;
+			width: 250px;
+		}
+	}
+
+	.social-list {
+		@include mq($max-width: $page-section-md) {
+			display: none;
+		}
+	}
+}
+
+.keynote__about {
+	margin: auto;
+	max-width: $lead-mobile-max-width;
+
+	@include mq($min-width: $page-section-md) {
+		@include grid-column(7);
+		@include grid-push(1);
+		max-width: 100%;
+	}
+
+	@include mq($min-width: 1000px) {
+		@include grid-column(8);
+		@include grid-push(1);
+	}
+
+	.text-center {
+		margin-bottom: $base-spacing;
+
+		@include mq($min-width: $page-section-md) {
+			text-align: left;
+		}
+
+		h2 {
+			@extend %text-keynote-title;
+		}
+
+		em {
+			@extend %text-keynote-subtitle;
+		}
+	}
+
+	.lead {
+		margin-bottom: $base-spacing;
+	}
+}

@@ -9,20 +9,20 @@ block title
 	title AAPA 2018 - Registration Pricing
 
 block vendorScripts
-	script(src='js/components/tabs-horizontal.min.js')
-	script(src="js/components/accordion.min.js")
-	script(src="js/components/splitSection.min.js")
-	script(src="js/pages/register.min.js")
+	script(src='js/tabsHorizontal.min.js')
+	script(src="js/accordion.min.js")
+	script(src="js/splitSection.min.js")
+	script(src="js/register.min.js")
 
 block content
-	+page-title-img(`background-image: url('images/hero-images/hero__aapa-staff.jpg');`, `Registration Pricing`, `Registration Pricing`)
+	+page-title-img(`background-image: url('img/hero-images/hero__aapa-staff.jpg');`, `Registration Pricing`, `Registration Pricing`)
 
 	section.split-section
 		.clearfix.relative
 
 			.split-section-media.right
-				.split-section-media-table(style="background-image: url('images/backgrounds/bg_pink-triangles.png')")
-					.split-section-media-cell.page-section.bg-scroll(style="background-image: url('images/clipart/new.svg')")
+				.split-section-media-table(style="background-image: url('img/backgrounds/bg_pink-triangles.png')")
+					.split-section-media-cell.page-section.bg-scroll(style="background-image: url('img/clipart/new.svg')")
 
 			.split-section-content.page-section.left
 				.split-section-content-wrapper
@@ -34,8 +34,8 @@ block content
 		.clearfix.relative
 
 			.split-section-media.left
-				.split-section-media-table(style="background-image: url('images/backgrounds/bg_lime-triangles.png')")
-					.split-section-media-cell.page-section.bg-scroll(style="background-image: url('images/clipart/question.svg')")
+				.split-section-media-table(style="background-image: url('img/backgrounds/bg_lime-triangles.png')")
+					.split-section-media-cell.page-section.bg-scroll(style="background-image: url('img/clipart/question.svg')")
 
 			.split-section-content.page-section.right
 				.split-section-content-wrapper
@@ -54,7 +54,7 @@ block content
 		.container
 			#regRates.agenda-tabs.register-tabs
 				nav.agenda-tabs__nav.text-center
-					.nav_wrap
+					.nav-wrap
 						a.agenda-tabs__nav--link.is-active(href='#') Member
 						a.agenda-tabs__nav--link(href='#') Nonmember
 						a.agenda-tabs__nav--link(href='#') Student Member
@@ -82,7 +82,7 @@ block content
 		.container
 			#regSingleRates.agenda-tabs.register-tabs
 				nav.agenda-tabs__nav.text-center
-					.nav_wrap
+					.nav-wrap
 						a.agenda-tabs__nav--link.is-active(href='#') Member
 						a.agenda-tabs__nav--link(href='#') Nonmember
 						a.agenda-tabs__nav--link(href='#') Student
@@ -105,7 +105,7 @@ block content
 		.container
 			#regPkgRates.agenda-tabs.register-tabs
 				nav.agenda-tabs__nav.text-center
-					.nav_wrap
+					.nav-wrap
 						a.agenda-tabs__nav--link.is-active(href='#') Fellow
 						a.agenda-tabs__nav--link(href='#') Retired
 						a.agenda-tabs__nav--link(href='#') Sustaining & Affiliate

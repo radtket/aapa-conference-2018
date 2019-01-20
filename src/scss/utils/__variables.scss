@@ -1,0 +1,134 @@
+// Typography
+$base-font-family: "BentonSans";
+$heading-font-family: $base-font-family;
+
+// Font Weights
+$font-weight--thin: 100;
+$font-weight--light: 300;
+$font-weight--regular: 400;
+$font-weight--medium: 500;
+$font-weight--bold: 700;
+$font-weight--black: 900;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+$lead-line-height: 1.65;
+
+// Other Sizes
+$base-border-radius: 3px;
+$large-border-radius: $base-border-radius * 2;
+
+// spacing
+$base-spacing: 1.5rem;
+$small-spacing: $base-spacing / 2;
+$x-small-spacing: $small-spacing / 2;
+$large-spacing: $base-spacing * 2;
+$base-z-index: 0;
+$base-letter-spacing: 0.1rem;
+$base-grid-gutter: 20px;
+
+// Section Padding
+$page-section-pad: 60px;
+$page-section-pad-sm: 80px;
+$page-section-pad-md: 120px;
+$page-section-pad-lg: 140px;
+
+// Colors
+$dark-gray: #333333;
+$medium-gray: #999999;
+$light-gray: #dddddd;
+$white: #ffffff;
+$white-75: rgba($white, 0.75);
+$black: #000000;
+$color-snow: #f8f8f8;
+$color-snow-d: #c5c5c5;
+
+// Theme Colors
+$color-purple: #6b478e;
+$color-teal: #63d0df;
+$color-purple-light: #7673c0;
+$color-blue: #636cb2;
+
+// Secondary Theme Colors
+$color-pink: #ed3e7a;
+$color-pink-l: tint($color-pink, 20%);
+$color-pink-d: shade($color-pink, 20%);
+$color-lime: #c9da2a;
+$color-black: #202020;
+$color-gray: $medium-gray;
+
+$accordion-color: $color-purple-light;
+$accordion-active: darken($color-purple-light, 7%);
+$accordion-accent: darken($color-purple-light, 10%);
+
+// Font Colors
+$base-font-color: $dark-gray;
+$action-color: $color-purple;
+
+// Color Lists
+$named-color-list: ("purple", $color-purple, $color-snow),
+("teal", $color-teal, $color-black),
+("purple-light", $color-purple-light, $color-snow),
+("blue", $color-blue, $color-snow),
+("pink", $color-pink, $color-snow),
+("lime", $color-lime, $color-black);
+
+
+// Border
+$base-border-color: $light-gray;
+$base-border-size: 1px;
+$base-border: $base-border-size solid $base-border-color;
+
+// Background Colors
+$viewport-background-color: $white;
+
+// Box Shadow
+$boxshadow-large: 0 $small-spacing $base-spacing 0 rgba(0, 0, 0, 0.2);
+$boxshadow-navbar: 0 3px 4.7px 0.3px rgba(0, 0, 0, 0.24);
+
+//Font Shadow
+$fontshaow-page-title: 0 7px 5px rgba(0, 0, 0, 0.45);
+$text-shadow-btn: 0 1px 0 rgba(0, 0, 0, 0.2);
+$venue-title-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+// Focus
+$focus-outline-color: transparentize($action-color, 0.4);
+$focus-outline-width: 3px;
+$focus-outline: $focus-outline-width solid $focus-outline-color;
+$focus-outline-offset: 2px;
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
+
+// Media Queies
+$container-max-width: 1200px;
+$navbar-colapse: 850px;
+$cards-brk-sm: 650px;
+$cards-brk-md: 900px;
+$slider-text-box-max-width: 500px;
+$footer-icon-break: 450px;
+$lead-mobile-max-width: $cards-brk-sm;
+$page-section-sm: 480px;
+$page-section-md: 768px;
+$page-section-lg: 1024px;
+// Element Sizes
+$card-max-width: 360px;
+
+// Extends
+$card-inner-padding: $base-spacing $small-spacing;
+
+%card {
+	border-radius: $large-border-radius;
+	box-shadow: $boxshadow-large;
+	margin: $base-spacing auto;
+	max-width: $card-max-width;
+	overflow: hidden;
+}
+
+%event-card {
+	background: $color-snow;
+	cursor: pointer;
+	height: auto;
+	max-width: 100%;
+}

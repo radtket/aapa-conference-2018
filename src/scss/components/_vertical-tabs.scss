@@ -1,0 +1,330 @@
+$tab-border: $base-border-size solid $color-pink-d;
+
+.vertical-tabs {
+	@include clearfix;
+	border-radius: $base-border-radius;
+	border-top: $tab-border;
+	margin-bottom: $base-spacing;
+
+	@include mq($max-width: $cards-brk-sm) {
+		border: $tab-border;
+	}
+
+	&__nav {
+		display: none;
+
+		@include mq($min-width: $cards-brk-sm) {
+			border-left: $tab-border;
+			display: inline-block;
+			float: left;
+			width: 20%;
+			width: 235px; // tabs-content calc(100% - 235px);
+		}
+
+		&--item {
+			@include mq($min-width: $cards-brk-sm) {
+				@include padding($small-spacing $x-small-spacing $small-spacing ($small-spacing + $x-small-spacing));
+				background-color: $color-snow;
+				border-bottom: $tab-border;
+				color: $color-black;
+				cursor: pointer;
+				display: block;
+				font-weight: $font-weight--medium;
+				margin-right: -$base-border-size;
+				position: relative;
+
+				&:hover {
+					background-color: $color-pink-l;
+					color: $color-black;
+
+					&::after {
+						background-color: tint($color-pink-d, 20%);
+					}
+				}
+
+				&::after {
+					@include position(absolute, 0 null 0 0);
+					background-color: transparent;
+					content: "";
+					display: block;
+					height: 100%;
+					width: $x-small-spacing;
+				}
+
+				&.is-active {
+					background-color: $color-pink;
+					color: $black;
+
+					&::after {
+						background-color: $color-pink-d;
+					}
+				}
+			}
+		}
+	}
+
+	.vertical-tab--content {
+		@include mq($min-width: $cards-brk-sm) {
+			background-color: $color-pink;
+			display: inline-block;
+			position: relative;
+			width: 80%;
+			width: calc(100% - 235px); // tabs navsize 235px
+
+			&::after {
+				background-color: $color-pink-d;
+				content: "";
+				display: block;
+				height: 1rem;
+				width: 100%;
+			}
+		}
+
+		&--item {
+			background-color: $color-pink;
+			padding: $base-spacing;
+
+			@include mq($min-width: $cards-brk-sm) {
+				display: none;
+				min-height: 400px;
+			}
+		}
+	}
+
+	.vertical-tab-accordion-heading {
+		background-color: $color-pink-l;
+		border-top: $tab-border;
+		color: $color-black;
+		cursor: pointer;
+		display: block;
+		font-weight: $font-weight--medium;
+		padding: $small-spacing $base-spacing;
+
+		@include mq($min-width: $cards-brk-sm) {
+			display: none;
+		}
+
+		&:focus,
+		&:hover,
+		&.is-active {
+			background-color: $color-pink;
+			color: $black;
+
+			&:focus,
+			&:hover {
+				color: inherit;
+			}
+		}
+
+		&:first-child {
+			border-top: 0;
+		}
+	}
+}
+
+
+
+// Alt Agenda - Vertical Tabs
+
+
+.alt-agenda-tabs-container {
+	@include clearfix;
+
+	.alt-agenda-tabs {
+		display: none;
+
+		@include mq($min-width: $page-section-md) {
+			background-color: $accordion-color;
+			display: inline-block;
+			float: left;
+			width: 20%;
+		}
+
+		&-title {
+			@extend %accordion-title;
+			display: none;
+
+			@include mq($min-width: $page-section-md) {
+				@include clearfix;
+				@include padding($small-spacing null);
+				background-color: $accordion-color;
+				border-bottom: 1px solid $accordion-active;
+				color: $white;
+				display: block;
+
+				span {
+					display: block;
+					float: left;
+					font-weight: $font-weight--bold;
+					letter-spacing: $base-letter-spacing;
+					padding-left: $base-grid-gutter;
+
+					&:first-of-type {
+						width: 200px;
+					}
+
+					&:last-of-type {
+						width: calc(100% - 200px);
+					}
+				}
+			}
+		}
+	}
+
+	.alt-agenda-tab {
+
+		@include mq($min-width: $page-section-md) {
+			background-color: $accordion-color;
+			border-bottom: 1px solid $accordion-active;
+			color: $white;
+			display: block;
+			font-size: calc-rem(20);
+			padding: $small-spacing $base-grid-gutter;
+
+			&.is-active {
+				background: $accordion-active;
+				border-bottom: 0;
+			}
+
+			>span {
+				display: block;
+				line-height: $base-line-height;
+			}
+		}
+
+		>span {
+			@extend %accordion-title;
+		}
+	}
+
+	.alt-agenda-tab-content-container {
+		background: $white;
+		display: block;
+
+		@include mq($min-width: $page-section-md) {
+			display: inline-block;
+			float: left;
+			width: 80%;
+		}
+
+		&::after {
+			background-color: $accordion-accent;
+			content: "";
+			display: block;
+			height: 1rem;
+			width: 100%;
+		}
+	}
+
+	.alt-agenda-tab-content {
+		@include mq($min-width: $page-section-md) {
+			display: none;
+		}
+	}
+
+	.alt-agenda-tab-accordion-heading {
+		@extend %card-title;
+		background-color: $color-purple-light;
+		border-bottom: 1px solid $accordion-accent;
+		color: $white;
+		cursor: pointer;
+		display: block;
+		padding: 1rem ($base-spacing + $small-spacing) 1rem 1rem;
+		position: relative;
+		transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+
+		>span {
+			@extend %accordion-title;
+			display: block;
+			line-height: $heading-line-height;
+		}
+
+		&::after {
+			@include margin((-$x-small-spacing) (-$x-small-spacing) null null);
+			@include position(absolute, 50% $base-spacing null null);
+			@include size($small-spacing);
+			background-image: url("../img/icons/accordion-plus.png?text=fallback");
+			background-image: url("../img/icons/accordion-plus.svg");
+			background-size: contain;
+			content: "";
+			display: block;
+			transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+		}
+
+		&:hover {
+			background-color: $accordion-active;
+		}
+
+		&.is-active {
+			background-color: $accordion-active;
+			color: $color-teal;
+			cursor: default;
+
+			@include mq($min-width: $page-section-md) {
+				display: none;
+			}
+
+			&::after {
+				@include margin((-0.5rem) (-0.5rem) null null);
+				@include size(1rem);
+				background-image: url("../img/icons/accordion-plus-teal.png?text=fallback");
+				background-image: url("../img/icons/accordion-plus-teal.svg");
+				transform: rotate(-225deg);
+			}
+		}
+	}
+}
+
+.agenda-item {
+	@include clearfix;
+	background: $color-snow;
+	border-bottom: $base-border;
+	color: $base-font-color;
+	display: block;
+	padding: $small-spacing;
+
+	@include mq($min-width: $page-section-md) {
+		@include padding(null 0);
+
+		>* {
+			padding-left: $base-grid-gutter;
+		}
+	}
+
+	@include mq($min-width: $cards-brk-sm) {
+		>* {
+			float: left;
+			font-size: calc-rem(14) !important;
+
+			&:first-of-type {
+				width: 200px;
+			}
+
+			&:last-of-type {
+				width: calc(100% - 200px);
+			}
+		}
+	}
+
+	>* {
+		line-height: $heading-line-height;
+	}
+
+	&--time {
+		@extend %accordion-title;
+	}
+
+	&--event {
+		@extend %lead;
+	}
+
+
+}
+
+.flexbox {
+	@include mq($min-width: $page-section-md) {
+		.alt-agenda-tabs-container {
+			display: flex;
+		}
+	}
+}

@@ -1,0 +1,80 @@
+$material-design-line-size: $small-spacing;
+
+.footer {
+	background-color: $color-snow;
+	margin-bottom: $material-design-line-size;
+	padding: $large-spacing $base-spacing;
+	position: relative;
+	text-align: center;
+	width: 100%;
+
+	&::after {
+		@include position(absolute, null 0 (-$material-design-line-size) 0);
+		background-color: $color-snow-d;
+		content: "";
+		display: block;
+		height: $material-design-line-size;
+		width: 100%;
+	}
+
+	&__logo {
+		height: $large-spacing;
+		margin-bottom: $base-spacing;
+	}
+
+	&__nav {
+		padding-bottom: $small-spacing;
+
+		&--item {
+			@extend %text-nav;
+			color: $base-font-color;
+
+			&:hover {
+				color: $color-purple-light;
+			}
+		}
+	}
+
+	&__disclaimer {
+		@include grid-container;
+		@include margin(null auto);
+		max-width: $footer-icon-break;
+
+		&--logo {
+			display: inline-block;
+			height: $large-spacing;
+			margin-bottom: $small-spacing;
+
+			@include mq($min-width: $footer-icon-break) {
+				@include grid-column(3);
+			}
+
+			svg {
+				cursor: pointer;
+				fill: $color-purple;
+				margin-bottom: $small-spacing;
+				vertical-align: middle;
+
+				&:hover {
+					fill: $color-pink;
+				}
+			}
+		}
+
+		&--text {
+			color: $color-gray;
+			font-size: calc-rem(12);
+
+			@include mq($min-width: $footer-icon-break) {
+				@include grid-column(9);
+				margin-left: $base-spacing;
+				text-align: left;
+			}
+		}
+	}
+
+	hr {
+		border-color: $color-teal;
+		width: $large-spacing * 4;
+	}
+}

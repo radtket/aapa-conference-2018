@@ -3,7 +3,7 @@ mixin special-events-mixitup-cards
 	each event in events
 		figure.event-card.mix(class=(event.saturday)? "saturday" : "", class=(event.sunday)? "sunday" : "", class=(event.monday)? "monday" : "", class=(event.tuesday)? "tuesday" : "", class=(event.wednesday)? "wednesday" : "")
 			a.event-card-photo(href= './' + event.slug + '.html')
-				img(src='images/event-pages/' + event.filePrefix + '-card.jpg', alt= event.eventName)
+				img(src='img/event-pages/' + event.filePrefix + '-card.jpg', alt= event.eventName)
 				if event.friday
 					span.text-center.date.date__sat
 						| 18

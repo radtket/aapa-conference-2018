@@ -1,0 +1,38 @@
+.mix-container {
+	align-content: flex-start;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 1rem;
+}
+
+.mix,
+.gap {
+	display: inline-block;
+	vertical-align: top;
+	width: calc(100%/2 - (((2 - 1) * 1rem) / 2));
+
+	@media screen and (min-width: 800px) {
+		width: calc(100%/3 - (((3 - 1) * 1rem) / 3));
+	}
+}
+
+.mix {
+	@extend %card;
+	@extend %event-card;
+	margin-bottom: 1rem;
+	position: relative;
+}
+
+.mixitup-control-active {
+	@extend .btn-pink;
+}
+
+.mix-btn {
+	margin-right: $x-small-spacing;
+
+	&:last-of-type {
+		margin-right: 0;
+	}
+}

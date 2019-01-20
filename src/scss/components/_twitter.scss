@@ -1,0 +1,92 @@
+#twitterFeed {
+	font-size: 12px;
+
+	li {
+		@include clearfix;
+		background-color: $color-snow;
+		border: $base-border;
+		cursor: pointer;
+		display: block;
+		margin-bottom: $small-spacing;
+		overflow: hidden;
+		padding: $small-spacing;
+		transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+
+		&:hover {
+			background-color: $light-gray;
+		}
+	}
+
+	[data-scribe="element:name"] {
+		color: $color-black;
+		font-size: 16px;
+		font-weight: $font-weight--bold;
+		line-height: $heading-line-height;
+	}
+
+	[data-scribe="element:screen_name"] {
+		color: $color-gray;
+		line-height: $heading-line-height;
+	}
+
+	a {
+		color: $color-pink;
+
+		&:hover {
+			color: $color-pink-l;
+		}
+	}
+
+	.tweet {
+		float: left;
+		width: calc(100% - 85px);
+	}
+
+	.user {
+		float: left;
+		margin-right: 20px;
+		text-align: center;
+		width: 65px;
+
+		img {
+			border-radius: 50%;
+			margin-bottom: $x-small-spacing;
+		}
+
+		a,
+		span {
+			display: block;
+		}
+	}
+
+	.interact,
+	.timePosted {
+		@include clearfix;
+		display: block;
+		float: right;
+	}
+
+	.interact {
+		a {
+			@include size(14px);
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			display: inline-block;
+			margin-right: $small-spacing;
+			text-indent: -12345px;
+
+			&.twitter_reply_icon {
+				background-image: url("../img/icons/reply-all.svg");
+			}
+
+			&.twitter_fav_icon {
+				background-image: url("../img/icons/heart.svg");
+			}
+
+			&.twitter_retweet_icon {
+				background-image: url("../img/icons/retweet.svg");
+			}
+		}
+	}
+}

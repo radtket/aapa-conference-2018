@@ -6,10 +6,8 @@ block title
 block vendorScripts
 	script(src="js/components/accordion.min.js")
 	script(src="js/components/tabs-vertical.min.js")
-	script(src="libraries/twitterFetcher_min.js")
 block scripts
-	script.
-		twitterFetcher.fetch(twitterFeed);
+	script(src="js/getTweets.js")
 block vendorCSS
 	link(rel="stylesheet", href="//code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css", attr)
 

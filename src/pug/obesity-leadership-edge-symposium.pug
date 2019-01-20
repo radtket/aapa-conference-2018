@@ -5,13 +5,10 @@ include mixins/single-event-days
 
 block title
 	title AAPA 2018 - Obesity Leadership Edge Symposium
-block vendorScripts
-	script(src="libraries/twitterFetcher_min.js")
 block scripts
-	script.
-		twitterFetcher.fetch(twitterFeed);
+	script(src="js/getTweets.js")
 block content
-	+page-title-img(`background-image: url('images/event-pages/CME3-hero.jpg'); background-position: 50% 35%;`, `Obesity Leadership Edge Symposium`, `Obesity Leadership Edge Symposium`)
+	+page-title-img(`background-image: url('img/event-pages/CME3-hero.jpg'); background-position: 50% 35%;`, `Obesity Leadership Edge Symposium`, `Obesity Leadership Edge Symposium`)
 
 	section.small-section.bg-pattern--blue
 		.container

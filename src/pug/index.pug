@@ -8,13 +8,12 @@ block vendorCSS
   link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css", attr)
 
 block vendorScripts
-  script(async='', defer='defer', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCHw9rWtVWl1JmE72GZ8kPs0Z2CmBdm_H8&callback=initializeVenueMap')
-  script(src='js/components/googleMap-venue.min.js')
-  script(src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js')
-  script(src='js/components/tabs-horizontal.min.js')
+  //- script(async='', defer='defer', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCHw9rWtVWl1JmE72GZ8kPs0Z2CmBdm_H8&callback=initializeVenueMap')
+  //- script(src='js/googleMapVenue.min.js')
+  script(src='js/tabsHorizontal.min.js')
 
 block scripts
-  script(src="js/pages/index.min.js")
+  script(src="js/index.min.js")
 
 include mixins/countdown
 include mixins/section-title-center-stacked-top-w-sub
@@ -28,12 +27,12 @@ block content
 
 
   .owl-carousel.opening-slider
-    +carousel-item(`background-image: url('images/hero-slider/hero-slider--skyline.jpg');`, `purple`, `Hello, Early Bird Rates!`, `These low rates have arrived – but they’re only sticking around until January 31. Register now to lock in your low price`, `Register Today`, `/register.html`, `teal`)
+    +carousel-item(`background-image: url('img/hero-slider/hero-slider--skyline.jpg');`, `purple`, `Hello, Early Bird Rates!`, `These low rates have arrived – but they’re only sticking around until January 31. Register now to lock in your low price`, `Register Today`, `/register.html`, `teal`)
     +carousel-item(`background-image: url('https://www.aapa.org/wp-content/uploads/2016/11/jeff.jpg'); background-position: 50% 25%;`, `teal`, `Lessons in Leadership`, `PA Jeff Evans has led rescue teams on Mount Everest. Trauma teams in Iraq. And expeditions through some of the most challenging terrain on the planet. Hear him speak on servant leadership, communication and trust at General Session, Monday, May 20.`, `Read More`, `/keynote.html`, `purple`)
-    +carousel-item(`background-image: url('images/hero-slider/hero-slider--bourbon-st.jpg');`, `pink`, `We’re Giving You $200 Off`, `Just book your hotel within the official AAPA hotel block and you’ll knock $200 off your registration. No prepayment or deposit required!`, `I'll take it`, `/housing-info-and-policies.html`, `blue`)
-    +carousel-item(`background-image: url('images/hero-slider/hero-slider--cme.jpg');`, `blue`, `Get Your CME Certificates`, `Need your CME certificate from AAPA Conferences in 2015, 2016, or 2017? Log in to the CME Manager, claim your credits and print out your certificate now.`, `MAKE IT OFFICIAL`, `https://conferencescheduler.aapa.org/`, `lime`)
-    +carousel-item(`background-image: url('images/hero-slider/hero-slider--hotel.jpg');`, `lime`, `Luxury, Louisiana Style`, `Win a VIP package worth more than $1,400 – including two nights at the Ritz and $400+ to spend at the city’s most famous restaurants! To enter, register and book your room in the official AAPA hotel block by December 31.`, `DON’T MISS OUT`, `/register.html`, `purple`)
-    +carousel-item(`background-image: url('images/hero-slider/hero-slider--exhibit-sponsors.jpg');`, `pink`, `Exhibit & Sponsorship Opportunities`, `Get your product, service or technology in front of 5,000+ attendees at the only national PA conference. See all PAs can do – and you’ll see why you can’t miss AAPA 2018.`, `MAKE CONNECTIONS`, `http://s23.a2zinc.net/clients/aapas/AC18/Public/Enter.aspx`, `blue`)
+    +carousel-item(`background-image: url('img/hero-slider/hero-slider--bourbon-st.jpg');`, `pink`, `We’re Giving You $200 Off`, `Just book your hotel within the official AAPA hotel block and you’ll knock $200 off your registration. No prepayment or deposit required!`, `I'll take it`, `/housing-info-and-policies.html`, `blue`)
+    +carousel-item(`background-image: url('img/hero-slider/hero-slider--cme.jpg');`, `blue`, `Get Your CME Certificates`, `Need your CME certificate from AAPA Conferences in 2015, 2016, or 2017? Log in to the CME Manager, claim your credits and print out your certificate now.`, `MAKE IT OFFICIAL`, `https://conferencescheduler.aapa.org/`, `lime`)
+    +carousel-item(`background-image: url('img/hero-slider/hero-slider--hotel.jpg');`, `lime`, `Luxury, Louisiana Style`, `Win a VIP package worth more than $1,400 – including two nights at the Ritz and $400+ to spend at the city’s most famous restaurants! To enter, register and book your room in the official AAPA hotel block by December 31.`, `DON’T MISS OUT`, `/register.html`, `purple`)
+    +carousel-item(`background-image: url('img/hero-slider/hero-slider--exhibit-sponsors.jpg');`, `pink`, `Exhibit & Sponsorship Opportunities`, `Get your product, service or technology in front of 5,000+ attendees at the only national PA conference. See all PAs can do – and you’ll see why you can’t miss AAPA 2018.`, `MAKE CONNECTIONS`, `http://s23.a2zinc.net/clients/aapas/AC18/Public/Enter.aspx`, `blue`)
 
 
 
@@ -71,7 +70,7 @@ block content
 
       #tabs.agenda-tabs
         nav.agenda-tabs__nav.text-center
-          .nav_wrap
+          .nav-wrap
             a.agenda-tabs__nav--link.is-active(href='#')
               | Friday
               span May 18
@@ -347,8 +346,8 @@ block content
       +special-events-cards
 
 
-  section#map_wrapper
-    figure#map_canvas.mapping
+  section#map__wrapper
+    figure#map__canvas.mapping
     .container
       figure.venue
         .venue__text

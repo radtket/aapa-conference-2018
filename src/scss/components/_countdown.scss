@@ -1,0 +1,64 @@
+.countdown__cta {
+	background-color: $color-purple;
+	color: $white;
+	padding: $base-spacing 0;
+
+	&--text {
+		@include mq($min-width: $page-section-md) {
+			@include grid-column(6);
+		}
+
+		>* {
+			text-align: center;
+
+			@include mq($min-width: $page-section-md) {
+				text-align: left;
+			}
+		}
+
+		h1 {
+			@extend %text-countdown-cta-headline;
+			margin-bottom: $x-small-spacing;
+
+			@include mq($min-width: $page-section-md) {
+				padding-top: $small-spacing;
+			}
+		}
+
+		.headline-lowercase {
+			@extend %text-headline-lowercase;
+		}
+	}
+
+	.js-countdown {
+		@include grid-collapse;
+		@include grid-container;
+
+		li {
+			@include grid-column(3);
+			@include padding($small-spacing null);
+			text-transform: capitalize;
+
+			&:first-child {
+				position: relative;
+
+				&::before {
+					@include position(absolute, 0 (-$base-grid-gutter / 2) null null);
+					@include size(2px 100%);
+					background-color: $color-lime;
+					content: "";
+				}
+			}
+
+			span {
+				@extend %countdown-number;
+			}
+
+			p {
+				font-weight: $font-weight--light;
+				line-height: 1;
+				margin-bottom: 0;
+			}
+		}
+	}
+}

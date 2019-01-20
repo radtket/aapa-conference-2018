@@ -1,0 +1,222 @@
+$tabs-color--dark: shade($color-pink, 8%);
+$tabs-color--lite: tint($color-pink, 8%);
+$tabs-nav-border: 1px solid $tabs-color--dark;
+$tabs-nav-height: 75px;
+
+.agenda-tabs {
+	@include margin($large-spacing auto $base-spacing);
+	background: $color-snow;
+	border: $base-border;
+	box-shadow: $boxshadow-large;
+
+	@include mq($max-width: $cards-brk-sm) {
+		padding: $small-spacing;
+	}
+
+
+	&.no-js {
+		.agenda-tabs__nav {
+			display: none;
+		}
+
+		.agenda-tabs__content-item {
+			display: block;
+			margin-bottom: $base-spacing;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+
+
+	&__nav {
+		@include margin((-$large-spacing) null $base-spacing);
+
+		@include mq($min-width: $cards-brk-sm) {
+			margin-top: -$tabs-nav-height / 2;
+		}
+
+		.nav-wrap {
+			background-color: $white;
+			border: $tabs-nav-border;
+			display: block;
+			margin: auto;
+			max-width: 90%;
+
+			@include mq($min-width: $cards-brk-sm) {
+				display: inline-block;
+				max-width: 100%;
+			}
+
+			@include mq($min-width: $cards-brk-md) {
+				display: flex;
+				max-width: 85%;
+			}
+		}
+
+		&--link {
+			@extend %card-title;
+			background: $tabs-color--lite;
+			border-bottom: $tabs-nav-border;
+			color: $white;
+			display: block;
+			outline: none;
+			padding: $small-spacing;
+
+			@include mq($min-width: $cards-brk-sm) {
+				border-bottom: 0;
+				border-right: $tabs-nav-border;
+				display: inline-block;
+				float: left;
+			}
+
+			@include mq($min-width: $navbar-colapse) {
+				padding: $small-spacing $base-spacing;
+			}
+
+			@include mq($min-width: $cards-brk-md) {
+				flex: 1;
+				float: none;
+			}
+
+			&:last-child {
+				border: 0;
+			}
+
+			&:hover {
+				background-color: $color-pink;
+				color: $white;
+
+				span {
+					color: $color-snow;
+				}
+			}
+
+			span {
+				@extend %text-agenda-subtitle-date;
+				color: $light-gray;
+				display: block;
+			}
+
+			&.is-active {
+				background-color: $tabs-color--dark;
+				position: relative;
+
+				@include mq($min-width: $cards-brk-sm) {
+					&::after {
+						@include position(absolute, 100% null null 50%);
+						@include triangle($base-spacing, $tabs-color--dark, down);
+						content: "";
+						margin-left: -$small-spacing;
+					}
+				}
+
+				span {
+					color: $color-snow;
+				}
+			}
+		}
+	}
+
+	&__content-item {
+		display: none;
+
+		&.is-active {
+			display: block;
+		}
+
+		&--inner {
+			@include grid-container;
+
+			@include mq($max-width: $cards-brk-sm) {
+				margin: $base-spacing;
+			}
+		}
+	}
+}
+
+.agenda {
+	&__tod {
+		margin-bottom: $base-spacing;
+
+		@include mq($min-width: $cards-brk-sm) {
+			@include grid-column(6);
+			@include padding(null $small-spacing);
+		}
+
+		&--headline {
+			@extend %text-countdown-cta-headline;
+			font-weight: $font-weight--medium;
+			margin-left: $small-spacing;
+		}
+	}
+
+	&__item {
+		@include grid-container;
+		@include padding($small-spacing);
+		border-bottom: $base-border;
+
+		&:first-of-type {
+			border-top: $base-border;
+		}
+
+		&--time {
+			@extend %accordion-title;
+			color: $medium-gray;
+
+			@include mq($min-width: $page-section-lg) {
+				color: initial;
+				float: left;
+				font-size: initial;
+				max-width: 175px;
+				text-transform: initial;
+				width: 100%;
+			}
+		}
+
+		&--name {
+			@include mq($min-width: $page-section-lg) {
+				float: left;
+				margin-left: $base-grid-gutter;
+				width: calc(100% - (175px + 20px));
+			}
+		}
+	}
+}
+
+.register-tabs {
+	margin-bottom: $base-spacing;
+	margin-top: $large-spacing + $base-spacing;
+
+	.agenda-tabs__nav {
+		.nav-wrap {
+			@include mq($min-width: $cards-brk-sm) {
+				display: flex;
+				max-width: 90%;
+			}
+		}
+
+		&--link {
+			line-height: $heading-line-height;
+
+			@include mq($min-width: $cards-brk-sm) {
+				align-items: center;
+				display: flex;
+				flex: 1;
+				float: none;
+				justify-content: center;
+				min-height: 60px;
+			}
+
+			@include mq($min-width: $cards-brk-sm, $max-width: $cards-brk-md) {
+				font-size: 16px;
+			}
+		}
+	}
+
+	.agenda-tabs__content-item--inner {
+		margin: $small-spacing;
+	}
+}

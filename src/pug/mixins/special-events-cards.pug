@@ -3,7 +3,7 @@ mixin special-events-cards
 	each event in events
 		figure.event-card
 			a.event-card-photo(href= './' + event.slug + '.html')
-				img(src='images/event-pages/' + event.filePrefix + '-card.jpg', alt=event.eventName)
+				img(src='img/event-pages/' + event.filePrefix + '-card.jpg', alt=event.eventName)
 				if event.friday
 					span.text-center.date.date__sat
 						| 18

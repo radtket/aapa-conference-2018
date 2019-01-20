@@ -1,0 +1,10 @@
+.promo-section {
+	&__headline {
+		@extend %text-countdown-cta-headline;
+		margin-bottom: $base-spacing;
+	}
+
+	.btn {
+		margin: $base-spacing auto;
+	}
+}

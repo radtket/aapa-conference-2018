@@ -1,0 +1,45 @@
+.intro-split-section {
+	&__video {
+		display: none;
+
+		@include mq($min-width: $page-section-lg) {
+			@include grid-column(6);
+			display: block;
+		}
+
+		&--table {
+			display: table;
+			width: 100%;
+		}
+
+		&--cell {
+			display: table-cell;
+			padding-left: $base-spacing;
+			vertical-align: middle;
+
+			.respnsive-video-wrapper {
+				box-shadow: $boxshadow-large;
+
+				video {
+					height: auto;
+					max-width: 100%;
+				}
+			}
+		}
+	}
+
+	&__content {
+		@include margin(null auto);
+		height: auto;
+		max-width: $lead-mobile-max-width;
+
+		@include mq($min-width: $page-section-lg) {
+			@include grid-column(6);
+			max-width: fit-content;
+
+			.lead {
+				font-size: 1rem;
+			}
+		}
+	}
+}

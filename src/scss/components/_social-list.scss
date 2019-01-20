@@ -1,0 +1,25 @@
+.social-list {
+	a {
+		@include size($base-spacing);
+		display: inline-block;
+		margin-right: $small-spacing;
+		vertical-align: middle;
+
+		@include mq($min-width: $footer-icon-break) {
+			@include size($base-spacing * 1.25);
+			margin-right: $base-spacing;
+		}
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+
+		svg {
+			fill: $color-purple;
+
+			&:hover {
+				fill: $color-pink;
+			}
+		}
+	}
+}

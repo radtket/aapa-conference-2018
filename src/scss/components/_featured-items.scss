@@ -1,0 +1,60 @@
+.featured-item-small {
+	cursor: pointer;
+	display: inline-block;
+	margin-bottom: $small-spacing;
+	overflow: hidden;
+	padding: $small-spacing;
+	position: relative;
+	vertical-align: top;
+
+	@include mq($min-width: $cards-brk-sm) {
+		@include grid-column(4);
+	}
+
+	&::after {
+		@include position(absolute, null null 0 0);
+		@include size(100%);
+		background-color: transparentize($color-gray, 0.9);
+		content: "";
+		opacity: 0;
+		transform: scale(0.5);
+		transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+	}
+
+	&:hover {
+		.featured-item-small-title {
+			color: $color-purple;
+		}
+
+		.featured-item-small-icon {
+			fill: $color-purple;
+		}
+
+		&::after {
+			opacity: 1;
+			transform: none;
+		}
+	}
+
+	&-icon {
+		fill: $color-black;
+		height: $large-spacing;
+		margin-bottom: $x-small-spacing;
+		position: relative;
+	}
+
+	&-title {
+		@extend %accordion-title;
+		font-weight: $font-weight--medium;
+		line-height: $base-line-height;
+		margin-bottom: $x-small-spacing;
+	}
+
+	&-desc {
+		@include margin(null auto);
+		color: $color-gray;
+		font-size: 13px;
+		font-weight: $font-weight--light;
+		max-width: 200px;
+	}
+}

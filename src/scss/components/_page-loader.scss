@@ -1,0 +1,33 @@
+.page-loader {
+	@include size(100%);
+	background: $color-snow;
+	display: block;
+	left: 0;
+	position: fixed;
+	top: 0;
+	z-index: 100000;
+}
+
+.loader {
+	@include margin((-$base-spacing) null null (-$base-spacing));
+	@include position(absolute, 50% null null 50%);
+	@include size($large-spacing);
+	animation: spinner 700ms infinite linear;
+	border-bottom: 1px solid rgba($color-purple, 0.25);
+	border-left: 1px solid rgba($color-purple, 0.75);
+	border-radius: 50%;
+	border-right: 1px solid rgba($color-purple, 0.25);
+	border-top: 1px solid rgba($color-purple, 0.25);
+	text-indent: -12345px;
+	z-index: 100001;
+}
+
+@keyframes spinner {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}

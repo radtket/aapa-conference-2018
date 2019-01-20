@@ -1,0 +1,85 @@
+.event-card {
+	overflow: hidden;
+	position: relative;
+	$card-event-date-width: 20%;
+
+	&:hover {
+		.event-card-photo img {
+			transform: scale(1.15);
+		}
+	}
+
+	&-photo {
+		display: inline-block;
+		line-height: 0;
+		overflow: hidden;
+		position: relative;
+
+		img {
+			display: block;
+			overflow: hidden;
+			transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1);
+		}
+
+		.date {
+			@extend %card-title;
+			@include padding($x-small-spacing null);
+			@include position(absolute, null null 0 0);
+			background: $color-purple-light;
+			color: $white;
+			line-height: $heading-line-height;
+			width: $card-event-date-width;
+
+			.month {
+				@extend %text-nav;
+				display: block;
+			}
+
+			&:nth-of-type(2) {
+				left: $card-event-date-width;
+			}
+
+			&:nth-of-type(3) {
+				left: $card-event-date-width * 2;
+			}
+
+			&:nth-of-type(4) {
+				left: $card-event-date-width * 3;
+			}
+
+			&:nth-of-type(5) {
+				left: $card-event-date-width * 4;
+			}
+
+			&__sat {
+				background: $color-purple-light;
+			}
+
+			&__sun {
+				background: shade($color-purple-light, 3%);
+			}
+
+			&__mon {
+				background: shade($color-purple-light, 6%);
+			}
+
+			&__tue {
+				background: shade($color-purple-light, 9%);
+			}
+
+			&__wed {
+				background: shade($color-purple-light, 12%);
+			}
+		}
+	}
+
+	&-text {
+		padding: $base-spacing;
+
+		&-title {
+			@extend %card-title;
+			color: $color-purple-light;
+			font-weight: $font-weight--medium;
+		}
+	}
+}

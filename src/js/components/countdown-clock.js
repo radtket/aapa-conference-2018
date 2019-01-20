@@ -12,16 +12,16 @@ function getTimeRemaining(endtime) {
 		days,
 		hours,
 		minutes,
-		seconds,
+		seconds
 	};
 }
 
 function initializeClock(id, endtime) {
 	const clock = document.querySelector(id);
-	const daysSpan = clock.querySelector('.days');
-	const hoursSpan = clock.querySelector('.hours');
-	const minutesSpan = clock.querySelector('.minutes');
-	const secondsSpan = clock.querySelector('.seconds');
+	const daysSpan = clock.querySelector(".days");
+	const hoursSpan = clock.querySelector(".hours");
+	const minutesSpan = clock.querySelector(".minutes");
+	const secondsSpan = clock.querySelector(".seconds");
 	let countdownInterval;
 
 	function updateClock() {
@@ -40,3 +40,5 @@ function initializeClock(id, endtime) {
 	updateClock();
 	countdownInterval = setInterval(updateClock, 1000);
 }
+
+export default initializeClock;

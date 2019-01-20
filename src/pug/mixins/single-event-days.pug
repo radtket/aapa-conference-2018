@@ -3,7 +3,7 @@ mixin single-event-days(pageSlug)
 	each event in events
 		if event.slug === pageSlug
 			header.event-card-photo.event-main-photo
-				img(src='images/event-pages/' + event.filePrefix + '-event.jpg', alt=event.eventName)
+				img(src='img/event-pages/' + event.filePrefix + '-event.jpg', alt=event.eventName)
 				if event.friday
 					span.text-center.date.date__sat
 						| 18

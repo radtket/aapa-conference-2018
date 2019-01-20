@@ -5,13 +5,10 @@ include mixins/single-event-days
 
 block title
 	title AAPA 2018 - Pacers for Health 5K Fun Run/Walk
-block vendorScripts
-	script(src="libraries/twitterFetcher_min.js")
 block scripts
-	script.
-		twitterFetcher.fetch(twitterFeed);
+	script(src="js/getTweets.js")
 block content
-	+page-title-img(`background-image: url('images/event-pages/FunRun-hero.jpg'); background-position: 50% 45%;`, `Pacers for Health 5K Fun Run/Walk`, `Pacers for Health 5K Fun Run/Walk`)
+	+page-title-img(`background-image: url('img/event-pages/FunRun-hero.jpg'); background-position: 50% 45%;`, `Pacers for Health 5K Fun Run/Walk`, `Pacers for Health 5K Fun Run/Walk`)
 
 	section.small-section.bg-pattern--blue
 		.container

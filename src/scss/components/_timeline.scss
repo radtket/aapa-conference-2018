@@ -1,0 +1,130 @@
+$timeline-color: $color-purple;
+
+// Timeline
+.timeline {
+	@include clearfix;
+	margin: $base-spacing;
+	position: relative;
+	transition: all 0.4s ease;
+	width: 90%;
+
+	@include mq($min-width: $page-section-lg) {
+		@include margin(null auto);
+		@include padding(null $small-spacing);
+		width: 100%;
+
+		&::before {
+			left: 50%;
+		}
+	}
+
+	&::before {
+		@include position(absolute, 0 null null 0);
+		@include size(3px 100%);
+		background-color: $timeline-color;
+		content: "";
+	}
+
+
+	&-item {
+		@include clearfix;
+		margin-bottom: $large-spacing;
+		position: relative;
+	}
+
+	&-content {
+		background-color: $color-snow;
+		border-radius: $large-border-radius;
+		box-shadow: $boxshadow-large;
+		float: right;
+		overflow: hidden;
+		// padding: 20px;
+		transition: all 0.3s ease;
+		width: 90%;
+
+		@include mq($min-width: $page-section-lg) {
+			float: none;
+			width: 45%;
+		}
+
+		&::before {
+			@include position(absolute, 16px null null 45%);
+			@include triangle(16px, $timeline-color, right);
+			content: "";
+			position: absolute;
+		}
+
+		&.right {
+			@include mq($min-width: $page-section-lg) {
+				float: right;
+
+				&::before {
+					@include triangle(16px, $timeline-color, left);
+					border-left: 0;
+					left: inherit;
+					right: 45%;
+				}
+			}
+		}
+
+		&-title {
+			@extend %card-title;
+			color: $white;
+			margin-bottom: 0;
+			padding: $small-spacing;
+
+			@include mq($min-width: $page-section-lg) {
+				text-align: center;
+			}
+
+			>span {
+				display: block;
+				font-weight: $font-weight--light;
+			}
+		}
+
+		&-body {
+			padding: $card-inner-padding;
+
+			.btn {
+				margin-top: $base-spacing;
+			}
+		}
+	}
+
+	&-icon {
+		@include position(absolute, 0 null null 0);
+		@include size($large-spacing);
+		margin-left: -($large-spacing / 2);
+		overflow: hidden;
+
+		@include mq($min-width: $page-section-lg) {
+			left: 50%;
+		}
+	}
+}
+
+@media screen and (max-width: $page-section-lg) {
+	.timeline {
+		// margin: 25px;
+		// padding: 0;
+		// width: 90%;
+
+		// &::before {
+		// 	left: 0;
+		// }
+
+		&-item {
+			.timeline-content {
+
+				&::before,
+				&.right::before {
+					border-left: 0;
+					border-right: 7px solid $timeline-color;
+					left: 10%;
+					margin-left: -6px;
+				}
+			}
+		}
+	}
+}
