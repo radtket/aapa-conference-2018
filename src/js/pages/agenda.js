@@ -1,9 +1,11 @@
+/* eslint-disable func-names */
 // Alt Algenda - Verical Tabs
 $(".js-alt-agenda-tab-content").hide();
 $(".js-alt-agenda-tab-content:first").show();
 
 /* if in tab mode */
-function inTabMode(event) {
+
+$(".js-alt-agenda-tab").click(function(event) {
 	event.preventDefault();
 
 	$(".js-alt-agenda-tab-content").hide();
@@ -17,10 +19,10 @@ function inTabMode(event) {
 	$(`.js-alt-agenda-tab-accordion-heading[rel^='${activeTab}']`).addClass(
 		"is-active"
 	);
-}
+});
 
-/* if in accordion mode */
-function inAccordionMode(event) {
+// If In accordion mode
+$(".js-alt-agenda-tab-accordion-heading").click(function(event) {
 	event.preventDefault();
 
 	$(".js-alt-agenda-tab-content").hide();
@@ -32,7 +34,4 @@ function inAccordionMode(event) {
 
 	$(".js-alt-agenda-tab").removeClass("is-active");
 	$(`.js-alt-agenda-tab[rel^='${accordionActiveTab}']`).addClass("is-active");
-}
-
-$(".js-alt-agenda-tab").click(inTabMode());
-$(".js-alt-agenda-tab-accordion-heading").click(inAccordionMode());
+});

@@ -1,4 +1,6 @@
-function activateAccordion() {
+/* eslint-disable func-names */
+$(".accordion > dd").hide();
+$(".accordion > dt > a").click(function() {
 	if ($(this).hasClass("active")) {
 		$(this)
 			.parent()
@@ -17,7 +19,4 @@ function activateAccordion() {
 	}
 
 	return false;
-}
-
-$(".accordion > dd").hide();
-$(".accordion > dt > a").click(activateAccordion());
+});

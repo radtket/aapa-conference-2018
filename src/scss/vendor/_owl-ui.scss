@@ -163,6 +163,7 @@ $slider-nav--size: 105px;
 	@include margin(null $x-small-spacing);
 	cursor: pointer;
 	display: inline-block;
+	padding: 0;
 	position: relative;
 	zoom: 1;
 

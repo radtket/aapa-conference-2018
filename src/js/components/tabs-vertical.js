@@ -1,9 +1,10 @@
+/* eslint-disable func-names */
 // Verical Tabs
 $(".js-vertical-tab-content").hide();
 $(".js-vertical-tab-content:first").show();
 
 /* if in tab mode */
-function inTabMode(e) {
+$(".js-vertical-tab").click(function(e) {
 	e.preventDefault();
 
 	$(".js-vertical-tab-content").hide();
@@ -17,10 +18,10 @@ function inTabMode(e) {
 	$(`.js-vertical-tab-accordion-heading[rel^='${activeTab}']`).addClass(
 		"is-active"
 	);
-}
+});
 
 /* if in accordion mode */
-function inAccordionMode(e) {
+$(".js-vertical-tab-accordion-heading").click(function(e) {
 	e.preventDefault();
 
 	$(".js-vertical-tab-content").slideUp("easeOutExpo");
@@ -32,7 +33,4 @@ function inAccordionMode(e) {
 
 	$(".js-vertical-tab").removeClass("is-active");
 	$(`.js-vertical-tab[rel^='${accordionActiveTab}']`).addClass("is-active");
-}
-
-$(".js-vertical-tab").click(inTabMode());
-$(".js-vertical-tab-accordion-heading").click(inAccordionMode());
+});

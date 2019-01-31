@@ -233,6 +233,10 @@ $tab-border: $base-border-size solid $color-pink-d;
 		position: relative;
 		transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
 
+		@include mq($min-width: $page-section-md) {
+			display: none;
+		}
+
 		>span {
 			@extend %accordion-title;
 			display: block;

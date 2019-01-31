@@ -6,8 +6,17 @@
 		"start": "gulp watch",
 		"build": "gulp"
 	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/radtket/aapa-conference-2018.git"
+	},
+	"keywords": [],
 	"author": "Taylor Radtke",
 	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/radtket/aapa-conference-2018/issues"
+	},
+	"homepage": "https://github.com/radtket/aapa-conference-2018#readme",
 	"devDependencies": {
 		"autoprefixer": "^9.4.5",
 		"babel-cli": "^6.26.0",

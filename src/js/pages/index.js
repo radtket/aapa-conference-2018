@@ -1,6 +1,5 @@
 import "owl.carousel";
 import initializeClock from "../components/countdown-clock";
-import initializeVenueMap from "../components/googleMap-venue";
 import tabs from "../components/tabs-horizontal";
 
 /* ---------------------------------------------
@@ -142,8 +141,7 @@ $(".events").owlCarousel({
 
 $(document).on("ready", () => {
 	$(window).trigger("resize");
-	initializeClock(".js-countdown", new Date(2017, 12, 27));
-	initializeVenueMap();
+	initializeClock(".js-countdown", new Date(2019, 6, 27));
 	tabs({
 		el: "#tabs",
 		tabNavigationLinks: ".agenda-tabs__nav--link",
