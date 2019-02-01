@@ -18,8 +18,8 @@ import sassGlob from "gulp-sass-glob";
 import sourcemaps from "gulp-sourcemaps";
 import webpack from "webpack";
 import webpackstream from "webpack-stream";
+import babel from "gulp-babel";
 import webpackconfig from "./webpack.config";
-// import babel from "gulp-babel";
 
 browsersync.create();
 
@@ -33,10 +33,10 @@ project.fonts = `${project.assets}/fonts`;
 project.html = `${project.assets}/html`;
 project.img = `${project.assets}/img`;
 project.js = `${project.assets}/js`;
-project.pug = `${project.assets}/html`;
 project.pug = `${project.assets}/pug`;
 project.scss = `${project.assets}/scss`;
 project.video = `${project.assets}/video`;
+project.documents = `${project.assets}/documents`;
 
 // BrowserSync
 function browserSync(done) {
@@ -77,6 +77,13 @@ function fonts() {
 	return gulp
 		.src(`${project.fonts}/**/*`)
 		.pipe(gulp.dest(`${project.dist}/fonts/`));
+}
+
+// Copy Document Assets
+function documents() {
+	return gulp
+		.src(`${project.documents}/**/*`)
+		.pipe(gulp.dest(`${project.dist}/documents/`));
 }
 
 // Copy Pug Assets
@@ -151,7 +158,10 @@ function scriptsLint() {
 function scripts() {
 	return (
 		gulp
-			.src([`${project.js}/**/*`])
+			.src([
+				`${project.js}/**/*`,
+				`!${project.js}/components/googleMap-venue.js`
+			])
 			// .pipe(babel())
 			.pipe(plumber())
 			.pipe(webpackstream(webpackconfig, webpack))
@@ -159,6 +169,14 @@ function scripts() {
 			.pipe(gulp.dest(`${project.dist}/js/`))
 			.pipe(browsersync.stream())
 	);
+}
+
+// Google Maps JS
+function googleMaps() {
+	return gulp
+		.src([`${project.js}/components/googleMap-venue.js`])
+		.pipe(babel())
+		.pipe(gulp.dest(`${project.dist}/js/`));
 }
 
 // Watch files
@@ -170,14 +188,26 @@ function watchFiles() {
 }
 
 // define complex tasks
-const js = gulp.series(scriptsLint, scripts);
+const js = gulp.series(scriptsLint, scripts, googleMaps);
 const build = gulp.series(
 	clean,
-	gulp.parallel(css, video, fonts, favicon, images, js, pug)
+	gulp.parallel(css, video, fonts, favicon, documents, images, js, pug)
 );
 const watch = gulp.parallel(watchFiles, browserSync);
 
 // export tasks
-export { images, video, fonts, favicon, pug, css, js, clean, build, watch };
+export {
+	images,
+	video,
+	fonts,
+	favicon,
+	documents,
+	pug,
+	css,
+	js,
+	clean,
+	build,
+	watch
+};
 
 export default build;

@@ -370,5 +370,3 @@ function initializeVenueMap() {
 		}
 	);
 }
-
-export default initializeVenueMap;

@@ -10,7 +10,6 @@ module.exports = {
 		register: ["./src/js/pages/register.js"],
 		app: ["./src/js/app.js"],
 		accordion: ["./src/js/components/accordion.js"],
-		googleMapVenue: ["./src/js/components/googleMap-venue.js"],
 		tabsVertical: ["./src/js/components/tabs-vertical.js"],
 		tabsHorizontal: ["./src/js/components/tabs-horizontal.js"],
 		splitSection: ["./src/js/components/splitSection.js"],
