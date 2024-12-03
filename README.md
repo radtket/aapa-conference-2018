@@ -1,10 +1,10 @@
-# AAPA Conference 2018
+# AAPA 2018 Conference Websit
 
-A multi-page website for The American Academy of Physician Assistants (AAPA)
+An informational website for the 2018 American Academy of Physician Associates (AAPA) conference held in New Orleans. It features details about conference agendas, keynote speakers, continuing medical education (CME) sessions, networking opportunities, and travel information. This project showcases skills in creating comprehensive event-focused web experiences with clear navigation and user-centric design.
 
-The American Academy of Physician Assistants (AAPA) national conference in New Orleans, Louisiana will provide opportunities to explore the profession's limitless future with five days of certification courses, educational sessions, and discussions surrounding groundbreaking medical innovations.
+**GitHub Repository:** [radtket/aapa-conference-2018](https://github.com/radtket/aapa-conference-2018)
 
-**Live demo:** [https://radtket.github.io/aapa-conference-2018/](https://radtket.github.io/aapa-conference-2018/)
+**Live Demo:** [AAPA 2018 Conference](https://radtket.github.io/aapa-conference-2018/)
 
 ## Getting started
 
