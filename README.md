@@ -1,4 +1,4 @@
-# AAPA 2018 Conference Websit
+# AAPA 2018 Conference Website
 
 An informational website for the 2018 American Academy of Physician Associates (AAPA) conference held in New Orleans. It features details about conference agendas, keynote speakers, continuing medical education (CME) sessions, networking opportunities, and travel information. This project showcases skills in creating comprehensive event-focused web experiences with clear navigation and user-centric design.
 
